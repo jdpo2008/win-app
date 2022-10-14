@@ -13,7 +13,7 @@ const MainBanner = () => {
               <div className="main-banner-content">
                 <div className="content">
                   <span className="sub-title">
-                    #Get your 14 days free trail
+                    #Get your 14 days free trail Jose Daniel
                   </span>
                   <h1>
                     The Revolutionary App That Makes Your Life Easier Than
