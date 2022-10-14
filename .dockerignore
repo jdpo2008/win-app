@@ -1,0 +1,11 @@
+.git/
+.vscode/
+# Existing Next.js builds
+.next/                
+.gitignore
+.dockerignore
+Dockerfile
+docker-compose.yml
+# Installed inside container
+node_modules/         
+nginx/         
