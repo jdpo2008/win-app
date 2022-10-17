@@ -9,29 +9,12 @@ This files table contents are outlined below >>>>>
 
 ****************************************************/
 /* All Pages and Components CSS File Imported here */
-@import url(../css/navbar/navbar.css);
-@import url(../css/home/home.css);
-/* @import url(../css/pages-and-components-css/home-two.css);
-@import url(../css/pages-and-components-css/home-three.css);
-@import url(../css/pages-and-components-css/home-four.css);
-@import url(../css/pages-and-components-css/home-five.css);
-@import url(../css/pages-and-components-css/home-six.css);
-@import url(../css/pages-and-components-css/team.css);
-@import url(../css/pages-and-components-css/privacy-policy.css);
-@import url(../css/pages-and-components-css/terms-conditions.css);
-@import url(../css/pages-and-components-css/gallery.css);
-@import url(../css/pages-and-components-css/how-it-works.css);
-@import url(../css/pages-and-components-css/profile-authentication.css);
-@import url(../css/pages-and-components-css/coming-soon.css);
-@import url(../css/pages-and-components-css/error.css);
-@import url(../css/pages-and-components-css/faq.css);
-@import url(../css/pages-and-components-css/products.css);
-@import url(../css/pages-and-components-css/products-details.css);
-@import url(../css/pages-and-components-css/cart.css);
-@import url(../css/pages-and-components-css/checkout.css);
-@import url(../css/pages-and-components-css/blog-details.css);
-@import url(../css/pages-and-components-css/contact.css);
-@import url(../css/pages-and-components-css/footer.css); */
+@import url(../css/components/navbar.css);
+@import url(../css/components/footer.css);
+
+@import url(../css/pages/home.css);
+@import url(../css/pages/error.css);
+
 /* Default CSS */
 /* Google Font Family url */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -41,12 +24,14 @@ This files table contents are outlined below >>>>>
   --transition: .5s;
   --mainColor: #ED2775;
   --whiteColor: #ffffff;
-  --blackColor: #372a26;
+  --blackColor: #191919;
   --navbarSticky: #da7211;
   --gradientColor: linear-gradient(44.44deg, #ED2775 7.79%, #FF7448 94.18%);
   --paragraphColor: #716c80;
   --fontFamily: 'Inter', sans-serif;
+  --mainGradient: linear-gradient(279.99deg, #df9d10 -1.19%, #cf7c10 50.96%, #dd5b10 99.95%);
   scroll-behavior: inherit;
+
 }
 
 body {
