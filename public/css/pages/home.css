@@ -749,8 +749,41 @@ Main Banner Area CSS
   /*================================================
   Screenshots Area CSS
   =================================================*/
-  .screenshots-area.bg-color {
-    position: relative;
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+ .screenshots-area.bg-color {
+    position: absolute;
     z-index: 1;
   }
   
@@ -758,14 +791,15 @@ Main Banner Area CSS
     left: 0;
     right: 0;
     bottom: 0;
+    top: 100;
     content: '';
     z-index: -1;
-    height: 55%;
+    height: 45%;
     position: absolute;
     background-color: var(--blackColor);
   }
   
-  .single-screenshot-item {
+  /*  .single-screenshot-item {
     text-align: center;
   }
   
@@ -831,7 +865,94 @@ Main Banner Area CSS
   .screenshots-slides.owl-theme:hover .owl-nav {
     opacity: 1;
     visibility: visible;
-  }
+  } */
+
+  /*================================================
+Screenshots Area CSS
+=================================================*/
+.screenshots-swiper-slides {
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+
+.screenshots-swiper-slides .swiper-slide {
+  width: 750px;
+  border-radius: 10px;
+}
+
+.screenshots-swiper-slides .swiper-slide img {
+  border-radius: 10px;
+}
+
+.screenshots-swiper-slides .swiper-slide.swiper-slide-active {
+  -webkit-box-shadow: 0px 35px 70px 5px rgba(25, 34, 64, 0.15);
+          box-shadow: 0px 35px 70px 5px rgba(25, 34, 64, 0.15);
+  border-radius: 10px;
+}
+
+.screenshots-swiper-slides .swiper-slide-shadow-left {
+  display: none;
+}
+
+.screenshots-swiper-slides .swiper-slide-shadow-right {
+  display: none;
+}
+
+.screenshots-swiper-slides .swiper-button-next {
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  -webkit-box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+          box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+}
+
+.screenshots-swiper-slides .swiper-button-next::after {
+  font-size: 20px;
+}
+
+.screenshots-swiper-slides .swiper-button-next::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background: var(--gradientColor);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+.screenshots-swiper-slides .swiper-button-prev {
+  z-index: 5;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: var(--whiteColor);
+  -webkit-box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+          box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+}
+
+.screenshots-swiper-slides .swiper-button-prev::after {
+  font-size: 20px;
+}
+
+.screenshots-swiper-slides .swiper-button-prev::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  background: var(--gradientColor);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+
   
   /*================================================
   Software Integrations Area CSS

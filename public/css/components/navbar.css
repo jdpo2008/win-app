@@ -1,10 +1,12 @@
 .navbar-area {
-    top: 0;
+    /* top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-    position: absolute;
+    position: absolute; */
     background-color: transparent;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
   }
   
   .navbar-area.is-sticky {
@@ -24,39 +26,39 @@
     background-color: transparent !important;
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item a {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item a {
     color: var(--blackColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item a:hover, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item a.active {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item a:hover, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item a.active {
     color: var(--mainColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item:hover a, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item.active a {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item:hover a, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item.active a {
     color: var(--mainColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a {
     color: var(--blackColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:hover, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a:focus {
     color: var(--mainColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li a.active {
     color: var(--mainColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
     color: var(--blackColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus {
     color: var(--mainColor);
   }
   
-  .navbar-area.navbar-style-two .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+  .navbar-area.navbar-style-one .texap-nav .navbar .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
     color: var(--mainColor);
   }
   
@@ -275,8 +277,8 @@
   }
   
   .texap-nav .navbar .navbar-nav .nav-item a {
-    position: relative;
-    color: var(--whiteColor);
+    /* position: relative; */
+    color: var(--navbarSticky);
     -webkit-transition: var(--transition);
     transition: var(--transition);
     font-weight: 600;
@@ -286,9 +288,13 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .navbar-area.is-sticky .texap-nav .navbar .navbar-nav .nav-item a {
+    color: var(--whiteColor);
+  }
   
   .texap-nav .navbar .navbar-nav .nav-item a:hover, .texap-nav .navbar .navbar-nav .nav-item a.active {
-    color: var(--whiteColor);
+    color: var(--mainColor);
   }
   
   .texap-nav .navbar .navbar-nav .nav-item .dropdown-toggle {
