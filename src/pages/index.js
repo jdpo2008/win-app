@@ -7,6 +7,7 @@ import MainBanner from "@components/Home/MainBanner";
 import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
 import ProductServices from "@components/Home/ProductServices";
 import ContactForm from "@components/Home/ContactForm";
+import Cliengo from "@components/Home/Cliengo";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <ContactForm />
 
       <Footer />
+
+      <Cliengo />
     </>
   );
 }

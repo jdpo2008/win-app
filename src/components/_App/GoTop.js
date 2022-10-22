@@ -39,7 +39,7 @@ const GoTop = ({ scrollStepInPx, delayInMs }) => {
               bottom: 0;
               z-index: 4;
               opacity: 0;
-              right: 20px;
+              left: 20px;
               width: 45px;
               height: 45px;
               position: fixed;

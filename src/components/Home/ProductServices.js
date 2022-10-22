@@ -34,6 +34,7 @@ const ProductServices = () => {
             <StyledTab
               className="product-area-tabs-item"
               label={product.nombre}
+              key={product.id}
             />
           );
         })}
@@ -43,7 +44,7 @@ const ProductServices = () => {
       <div className="product-area-tabs-panel">
         {Products.map((product, i = index) => {
           return (
-            <StyledTabPanel value={value} index={i}>
+            <StyledTabPanel value={value} index={i} key={i}>
               Item {i}
             </StyledTabPanel>
           );
