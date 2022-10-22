@@ -13,6 +13,11 @@ import "../../node_modules/react-modal-video/css/modal-video.min.css";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "react-image-lightbox/style.css";
 import "react-tabs/style/react-tabs.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
 // Global CSS
 import "@public/css/styles.css";
 

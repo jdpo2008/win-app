@@ -11,6 +11,12 @@
     "prod:up": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.10",
+    "@mui/styled-engine-sc": "^5.10.6",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-accessible-accordion": "^5.0.0",
@@ -21,6 +27,7 @@
     "react-owl-carousel3": "^2.2.5",
     "react-tabs": "^5.1.0",
     "sass": "^1.55.0",
+    "styled-components": "^5.3.6",
     "swiper": "^8.4.4"
   },
   "devDependencies": {

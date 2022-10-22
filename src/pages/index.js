@@ -4,7 +4,9 @@ import Footer from "@components/_App/Footer";
 
 import AppScreenshots from "@components/Home/AppScreenshots";
 import MainBanner from "@components/Home/MainBanner";
-import PricingPlan from "@components/Home/PricingPlan";
+import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
+import ProductServices from "@components/Home/ProductServices";
+import ContactForm from "@components/Home/ContactForm";
 
 export default function Home() {
   return (
@@ -15,7 +17,13 @@ export default function Home() {
 
       <AppScreenshots />
 
-      <PricingPlan />
+      <CharacteristicsPlan />
+
+      <ProductServices />
+
+      {/* <PricingPlan /> */}
+
+      <ContactForm />
 
       <Footer />
     </>

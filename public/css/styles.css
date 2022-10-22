@@ -15,9 +15,12 @@ This files table contents are outlined below >>>>>
 @import url(../css/pages/home.css);
 @import url(../css/pages/error.css);
 
+
 /* Default CSS */
 /* Google Font Family url */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons");
+
 /* Global Variables */
 :root {
   --fontSize: 14px;
@@ -115,6 +118,23 @@ p:last-child {
   padding-bottom: 75px;
 }
 
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
+}
+
+.pt-25 {
+  padding-top: 25px;
+}
+
+.pb-25 {
+  padding-bottom: 25px;
+}
+
+
 .bg-F7F7FF {
   background-color: #F7F7FF;
 }
@@ -155,7 +175,7 @@ p:last-child {
   bottom: 0;
   z-index: -1;
   border-radius: 30px;
-  background: var(--gradientColor);
+  background: rgb(241, 105, 13);
 }
 
 .default-btn:hover {

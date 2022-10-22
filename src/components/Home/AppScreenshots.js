@@ -18,7 +18,7 @@ import "swiper/css/pagination";
 const AppScreenshots = () => {
   return (
     <>
-      <div className="screenshots-area pb-100">
+      <div className="screenshots-area">
         <div className="">
           {/* <div className="section-title">
             <span className="sub-title">APP SCREENS</span>

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Link from "@utils/ActiveLink";
 
 const NavbarStyle = () => {
@@ -35,7 +35,11 @@ const NavbarStyle = () => {
             <nav className="navbar navbar-expand-md navbar-light bg-light">
               <Link href="/">
                 <a className="navbar-brand">
-                  <img src="/images/logo.png" alt="logo" />
+                  <img
+                    className="logo"
+                    src="/images/logo_blanco.png"
+                    alt="logo"
+                  />
                 </a>
               </Link>
 
@@ -68,29 +72,40 @@ const NavbarStyle = () => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/" activeClassName="active">
+                    <Link href="/blog" activeClassName="active">
                       <a
                         onClick={(e) => e.preventDefault()}
                         className="nav-link"
                       >
-                        Secciones
+                        Blog
                       </a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/" activeClassName="active">
+                    <Link href="/postula" activeClassName="active">
                       <a
                         onClick={(e) => e.preventDefault()}
                         className="nav-link"
                       >
-                        Blogs
+                        Postula
                       </a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/" activeClassName="active">
+                    <Link href="/afiliaciones" activeClassName="active">
+                      <a
+                        onClick={(e) => e.preventDefault()}
+                        className="nav-link"
+                      >
+                        Afiliaciones
+                      </a>
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link href="/contacto" activeClassName="active">
                       <a
                         onClick={(e) => e.preventDefault()}
                         className="nav-link"
