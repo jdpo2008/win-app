@@ -1,6 +1,4 @@
 import * as React from "react";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 
 const StyledTabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -14,9 +12,15 @@ const StyledTabPanel = (props) => {
       {...other}
     >
       {value === index && (
-        <Box>
-          <Typography>{children}</Typography>
-        </Box>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            width: "cal(100vw)",
+          }}
+        >
+          {children}
+        </div>
       )}
     </div>
   );

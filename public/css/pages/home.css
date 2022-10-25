@@ -1043,8 +1043,155 @@ Screenshots Area CSS
 
 .product-area-tabs-panel {
   margin-top: 10px;
+  text-align: center;
   padding: 10px auto;
+  width: 100%;
 }
+
+/*================================================
+  Services Area CSS
+  =================================================*/
+
+  .product-area-services-container {
+    border: 1.8px solid rgb(241, 105, 13);
+    border-radius: 25px;
+    padding: 25px;
+    width: 300px;
+    background: #fff;
+    color: rgb(241, 105, 13);
+    font-weight: bolder;
+    -webkit-box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    margin-top: 50px;
+    height: 400px;
+    /* display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; */
+   }
+
+   .product-area-services-container-promotion {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin-top: -55px;
+    margin-left: 200px;
+    padding: 7px;
+    font-size: 1.6rem;
+    background-color: rgb(241, 105, 13);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    border-radius: 10px;
+   }
+
+   .product-area-services-container:hover .product-area-services-container-promotion  {
+    color: rgb(241, 105, 13);
+    background-color: white;
+   }
+
+   .product-area-services-card-nombre {
+    color: rgb(83, 84, 87);
+   }
+
+   .product-area-services-container:hover, .product-area-services-container:hover h5 {
+    background:  rgb(241, 105, 13);
+    color: #fff;
+   }
+ 
+   .product-area-services-container  .product-area-services-card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .product-area-services-container:hover .product-area-services-card-logo {
+    background-image: url(/images/logo_color.png);
+   }
+
+   .product-area-services-card-logo {
+    width: 80px;
+    height: 60px;
+    background-image: url(/images/logo_blanco.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+   }
+
+   .product-area-services-card-velocidad {
+    color: rgb(241, 105, 13);
+    font-variant: bolder;
+   }
+
+   .product-area-services-container:hover .product-area-services-card-velocidad  {
+    background:  rgb(241, 105, 13);
+    color: #fff;
+   }
+
+   .product-area-services-card-velocidad span {
+    color: rgb(83, 84, 87);
+    font-size: 0.8rem;
+   }
+
+   .product-area-services-container:hover .product-area-services-card-velocidad span {
+    color: #fff;
+   }
+
+   .product-area-services-card-velocidad-antigua {
+    color: rgba(83, 84, 87, 0.4);
+    font-size: 0.8rem;
+    font-style: unset;
+    text-decoration:line-through;
+   }
+   .product-area-services-container:hover  .product-area-services-card-velocidad-antigua {
+    color: #fff;
+   }
+
+   .product-area-services-card-precio span {
+    font-size: 1.5rem;
+    font-weight: bolder;
+   }
+
+   .product-area-services-container:hover .product-area-services-card-precio {
+    color: #fff;
+   }
+
+   .product-area-services-card-button {
+    border: none !important;
+    background:  rgb(241, 105, 13);
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    position: sticky;
+    bottom: 0;
+   }
+
+   .product-area-services-container:hover .product-area-services-card-button {
+    background:  #fff;
+    color: rgba(83, 84, 87, 0.8);
+
+   }
+
+   .product-area-services-card-button-icon {
+    font-size: 1.5rem;
+    margin-left: 5px;
+   }
+
+   .product-area-services-container:hover .product-area-services-card-button-icon  {
+    color: green;
+    font-weight: bolder;
+   }
+
+   .product-area-services-card-features {
+    display: flex;
+   }
+ 
 
 /*================================================
   Contact Form Area CSS
@@ -1262,8 +1409,10 @@ Screenshots Area CSS
   .regions-area-tabs-panel {
     margin-top: 10px;
     padding: 10px auto;
+  
   }
 
+  
 /*================================================
   Software Integrations Area CSS
   =================================================*/
