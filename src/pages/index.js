@@ -8,6 +8,8 @@ import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
 import ProductServices from "@components/Home/ProductServices";
 import ContactForm from "@components/Home/ContactForm";
 import Cliengo from "@components/Home/Cliengo";
+import Information from "@components/Home/Information";
+import RegionsParts from "@components/Home/RegionsParts";
 
 export default function Home() {
   return (
@@ -25,6 +27,10 @@ export default function Home() {
       {/* <PricingPlan /> */}
 
       <ContactForm />
+
+      <Information />
+
+      <RegionsParts />
 
       <Footer />
 

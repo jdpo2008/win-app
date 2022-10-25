@@ -42,7 +42,7 @@ const ProductServices = () => {
         <StyledTab className="product-area-tabs-item" label="" />
       </StyledTabs>
       <div className="product-area-tabs-panel">
-        {Products.map((product, i = index) => {
+        {Products.map((product, i) => {
           return (
             <StyledTabPanel value={value} index={i} key={i}>
               Item {i}

@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import { useForm } from "react-hook-form";
 import FormHelperText from "@mui/material/FormHelperText";
-import { ErrorMessage } from "@hookform/error-message";
 
 const ContactForm = () => {
   const {
@@ -14,7 +13,7 @@ const ContactForm = () => {
   };
   return (
     <>
-      <div className="contact-form-area bg-gradient-color pb-75">
+      <div className="contact-form-area bg-gradient-color pb-25">
         <div className="contact-form-cards">
           <div className="contact-form-bg">
             <div className="pt-25 contact-form-cards-container">

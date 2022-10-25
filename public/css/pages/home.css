@@ -1146,6 +1146,125 @@ Screenshots Area CSS
 }
 
 /*================================================
+  Information Area CSS
+  =================================================*/
+
+  .information-area {}
+
+  .information-area .information-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  .information-area .information-cards .information-cards-item-01 {
+    flex: 1 1 20%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    position: absolute;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+
+  .information-area .information-cards .information-cards-item-01 h1 {
+    color: rgb(241, 105, 13);
+    font-weight: bold;
+    width: 550px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .information-area .information-cards .information-cards-item-01 h4 {
+    color: rgb(241, 105, 13);
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone span {
+    font-size: 1.4rem;
+    font-weight: bolder;
+  }
+
+
+  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .information-cards-item-01-phone-circle {
+    background-color: rgb(241, 105, 13);
+    border-radius: 30px;
+    color: #fff;
+    padding: 10px 30px;
+    width: 100%;
+  }
+
+  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .information-cards-item-01-phone-circle span {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+
+  .information-cards-item-01-phone-circle {
+    font-size: 1.6rem !important;
+  }
+
+  .information-cards-item-01-phone-circle-redes  {
+
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+
+  .information-area .information-cards .information-cards-item-02 {
+    flex: 1 1 80%;
+  }
+
+  .information-area .information-cards .information-cards-item-02 .information-cards-item-02-bg {
+    width: 100%;
+    height: 75vh;
+    background-image: url(/images/whatssap.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/*================================================
+  Regions Services Area CSS
+  =================================================*/
+
+  .regions-area-box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .regions-area-box .regions-area-tabs {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+  
+  .regions-area-tabs-item {
+    flex: 1 1 100%;
+    margin: auto 20px;
+    border: 2px solid rgb(241, 105, 13);
+    padding: 10px auto;
+  }
+  
+  .regions-area-tabs-panel {
+    margin-top: 10px;
+    padding: 10px auto;
+  }
+
+/*================================================
   Software Integrations Area CSS
   =================================================*/
 .software-integrations-area {
