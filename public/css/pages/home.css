@@ -1055,19 +1055,19 @@ Screenshots Area CSS
   .product-area-services-container {
     border: 1.8px solid rgb(241, 105, 13);
     border-radius: 25px;
-    padding: 25px;
-    width: 300px;
+    padding: 15px;
+    width: 330px;
     background: #fff;
     color: rgb(241, 105, 13);
     font-weight: bolder;
     -webkit-box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     margin-top: 50px;
-    height: 400px;
-    /* display: flex;
+    height: 470px;
+    display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-items: center; */
+    justify-content: space-around;
+    align-items: center;
    }
 
    .product-area-services-container-promotion {
@@ -1075,8 +1075,8 @@ Screenshots Area CSS
     top: 0;
     right: 0;
     width: 100%;
-    margin-top: -55px;
-    margin-left: 200px;
+    margin-top: -48px;
+    margin-left: 230px;
     padding: 7px;
     font-size: 1.6rem;
     background-color: rgb(241, 105, 13);
@@ -1110,13 +1110,13 @@ Screenshots Area CSS
    }
 
    .product-area-services-container:hover .product-area-services-card-logo {
-    background-image: url(/images/logo_color.png);
+    background-image: url(/images/logo_blanco_letras.png);
    }
 
    .product-area-services-card-logo {
     width: 80px;
     height: 60px;
-    background-image: url(/images/logo_blanco.png);
+    background-image: url(/images/logo_letras_plomo.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1168,7 +1168,6 @@ Screenshots Area CSS
     padding: 5px 20px;
     border-radius: 50px;
     font-weight: bold;
-    position: sticky;
     bottom: 0;
    }
 
@@ -1186,6 +1185,21 @@ Screenshots Area CSS
    .product-area-services-container:hover .product-area-services-card-button-icon  {
     color: green;
     font-weight: bolder;
+   }
+
+   .product-area-services-card ol {
+    padding: 0 !important;
+   }
+
+   .product-area-services-card ol li {
+    color: rgba(83, 84, 87, 0.8);
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    text-align: left;
+   }
+
+   .product-area-services-container:hover .product-area-services-card ol li {
+    color: #fff;
    }
 
    .product-area-services-card-features {

@@ -66,6 +66,11 @@ const ProductServices = () => {
                                 <span>X2</span>
                               </div>
                             )}
+                            {!service.has_promotion && (
+                              <div className="">
+                                <span>&nbsp;</span>
+                              </div>
+                            )}
                             <div className="product-area-services-card">
                               <h5 className="product-area-services-card-nombre">
                                 {service.nombre}
@@ -92,20 +97,22 @@ const ProductServices = () => {
                                 )}{" "}
                                 al mes
                               </p>
-                              {service.features &&
-                                service.features.map((f) => (
-                                  <div
-                                    key={f.id}
-                                    className="product-area-services-card-features"
-                                  >
-                                    {f.descripcion}
-                                  </div>
-                                ))}
-                              <button className="product-area-services-card-button">
-                                ¡Pidelo por WhatsApp{" "}
-                                <WhatsAppIcon className="product-area-services-card-button-icon" />
-                              </button>
+                              <ol>
+                                {service.features &&
+                                  service.features.map((f) => (
+                                    <li
+                                      key={f.id}
+                                      className="product-area-services-card-features"
+                                    >
+                                      {f.descripcion}
+                                    </li>
+                                  ))}
+                              </ol>
                             </div>
+                            <button className="product-area-services-card-button">
+                              ¡Pidelo por WhatsApp{" "}
+                              <WhatsAppIcon className="product-area-services-card-button-icon" />
+                            </button>
                           </div>
                         </div>
                       );

@@ -74,12 +74,8 @@ export const Services = [
         descripcion: "Mayor Velocidad",
       },
       {
-        id: 4,
-        descripcion: "Mesh",
-      },
-      {
         id: 5,
-        descripcion: "Mcafee",
+        descripcion: "Mesh + Mcafee",
       },
     ],
   },
@@ -182,12 +178,8 @@ export const Services = [
         descripcion: "Mayor Velocidad",
       },
       {
-        id: 4,
-        descripcion: "Mesh",
-      },
-      {
         id: 5,
-        descripcion: "Mcafee",
+        descripcion: "Mesh + Mcafee",
       },
       {
         id: 6,
