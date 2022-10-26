@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="footer-content">
             <Link href="/">
               <a className="logo">
-                <img src="/images/logo2.png" alt="logo" />
+                <img src="/images/logo_blanco.png" alt="logo" />
               </a>
             </Link>
 
@@ -45,28 +45,28 @@ const Footer = () => {
 
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link href="/services">
-                  <a className="nav-link">Services</a>
+                <Link href="/">
+                  <a className="nav-link">Home</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/blog">
+                  <a className="nav-link">Blog</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/postula">
+                  <a className="nav-link">Postula</a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="/afiliaciones">
+                  <a className="nav-link">Afiliaciones</a>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link href="/contact">
-                  <a className="nav-link">Support</a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/privacy-policy">
-                  <a className="nav-link">Privacy Policy</a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/faq">
-                  <a className="nav-link">FAQ's</a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/contact">
-                  <a className="nav-link">Contact</a>
+                  <a className="nav-link">Contacta</a>
                 </Link>
               </li>
             </ul>

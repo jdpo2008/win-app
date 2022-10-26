@@ -37,6 +37,11 @@ This files table contents are outlined below >>>>>
 
 }
 
+/* #popupIframe, #chatIframe {
+  float:left!important;
+  right:auto!important;
+} */
+
 body {
   margin: 0;
   padding: 0;
