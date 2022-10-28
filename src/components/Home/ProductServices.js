@@ -67,7 +67,7 @@ const ProductServices = () => {
                               </div>
                             )}
                             {!service.has_promotion && (
-                              <div className="">
+                              <div className="product-area-services-container-promotion-x">
                                 <span>&nbsp;</span>
                               </div>
                             )}

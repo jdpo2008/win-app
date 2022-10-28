@@ -3,6 +3,10 @@ import Head from "next/head";
 import GoTop from "./GoTop";
 import Preloader from "./Preloader";
 
+import NavbarStyle from "./NavbarStyle";
+import Footer from "./Footer";
+import Cliengo from "./Cliengo";
+
 const Layout = ({ children }) => {
   // Preloader
   const [loader, setLoader] = React.useState(true);
@@ -20,11 +24,17 @@ const Layout = ({ children }) => {
         <title>Wiin - Next.js App</title>
       </Head>
 
+      <NavbarStyle />
+
       {children}
 
       {loader ? <Preloader /> : null}
 
       {/* <GoTop scrollStepInPx="100" delayInMs="10.50" /> */}
+
+      <Cliengo />
+
+      <Footer />
     </>
   );
 };

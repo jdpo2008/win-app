@@ -1075,7 +1075,7 @@ Screenshots Area CSS
     top: 0;
     right: 0;
     width: 100%;
-    margin-top: -48px;
+    margin-top: -60px;
     margin-left: 230px;
     padding: 7px;
     font-size: 1.6rem;
@@ -1087,6 +1087,24 @@ Screenshots Area CSS
     display: flex;
     border-radius: 10px;
    }
+
+   .product-area-services-container-promotion-x {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    margin-top: -60px;
+    margin-left: 230px;
+    padding: 7px;
+    font-size: 1.6rem;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    display: flex;
+    border-radius: 10px;
+   }
+
 
    .product-area-services-container:hover .product-area-services-container-promotion  {
     color: rgb(241, 105, 13);

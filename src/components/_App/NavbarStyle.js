@@ -62,56 +62,31 @@ const NavbarStyle = () => {
                 <ul className="navbar-nav">
                   <li className="nav-item">
                     <Link href="/" activeClassName="active">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="nav-link"
-                      >
-                        Home
-                      </a>
+                      <a className="nav-link">Home</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="/blog" activeClassName="active">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="nav-link"
-                      >
-                        Blog
-                      </a>
+                      <a className="nav-link">Blog</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="/postula" activeClassName="active">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="nav-link"
-                      >
-                        Postula
-                      </a>
+                      <a className="nav-link">Postula</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="/afiliaciones" activeClassName="active">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="nav-link"
-                      >
-                        Afiliaciones
-                      </a>
+                      <a className="nav-link">Afiliaciones</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="/contacto" activeClassName="active">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="nav-link"
-                      >
-                        Contactos
-                      </a>
+                      <a className="nav-link">Contactos</a>
                     </Link>
                   </li>
 
@@ -418,7 +393,7 @@ const NavbarStyle = () => {
               </div>
 
               <div className="others-options">
-                <Link href="/contact">
+                <Link href="/error">
                   <a className="default-btn">Get Started</a>
                 </Link>
               </div>

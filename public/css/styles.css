@@ -14,7 +14,8 @@ This files table contents are outlined below >>>>>
 
 @import url(../css/pages/home.css);
 @import url(../css/pages/error.css);
-
+@import url(../css/pages/blog.css);
+@import url(../css/pages/blog-details.css);
 
 /* Default CSS */
 /* Google Font Family url */
@@ -163,8 +164,8 @@ p:last-child {
   color: var(--whiteColor);
   -webkit-transition: var(--transition);
   transition: var(--transition);
-  -webkit-box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
-          box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+  /* -webkit-box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25);
+          box-shadow: 0px 12px 35px rgba(237, 39, 117, 0.25); */
   font-size: var(--fontSize);
   font-weight: 600;
 }
@@ -561,23 +562,23 @@ textarea.form-control {
 .page-title-area {
   z-index: 1;
   position: relative;
-  background: linear-gradient(50.48deg, #ED2775 -2.06%, #FF7448 93.55%);
+  background: linear-gradient(50.48deg, #191919 -2.06%, #202020 93.55%);
   padding-bottom: 100px;
-  padding-top: 180px;
+  padding-top: 100px;
 }
 
-.page-title-area::before {
+/* .page-title-area::before {
   left: 0;
   right: 0;
-  top: 82px;
+  top: 0px;
   height: 1px;
   content: '';
   z-index: -1;
   opacity: .2;
   position: absolute;
   background-color: var(--whiteColor);
-}
-
+} */
+/* 
 .page-title-area.page-title-style-two {
   background: #eef5fc;
 }
@@ -585,7 +586,7 @@ textarea.form-control {
 .page-title-area.page-title-style-two::before {
   background-color: var(--blackColor);
   opacity: .04;
-}
+} */
 
 .page-title-area.page-title-style-two .page-title-content h2 {
   color: var(--blackColor);
@@ -626,7 +627,7 @@ textarea.form-control {
 }
 
 .page-title-content h2 {
-  color: var(--whiteColor);
+  color: var(--navbarSticky);
   margin-bottom: 0;
   font-size: 40px;
 }
@@ -639,7 +640,7 @@ textarea.form-control {
 }
 
 .page-title-content ul li {
-  color: var(--whiteColor);
+  color: var(--navbarSticky);
   display: inline-block;
   position: relative;
   font-size: 16px;
@@ -661,7 +662,7 @@ textarea.form-control {
 }
 
 .page-title-content ul li a {
-  color: var(--whiteColor);
+  color: var(--navbarSticky);
 }
 
 .page-title-content ul li::before {
@@ -674,7 +675,7 @@ textarea.form-control {
   position: absolute;
   width: 5px;
   height: 5px;
-  background-color: var(--whiteColor);
+  background-color: var(--navbarSticky);
   border-radius: 50%;
 }
 
