@@ -1,27 +1,83 @@
 import React from "react";
 import Link from "next/link";
+import { styled } from "@mui/material/styles";
+
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Button from "@mui/material/Button";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Search from "@mui/icons-material/Search";
+
+const ButtonStyled = styled(Button)({
+  boxShadow: "none",
+  textTransform: "none",
+  fontSize: 14,
+  padding: "0px 0px",
+  border: "1px solid",
+  lineHeight: 1,
+  backgroundColor: "#dd5b10",
+  borderColor: "#dd5b10",
+  color: "#fff",
+  height: "39px",
+  width: "10%",
+  "&:hover": {
+    backgroundColor: "#000",
+    borderColor: "#000",
+    color: "#dd5b10",
+  },
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "#dd5b10",
+    borderColor: "#dd5b10",
+  },
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+  },
+});
 
 const BlogSidebar = () => {
+  const [values, setValues] = React.useState({
+    categoria: "",
+    search: "",
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickSearch = () => {
+    setValues({
+      ...values,
+    });
+  };
+
   return (
     <>
       <div className="widget-area">
         <div className="widget widget_search">
-          <form className="search-form">
-            <label>
-              <input
-                type="search"
-                className="search-field"
-                placeholder="Search..."
-              />
-            </label>
-            <button type="submit">
-              <i className="ri-search-2-line"></i>
-            </button>
-          </form>
+          <FormControl
+            sx={{ marginTop: 2, marginBottom: 2, width: "35ch" }}
+            size="small"
+          >
+            <InputLabel htmlFor="filled-adornment-Search">Search</InputLabel>
+            <OutlinedInput
+              id="filled-adornment-Search"
+              type="text"
+              value={values.search}
+              onChange={handleChange("search")}
+            />
+          </FormControl>
+          <ButtonStyled
+            aria-label="toggle Search visibility"
+            onClick={handleClickSearch}
+            sx={{ marginTop: 2, marginRight: 0 }}
+          >
+            <Search />
+          </ButtonStyled>
         </div>
 
         <div className="widget widget_pakap_posts_thumb">
-          <h3 className="widget-title">Popular Posts</h3>
+          <h3 className="widget-title">Popular Blogs</h3>
 
           <article className="item">
             <Link href="/blog-details">
@@ -97,7 +153,7 @@ const BlogSidebar = () => {
         </div>
 
         <div className="widget widget_categories">
-          <h3 className="widget-title">Categories</h3>
+          <h3 className="widget-title">Categorias</h3>
 
           <ul>
             <li>

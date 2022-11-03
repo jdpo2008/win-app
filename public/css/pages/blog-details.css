@@ -6,13 +6,13 @@ Blog Details Area CSS
 }
 
 .blog-details-desc .article-image .tag {
-  background: linear-gradient(279.99deg, #9F5FF1 -1.19%, #FF54B0 50.99%, #FF9F5A 100%);
+  background: linear-gradient(279.99deg, #f1610e -1.19%, #e28024 50.99%, #f88634 100%);
   color: var(--whiteColor);
   position: absolute;
-  border-radius: 2px;
-  padding: 4px 15px;
-  left: 25px;
-  top: 25px;
+  border-radius: 40px;
+  padding: 2px 10px;
+  left: 15px;
+  top: 15px;
   font-size: 13px;
   font-weight: 500;
 }
@@ -219,6 +219,7 @@ Blog Details Area CSS
 
 .blog-details-desc .article-footer .article-share .social li {
   display: inline-block;
+  margin: 0 2px;
 }
 
 .blog-details-desc .article-footer .article-share .social li span {
@@ -597,8 +598,9 @@ Widget Area CSS
 }
 
 .widget-area .widget_search {
-  padding: 0;
+  padding: 10px;
   border: none;
+  display: flex;
 }
 
 .widget-area .widget_search form {
@@ -632,21 +634,6 @@ Widget Area CSS
   border-color: var(--mainColor);
 }
 
-.widget-area .widget_search form button {
-  right: 0;
-  bottom: 0;
-  outline: 0;
-  width: 50px;
-  height: 50px;
-  border: none;
-  font-size: 18px;
-  position: absolute;
-  color: var(--whiteColor);
-  border-radius: 0 5px 5px 0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  background-color: var(--mainColor);
-}
 
 .widget-area .widget_search form button:hover {
   color: var(--whiteColor);
@@ -773,7 +760,7 @@ Widget Area CSS
 }
 
 .widget-area .widget_categories ul li a:hover {
-  color: var(--mainColor);
+  color: #dd5b10;
 }
 
 .widget-area .widget_categories ul li:last-child {
@@ -794,7 +781,7 @@ Widget Area CSS
 }
 
 .widget-area .widget_tag_cloud .tagcloud a:hover {
-  background-color: var(--mainColor);
+  background-color: #dd5b10;
   color: var(--whiteColor);
 }
 

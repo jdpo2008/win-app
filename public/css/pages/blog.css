@@ -37,9 +37,9 @@ Blog Area CSS
     margin-top: 15px;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    /* justify-content: space-between;
     align-items: baseline;
-    align-content: space-between;
+    align-content: space-between; */
     min-height: 300px;
 }
 
@@ -117,6 +117,7 @@ Blog Area CSS
     border-radius: 5px;
     font-weight: bolder;
     background-color: #fff;
+    width: 130px;
 }
 
 .single-blog-post .content .post-btn .post-btn-icon {
