@@ -110,6 +110,167 @@ export default function Postula() {
               Conoce los testimonios de <span>nuestro equipo WIN </span>
             </h5>
           </div>
+          <div className="team-area pt-50 pb-50">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-3 col-md-6 col-sm-6">
+                  <div className="single-team-member">
+                    <div className="image">
+                      <img src="/images/team/team2.jpg" alt="image" />
+                    </div>
+                    <div className="content">
+                      <p style={{ paddingTop: "5px", textAlign: "justify" }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod temporibus excepturi magni animi fugiat quis porro
+                        eligendi quasi itaque, debitis eaque eveniet.
+                      </p>
+                      <h3>Daniel Villegas</h3>
+                      <span>Gestor Comercial</span>
+                    </div>
+                    <ul className="social-links">
+                      <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <i className="ri-facebook-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          <i className="ri-linkedin-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/" target="_blank">
+                          <i className="ri-twitter-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                          <i className="ri-instagram-line"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 col-sm-6">
+                  <div className="single-team-member">
+                    <div className="image">
+                      <img src="/images/team/team1.jpg" alt="image" />
+                    </div>
+                    <div className="content">
+                      <p style={{ paddingTop: "5px", textAlign: "justify" }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod temporibus excepturi magni animi fugiat quis porro
+                        eligendi quasi itaque, debitis eaque eveniet.
+                      </p>
+                      <h3>Anabel Mejías</h3>
+                      <span>Ejecutivo de Ventas</span>
+                    </div>
+                    <ul className="social-links">
+                      <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <i className="ri-facebook-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          <i className="ri-linkedin-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/" target="_blank">
+                          <i className="ri-twitter-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                          <i className="ri-instagram-line"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 col-sm-6">
+                  <div className="single-team-member">
+                    <div className="image">
+                      <img src="/images/team/team3.jpg" alt="image" />
+                    </div>
+                    <div className="content">
+                      <p style={{ paddingTop: "5px", textAlign: "justify" }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod temporibus excepturi magni animi fugiat quis porro
+                        eligendi quasi itaque, debitis eaque eveniet.
+                      </p>
+                      <h3>Sarah Taylor</h3>
+                      <span>Web Designer</span>
+                    </div>
+                    <ul className="social-links">
+                      <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <i className="ri-facebook-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          <i className="ri-linkedin-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/" target="_blank">
+                          <i className="ri-twitter-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                          <i className="ri-instagram-line"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="col-lg-3 col-md-6 col-sm-6">
+                  <div className="single-team-member">
+                    <div className="image">
+                      <img src="/images/team/team4.jpg" alt="image" />
+                    </div>
+                    <div className="content">
+                      <p style={{ paddingTop: "5px", textAlign: "justify" }}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quod temporibus excepturi magni animi fugiat quis porro
+                        eligendi quasi itaque, debitis eaque eveniet.
+                      </p>
+                      <h3>Alina Aly</h3>
+                      <span>SEO Consultant</span>
+                    </div>
+                    <ul className="social-links">
+                      <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                          <i className="ri-facebook-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                          <i className="ri-linkedin-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/" target="_blank">
+                          <i className="ri-twitter-fill"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                          <i className="ri-instagram-line"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
