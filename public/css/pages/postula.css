@@ -1,0 +1,147 @@
+.postula-area {
+    width: 100%;
+    padding-top: 25px;
+}
+
+.postula-area .postula-area-container .postula-area-image {
+    height: 80vh;
+    background-image: url(/images/postula/web_banner_postula.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: inherit;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: auto 60px;
+}
+
+
+.postula-area .postula-area-container .postula-area-image div h4 {
+    color: rgb(241, 105, 13);
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.postula-area .postula-area-container .postula-area-image div h3 {
+    color: rgb(241, 105, 13);
+    font-weight: bolder;
+    font-size: 55px;
+
+}
+
+.postula-area .postula-area-container .postula-area-empleos {
+    background-color: rgb(241, 105, 13);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: flex-start;
+    padding:  50px;
+}
+
+.postula-area .postula-area-container .postula-area-empleos h3 {
+    color: #fff;
+    width: 65%;
+    font-size: 40px;
+}
+
+.postula-area .postula-area-container .postula-area-empleos .postula-area-empleos-card {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 100%;
+}
+
+.postula-area .postula-area-container .postula-area-empleos .postula-area-empleos-card .postula-area-empleos-content {
+    flex: 1 1 20%;
+    text-align: center;
+}
+
+.postula-area .postula-area-container .postula-area-empleos .postula-area-empleos-card .postula-area-empleos-content img {
+    width: 160px;
+}
+
+.postula-area .postula-area-container .postula-area-empleos .postula-area-empleos-card .postula-area-empleos-content h6 {
+    color: #fff;
+    padding-top: 30px;
+}
+
+.postula-area .postula-area-container .postula-area-ventajas {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.postula-area-ventajas h5 {
+    font-size: 35px;
+    flex: 1 1 100%;
+}
+
+.postula-area-ventajas h5 span {
+    color: rgb(241, 105, 13);
+}
+
+.postula-area-ventajas  .postula-area-ventajas-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: row nowrap;
+    flex: 1 1 100%;
+}
+
+.postula-area-ventajas  .postula-area-ventajas-container .postula-area-ventajas-container-card {
+    text-align: center;
+    flex: 1 1 25%;
+}
+
+.postula-area-ventajas-container-card-bg {
+    background-color: rgb(241, 105, 13);
+    padding: 40px;
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px 0 50px 0;
+}
+
+.postula-area-ventajas-container-card-bg img {
+    height: 110px;
+    width: 100px;
+}
+
+.postula-area-ventajas-container-card p {
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    width: 200px;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+.postula-area-testimonio {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+.postula-area-testimonio h5 {
+    font-size: 35px;
+    width: 40%;
+    text-align: center;
+}
+
+.postula-area-testimonio h5 span {
+    color: rgb(241, 105, 13);
+    font-weight: 500;
+}
+
+
+@media only screen and (min-width: 767px) {
+   
+}
