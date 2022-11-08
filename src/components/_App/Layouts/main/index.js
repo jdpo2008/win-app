@@ -7,7 +7,7 @@ import NavbarStyle from "./NavbarStyle";
 import Footer from "./Footer";
 import Cliengo from "./Cliengo";
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children }) => {
   // Preloader
   const [loader, setLoader] = React.useState(true);
   React.useEffect(() => {
@@ -16,14 +16,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Head>
-        {/* Required meta tags */}
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <title>Wiin - Next.js App</title>
-      </Head>
-
       <NavbarStyle />
 
       {children}
@@ -39,4 +31,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout;
+export default MainLayout;

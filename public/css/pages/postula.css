@@ -141,6 +141,42 @@
     font-weight: 500;
 }
 
+.postula-area-formulario {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.postula-area-formulario h5 {
+    font-size: 35px;
+    text-align: center;
+    width: 40%;
+}
+
+.postula-area-formulario h5 span {
+    color: rgb(241, 105, 13);
+    font-weight: 500;
+}
+
+.postula-area-formulario .p {
+    color: #000;
+    font-size: 25px;
+    font-weight: bolder;
+    line-height: 1.2;
+    padding-top: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.postula-area-formulario .form {
+    background-color: rgb(241, 105, 13);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
 
 @media only screen and (min-width: 767px) {
    

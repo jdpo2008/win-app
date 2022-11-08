@@ -1,11 +1,19 @@
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import Page from "@components/_App/Page";
+import Layout from "@components/_App/Layouts";
+
 import PageBanner from "@components/Common/PageBanner";
 import RelatedPost from "@components/Blog/RelatedPost";
 import BlogSidebar from "@components/Blog/BlogSidebar";
 
-const BlogDetails = () => {
+BlogDetails.getLayout = function getLayout(page) {
+  return <Layout variant="main">{page}</Layout>;
+};
+
+export default function BlogDetails() {
   const router = useRouter();
   const { blogId } = router.query;
 
@@ -22,7 +30,7 @@ const BlogDetails = () => {
   }, [blogId]);
 
   return (
-    <>
+    <Page title="Blog Detalle">
       <PageBanner
         pageTitle="Tu Blog favorito de INTERNET"
         homePageUrl="/"
@@ -160,8 +168,6 @@ const BlogDetails = () => {
           </div>
         </div>
       </div>
-    </>
+    </Page>
   );
-};
-
-export default BlogDetails;
+}

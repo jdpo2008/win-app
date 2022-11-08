@@ -4,6 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
 
+import Page from "@components/_App/Page";
+import Layout from "@components/_App/Layouts";
+
 import Container from "@mui/material/Container";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -61,6 +64,10 @@ const ButtonStyled = styled(Button)({
   },
 });
 
+Blog.getLayout = function getLayout(page) {
+  return <Layout variant="main">{page}</Layout>;
+};
+
 export default function Blog() {
   const [values, setValues] = React.useState({
     categoria: "",
@@ -80,7 +87,7 @@ export default function Blog() {
   const router = useRouter();
 
   return (
-    <>
+    <Page title="Blog">
       <PageBanner
         pageTitle="Tu Blog favorito de INTERNET"
         homePageUrl="/"
@@ -656,6 +663,6 @@ export default function Blog() {
           </div>
         </div>
       </div>
-    </>
+    </Page>
   );
 }

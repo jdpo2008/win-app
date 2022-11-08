@@ -1,5 +1,7 @@
 import React from "react";
 
+import Head from "next/head";
+
 import "@public/css/bootstrap.min.css";
 import "@public/css/fontawesome.min.css";
 import "@public/css/remixicon.css";
@@ -21,13 +23,16 @@ import "@fontsource/roboto/700.css";
 // Global CSS
 import "@public/css/styles.css";
 
-import Layout from "@components/_App/Layout";
-
 function MyApp({ Component, pageProps }) {
+  const getLayout = Component.getLayout ?? ((page) => page);
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      {getLayout(<Component {...pageProps} />)}
+    </>
   );
 }
 
