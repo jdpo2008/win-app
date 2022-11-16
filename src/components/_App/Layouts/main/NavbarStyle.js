@@ -90,88 +90,92 @@ const NavbarStyle = () => {
                     </Link>
                   </li>
 
-                  <li className="nav-item">
-                    <Link href="#">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="dropdown-toggle nav-link"
-                      >
-                        Mantenimiento
-                      </a>
-                    </Link>
-
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/maintenance/security/users"
-                          activeClassName="active"
+                  {false && (
+                    <li className="nav-item">
+                      <Link href="#">
+                        <a
+                          onClick={(e) => e.preventDefault()}
+                          className="dropdown-toggle nav-link"
                         >
-                          <a onClick={toggleNavbar} className="nav-link">
-                            Empleos
-                          </a>
-                        </Link>
-                      </li>
+                          Mantenimiento
+                        </a>
+                      </Link>
 
-                      <li className="nav-item">
-                        <Link href="/features-2" activeClassName="active">
-                          <a onClick={toggleNavbar} className="nav-link">
-                            Regiones
-                          </a>
-                        </Link>
-                      </li>
+                      <ul className="dropdown-menu">
+                        <li className="nav-item">
+                          <Link
+                            href="/maintenance/security/users"
+                            activeClassName="active"
+                          >
+                            <a onClick={toggleNavbar} className="nav-link">
+                              Empleos
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li className="nav-item">
-                        <Link href="/features-2" activeClassName="active">
-                          <a onClick={toggleNavbar} className="nav-link">
-                            Categorias
-                          </a>
-                        </Link>
-                      </li>
+                        <li className="nav-item">
+                          <Link href="/features-2" activeClassName="active">
+                            <a onClick={toggleNavbar} className="nav-link">
+                              Regiones
+                            </a>
+                          </Link>
+                        </li>
 
-                      <li className="nav-item">
-                        <Link href="/features-2" activeClassName="active">
-                          <a onClick={toggleNavbar} className="nav-link">
-                            Blogs
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
+                        <li className="nav-item">
+                          <Link href="/features-2" activeClassName="active">
+                            <a onClick={toggleNavbar} className="nav-link">
+                              Categorias
+                            </a>
+                          </Link>
+                        </li>
 
-                  <li className="nav-item">
-                    <Link href="#">
-                      <a
-                        onClick={(e) => e.preventDefault()}
-                        className="dropdown-toggle nav-link"
-                      >
-                        Seguridad
-                      </a>
-                    </Link>
+                        <li className="nav-item">
+                          <Link href="/features-2" activeClassName="active">
+                            <a onClick={toggleNavbar} className="nav-link">
+                              Blogs
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                  )}
 
-                    <ul className="dropdown-menu">
-                      <li className="nav-item">
-                        <Link
-                          href="/seguridad/usuarios"
-                          activeClassName="active"
+                  {false && (
+                    <li className="nav-item">
+                      <Link href="#">
+                        <a
+                          onClick={(e) => e.preventDefault()}
+                          className="dropdown-toggle nav-link"
                         >
-                          <a onClick={toggleNavbar} className="nav-link">
-                            Usuarios
-                          </a>
-                        </Link>
-                      </li>
+                          Seguridad
+                        </a>
+                      </Link>
 
-                      <li className="nav-item">
-                        <Link
-                          href="/seguridad/perfiles"
-                          activeClassName="active"
-                        >
-                          <a onClick={toggleNavbar} className="nav-link">
-                            Perfiles
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
+                      <ul className="dropdown-menu">
+                        <li className="nav-item">
+                          <Link
+                            href="/seguridad/usuarios"
+                            activeClassName="active"
+                          >
+                            <a onClick={toggleNavbar} className="nav-link">
+                              Usuarios
+                            </a>
+                          </Link>
+                        </li>
+
+                        <li className="nav-item">
+                          <Link
+                            href="/seguridad/perfiles"
+                            activeClassName="active"
+                          >
+                            <a onClick={toggleNavbar} className="nav-link">
+                              Perfiles
+                            </a>
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+                  )}
 
                   {/* <li className="nav-item">
                     <Link href="#">
