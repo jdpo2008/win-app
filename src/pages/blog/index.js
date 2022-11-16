@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
 import { styled } from "@mui/material/styles";
 
 import Page from "@components/_App/Page";
@@ -70,7 +69,7 @@ Blog.getLayout = function getLayout(page) {
 
 export default function Blog() {
   const [values, setValues] = React.useState({
-    categoria: "",
+    categoria: 0,
     search: "",
   });
 
@@ -106,12 +105,15 @@ export default function Blog() {
             onChange={handleChange("categoria")}
             color="warning"
           >
-            <MenuItem value="">
-              <em>None</em>
+            <MenuItem value={0}>
+              <em>Todas</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>Entretenimiento</MenuItem>
+            <MenuItem value={20}>Productividad</MenuItem>
+            <MenuItem value={30}>Educacion</MenuItem>
+            <MenuItem value={40}>Seguridad en internet</MenuItem>
+            <MenuItem value={50}>Actualidad</MenuItem>
+            <MenuItem value={60}>Tecnologia</MenuItem>
           </CssSelect>
         </FormControl>
 

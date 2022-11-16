@@ -18,6 +18,7 @@ This files table contents are outlined below >>>>>
 @import url(../css/pages/team.css);
 @import url(../css/pages/blog.css);
 @import url(../css/pages/blog-details.css);
+@import url(../css/pages/profile-authentication.css);
 
 /* Default CSS */
 /* Google Font Family url */
@@ -67,7 +68,7 @@ a {
 }
 
 a:hover {
-  color: var(--mainColor);
+  color: #da7211;
   text-decoration: none;
 }
 
@@ -85,6 +86,7 @@ a:hover {
 }
 
 img {
+  display: inline !important;
   max-width: 100%;
   height: auto;
 }
@@ -92,7 +94,7 @@ img {
 p {
   color: var(--paragraphColor);
   font-size: var(--fontSize);
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   line-height: 1.8;
 }
 
@@ -187,8 +189,8 @@ p:last-child {
 }
 
 .default-btn:hover {
-  background-color: var(--mainColor);
-  color: var(--whiteColor);
+  background-color: #fff;
+  color: rgb(241, 105, 13);
 }
 
 .default-btn:hover::before {
@@ -740,6 +742,36 @@ textarea.form-control {
   margin-right: 0;
 }
 
+.modal.flip {
+		perspective: 1300px;
+}
+
+.modal.flip .modal-dialog {
+	opacity: 0;
+			transform: rotateY(-70deg);
+			transition: all .3s;
+}
+
+.modal.flip.show .modal-dialog {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.modal-title {
+  display: flex !important;
+  justify-content: space-around !important;
+  width: 100% !important;
+}
+
+.btn-close:hover {
+  color: #fff !important;
+}
+
+.btn-secondary:hover {
+  color: #fff !important;
+  background-color: rgb(241, 105, 13) !important;
+  border-color: rgb(241, 105, 13) !important;
+}
 /* keyframes-css */
 @-webkit-keyframes ripple {
   0% {

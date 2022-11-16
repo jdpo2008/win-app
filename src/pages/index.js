@@ -14,7 +14,7 @@ Home.getLayout = function getLayout(page) {
   return <Layout variant="main">{page}</Layout>;
 };
 
-export default function Home() {
+export default function Home(props) {
   return (
     <Page title="Home">
       <AppScreenshots />

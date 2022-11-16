@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 import { useForm, Controller } from "react-hook-form";
+import AddIcon from "@mui/icons-material/AttachFile";
+
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import PageBanner from "@components/Common/PageBanner";
@@ -88,6 +90,7 @@ export default function Postula() {
       .required("EL documento de identidad es requerido"),
     email: Yup.string().required("El correo electronico es requerido"),
     celular: Yup.string().required("El celular es requerido"),
+    adjuntar: Yup.string().required("El CV es requerido"),
   });
 
   const defaultValues = {
@@ -99,6 +102,7 @@ export default function Postula() {
     celular: "",
     experiencia: "",
     puesto: "",
+    adjuntar: "",
   };
 
   const methods = useForm({
@@ -116,6 +120,16 @@ export default function Postula() {
   } = methods;
 
   const values = watch();
+
+  const [filename, setFilename] = React.useState("");
+
+  const handleFilesChange = ({ target }) => {
+    console.log("Cambio....", target.files[0].name);
+    setValue("adjuntar", "");
+    if (target?.files[0] && target.files.length > 0) {
+      setValue("adjuntar", target.files[0].name);
+    }
+  };
 
   const onSubmit = async () => {
     try {
@@ -304,6 +318,38 @@ export default function Postula() {
                           ))}
                         </RHFSelect>
                       </Box>
+                      <Stack
+                        justifyItems={"center"}
+                        direction={"row"}
+                        sx={{ mt: 3 }}
+                      >
+                        <RHFTextField name="adjuntar" label="Adjuntar CV" />
+                        {/* <TextField
+                          label="Adjuntar CV"
+                          fullWidth
+                          size="small"
+                          value={filename}
+                        /> */}
+                        <Button
+                          variant="contained"
+                          component="label"
+                          sx={{
+                            backgroundColor: "rgba(241, 105, 13, 1)",
+                            ":hover": {
+                              backgroundColor: "rgba(241, 105, 13, 0.7)",
+                            },
+                            marginTop: "-1.5px",
+                          }}
+                        >
+                          {" "}
+                          <AddIcon />
+                          <input
+                            type="file"
+                            hidden
+                            onChange={handleFilesChange}
+                          />
+                        </Button>
+                      </Stack>
 
                       <Stack alignItems="center" sx={{ mt: 3 }}>
                         <LoadingButton
@@ -313,7 +359,9 @@ export default function Postula() {
                           sx={{
                             width: "30%",
                             backgroundColor: "rgb(241, 105, 13)",
-                            ":hover": { backgroundColor: "rgb(241, 105, 13)" },
+                            ":hover": {
+                              backgroundColor: "rgba(241, 105, 13, 0.7)",
+                            },
                           }}
                         >
                           Enviar

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 
 // components
 import MainLayout from "./main";
+import AuthLayotu from "./auth";
 
 // ----------------------------------------------------------------------
 
@@ -17,9 +18,5 @@ export default function Layout({ variant = "dashboard", children }) {
   if (variant === "main") {
     return <MainLayout>{children}</MainLayout>;
   }
-  //   return (
-  //     <AuthGuard>
-  //       <DashboardLayout> {children} </DashboardLayout>
-  //     </AuthGuard>
-  //   );
+  return <AuthLayotu>{children}</AuthLayotu>;
 }

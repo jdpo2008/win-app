@@ -12,9 +12,9 @@ const NavbarStyle = () => {
     let elementId = document.getElementById("navbar");
     document.addEventListener("scroll", () => {
       if (window.scrollY > 80) {
-        elementId.classList.add("is-sticky");
+        elementId?.classList.add("is-sticky");
       } else {
-        elementId.classList.remove("is-sticky");
+        elementId?.classList.remove("is-sticky");
       }
     });
     window.scrollTo(0, 0);
@@ -88,6 +88,89 @@ const NavbarStyle = () => {
                     <Link href="/contacto" activeClassName="active">
                       <a className="nav-link">Contactos</a>
                     </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link href="#">
+                      <a
+                        onClick={(e) => e.preventDefault()}
+                        className="dropdown-toggle nav-link"
+                      >
+                        Mantenimiento
+                      </a>
+                    </Link>
+
+                    <ul className="dropdown-menu">
+                      <li className="nav-item">
+                        <Link
+                          href="/maintenance/security/users"
+                          activeClassName="active"
+                        >
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Empleos
+                          </a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
+                        <Link href="/features-2" activeClassName="active">
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Regiones
+                          </a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
+                        <Link href="/features-2" activeClassName="active">
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Categorias
+                          </a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
+                        <Link href="/features-2" activeClassName="active">
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Blogs
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link href="#">
+                      <a
+                        onClick={(e) => e.preventDefault()}
+                        className="dropdown-toggle nav-link"
+                      >
+                        Seguridad
+                      </a>
+                    </Link>
+
+                    <ul className="dropdown-menu">
+                      <li className="nav-item">
+                        <Link
+                          href="/seguridad/usuarios"
+                          activeClassName="active"
+                        >
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Usuarios
+                          </a>
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
+                        <Link
+                          href="/seguridad/perfiles"
+                          activeClassName="active"
+                        >
+                          <a onClick={toggleNavbar} className="nav-link">
+                            Perfiles
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
 
                   {/* <li className="nav-item">
@@ -393,8 +476,8 @@ const NavbarStyle = () => {
               </div>
 
               <div className="others-options">
-                <Link href="/error">
-                  <a className="default-btn">Get Started</a>
+                <Link href="/auth/login">
+                  <a className="default-btn">Ingresar</a>
                 </Link>
               </div>
             </nav>

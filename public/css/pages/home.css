@@ -973,6 +973,7 @@ Screenshots Area CSS
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  padding-top: 100px;
 }
 
 .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-container {
@@ -1007,6 +1008,7 @@ Screenshots Area CSS
 .characteristics-cards-item-img.velocidad {
   margin-top: 10px;
 }
+
 .characteristics-cards-item-img.precio {
   margin-top: 10px;
 }
@@ -1052,178 +1054,180 @@ Screenshots Area CSS
   Services Area CSS
   =================================================*/
 
-  .product-area-services-container {
-    border: 1.8px solid rgb(241, 105, 13);
-    border-radius: 25px;
-    padding: 15px;
-    width: 330px;
-    background: #fff;
-    color: rgb(241, 105, 13);
-    font-weight: bolder;
-    -webkit-box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
-    margin-top: 50px;
-    height: 470px;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-around;
-    align-items: center;
-   }
+.product-area-services-container {
+  border: 1.8px solid rgb(241, 105, 13);
+  border-radius: 25px;
+  padding: 15px;
+  width: 330px;
+  background: #fff;
+  color: rgb(241, 105, 13);
+  font-weight: bolder;
+  -webkit-box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  margin-top: 50px;
+  height: 470px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
-   .product-area-services-container-promotion {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 100%;
-    margin-top: -60px;
-    margin-left: 230px;
-    padding: 7px;
-    font-size: 1.6rem;
-    background-color: rgb(241, 105, 13);
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    color: white;
-    display: flex;
-    border-radius: 10px;
-   }
+.product-area-services-container-promotion {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  margin-top: -60px;
+  margin-left: 230px;
+  padding: 7px;
+  font-size: 1.6rem;
+  background-color: rgb(241, 105, 13);
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  display: flex;
+  border-radius: 10px;
+}
 
-   .product-area-services-container-promotion-x {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 100%;
-    margin-top: -60px;
-    margin-left: 230px;
-    padding: 7px;
-    font-size: 1.6rem;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    color: white;
-    display: flex;
-    border-radius: 10px;
-   }
+.product-area-services-container-promotion-x {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  margin-top: -60px;
+  margin-left: 230px;
+  padding: 7px;
+  font-size: 1.6rem;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  display: flex;
+  border-radius: 10px;
+}
 
 
-   .product-area-services-container:hover .product-area-services-container-promotion  {
-    color: rgb(241, 105, 13);
-    background-color: white;
-   }
+.product-area-services-container:hover .product-area-services-container-promotion {
+  color: rgb(241, 105, 13);
+  background-color: white;
+}
 
-   .product-area-services-card-nombre {
-    color: rgb(83, 84, 87);
-   }
+.product-area-services-card-nombre {
+  color: rgb(83, 84, 87);
+}
 
-   .product-area-services-container:hover, .product-area-services-container:hover h5 {
-    background:  rgb(241, 105, 13);
-    color: #fff;
-   }
- 
-   .product-area-services-container  .product-area-services-card {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-   }
+.product-area-services-container:hover,
+.product-area-services-container:hover h5 {
+  background: rgb(241, 105, 13);
+  color: #fff;
+}
 
-   .product-area-services-container:hover .product-area-services-card-logo {
-    background-image: url(/images/logo_blanco_letras.png);
-   }
+.product-area-services-container .product-area-services-card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 
-   .product-area-services-card-logo {
-    width: 80px;
-    height: 60px;
-    background-image: url(/images/logo_letras_plomo.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-   }
+.product-area-services-container:hover .product-area-services-card-logo {
+  background-image: url(/images/logo_blanco_letras.png);
+}
 
-   .product-area-services-card-velocidad {
-    color: rgb(241, 105, 13);
-    font-variant: bolder;
-   }
+.product-area-services-card-logo {
+  width: 80px;
+  height: 60px;
+  background-image: url(/images/logo_letras_plomo.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
 
-   .product-area-services-container:hover .product-area-services-card-velocidad  {
-    background:  rgb(241, 105, 13);
-    color: #fff;
-   }
+.product-area-services-card-velocidad {
+  color: rgb(241, 105, 13);
+  font-variant: bolder;
+}
 
-   .product-area-services-card-velocidad span {
-    color: rgb(83, 84, 87);
-    font-size: 0.8rem;
-   }
+.product-area-services-container:hover .product-area-services-card-velocidad {
+  background: rgb(241, 105, 13);
+  color: #fff;
+}
 
-   .product-area-services-container:hover .product-area-services-card-velocidad span {
-    color: #fff;
-   }
+.product-area-services-card-velocidad span {
+  color: rgb(83, 84, 87);
+  font-size: 0.8rem;
+}
 
-   .product-area-services-card-velocidad-antigua {
-    color: rgba(83, 84, 87, 0.4);
-    font-size: 0.8rem;
-    font-style: unset;
-    text-decoration:line-through;
-   }
-   .product-area-services-container:hover  .product-area-services-card-velocidad-antigua {
-    color: #fff;
-   }
+.product-area-services-container:hover .product-area-services-card-velocidad span {
+  color: #fff;
+}
 
-   .product-area-services-card-precio span {
-    font-size: 1.5rem;
-    font-weight: bolder;
-   }
+.product-area-services-card-velocidad-antigua {
+  color: rgba(83, 84, 87, 0.4);
+  font-size: 0.8rem;
+  font-style: unset;
+  text-decoration: line-through;
+}
 
-   .product-area-services-container:hover .product-area-services-card-precio {
-    color: #fff;
-   }
+.product-area-services-container:hover .product-area-services-card-velocidad-antigua {
+  color: #fff;
+}
 
-   .product-area-services-card-button {
-    border: none !important;
-    background:  rgb(241, 105, 13);
-    color: #fff;
-    padding: 5px 20px;
-    border-radius: 50px;
-    font-weight: bold;
-    bottom: 0;
-   }
+.product-area-services-card-precio span {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
 
-   .product-area-services-container:hover .product-area-services-card-button {
-    background:  #fff;
-    color: rgba(83, 84, 87, 0.8);
+.product-area-services-container:hover .product-area-services-card-precio {
+  color: #fff;
+}
 
-   }
+.product-area-services-card-button {
+  border: none !important;
+  background: rgb(241, 105, 13);
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  bottom: 0;
+}
 
-   .product-area-services-card-button-icon {
-    font-size: 1.5rem;
-    margin-left: 5px;
-   }
+.product-area-services-container:hover .product-area-services-card-button {
+  background: #fff;
+  color: rgba(83, 84, 87, 0.8);
 
-   .product-area-services-container:hover .product-area-services-card-button-icon  {
-    color: green;
-    font-weight: bolder;
-   }
+}
 
-   .product-area-services-card ol {
-    padding: 0 !important;
-   }
+.product-area-services-card-button-icon {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
 
-   .product-area-services-card ol li {
-    color: rgba(83, 84, 87, 0.8);
-    font-size: 0.8rem;
-    text-overflow: ellipsis;
-    text-align: left;
-   }
+.product-area-services-container:hover .product-area-services-card-button-icon {
+  color: green;
+  font-weight: bolder;
+}
 
-   .product-area-services-container:hover .product-area-services-card ol li {
-    color: #fff;
-   }
+.product-area-services-card ol {
+  padding: 0 !important;
+}
 
-   .product-area-services-card-features {
-    display: flex;
-   }
- 
+.product-area-services-card ol li {
+  color: rgba(83, 84, 87, 0.8);
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.product-area-services-container:hover .product-area-services-card ol li {
+  color: #fff;
+}
+
+.product-area-services-card-features {
+  display: flex;
+}
+
 
 /*================================================
   Contact Form Area CSS
@@ -1250,35 +1254,35 @@ Screenshots Area CSS
   text-align: end;
 }
 
-.contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form  {
- /* max-width: 950px; */
+.contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form {
+  /* max-width: 950px; */
   display: flex;
   flex-flow: column;
   justify-content: end;
   align-items: flex-end;
 }
 
-.contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container  h2 {
+.contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container h2 {
   color: #fff;
   font-size: 2.7rem;
   font-style: italic;
   margin-right: 5px;
- }
+  margin-top: 10px;
+}
 
 
 
-.contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form  form {
+.contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form form {
   width: 30vw;
-  height: 60vh;
+  height: 62vh;
   text-align: center;
-  padding: 30px;
+  padding: 10px 20px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 5%;
-  margin-top: 0.5rem;
- }
+}
 
 .contact-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .contact-form .form-group .form-control {
@@ -1291,9 +1295,7 @@ Screenshots Area CSS
   border-color: var(--mainColor) !important;
 }
 
-.btn-container {
-  margin-top: 1rem;
-}
+.btn-container {}
 
 .btn-container .btn-form {
 
@@ -1303,7 +1305,7 @@ Screenshots Area CSS
   background: #0064FB;
   border: none;
   color: #fff;
-  
+
 }
 
 .contact-form .help-block.with-errors {
@@ -1328,123 +1330,128 @@ Screenshots Area CSS
   Information Area CSS
   =================================================*/
 
-  .information-area {}
+.information-area {}
 
-  .information-area .information-cards {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
+.information-area .information-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 
-  .information-area .information-cards .information-cards-item-01 {
-    flex: 1 1 20%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    position: absolute;
-    padding-top: 50px;
-    padding-left: 20px;
-  }
+.information-area .information-cards .information-cards-item-01 {
+  flex: 1 1 20%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  position: absolute;
+  padding-top: 50px;
+  padding-left: 20px;
+}
 
-  .information-area .information-cards .information-cards-item-01 h1 {
-    color: rgb(241, 105, 13);
-    font-weight: bold;
-    width: 550px;
-    text-align: center;
-    letter-spacing: 2px;
-  }
+.information-area .information-cards .information-cards-item-01 h1 {
+  color: rgb(241, 105, 13);
+  font-weight: bold;
+  width: 550px;
+  text-align: center;
+  letter-spacing: 2px;
+}
 
-  .information-area .information-cards .information-cards-item-01 h4 {
-    color: rgb(241, 105, 13);
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 2px;
-    font-style: italic;
-    text-transform: uppercase;
-  }
+.information-area .information-cards .information-cards-item-01 h4 {
+  color: rgb(241, 105, 13);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-transform: uppercase;
+}
 
-  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-  }
+.information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
-  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone span {
-    font-size: 1.4rem;
-    font-weight: bolder;
-  }
+.information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .contactanos {
+  width: 53%;
+  margin-top: 10px;
+}
 
-
-  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .information-cards-item-01-phone-circle {
-    background-color: rgb(241, 105, 13);
-    border-radius: 30px;
-    color: #fff;
-    padding: 10px 30px;
-    width: 100%;
-  }
-
-  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .information-cards-item-01-phone-circle span {
-    margin-left: 10px;
-    margin-top: 5px;
-  }
-
-  .information-cards-item-01-phone-circle {
-    font-size: 1.6rem !important;
-  }
-
-  .information-cards-item-01-phone-circle-redes  {
-
-    display: flex;
-    width: 100%;
-    margin-top: 30px;
-  }
+.information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone span {
+  font-size: 1.4rem;
+  font-weight: bolder;
+}
 
 
-  .information-area .information-cards .information-cards-item-02 {
-    flex: 1 1 80%;
-  }
+.information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .information-cards-item-01-phone-circle {
+  background-color: rgb(241, 105, 13);
+  border-radius: 30px;
+  color: #fff;
+  padding: 10px 30px;
+  width: 100%;
+}
 
-  .information-area .information-cards .information-cards-item-02 .information-cards-item-02-bg {
-    width: 100%;
-    height: 75vh;
-    background-image: url(/images/whatssap.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .information-cards-item-01-phone-circle span {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.information-cards-item-01-phone-circle {
+  font-size: 1.6rem !important;
+}
+
+.information-cards-item-01-phone-circle-redes {
+
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+.information-area .information-cards .information-cards-item-02 {
+  flex: 1 1 80%;
+}
+
+.information-area .information-cards .information-cards-item-02 .information-cards-item-02-bg {
+  width: 100%;
+  height: 75vh;
+  background-image: url(/images/whatssap.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /*================================================
   Regions Services Area CSS
   =================================================*/
 
-  .regions-area-box {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .regions-area-box .regions-area-tabs {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-  }
-  
-  .regions-area-tabs-item {
-    flex: 1 1 100%;
-    margin: auto 20px;
-    border: 2px solid rgb(241, 105, 13);
-    padding: 10px auto;
-  }
-  
-  .regions-area-tabs-panel {
-    margin-top: 10px;
-    padding: 10px auto;
-  
-  }
+.regions-area-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  
+.regions-area-box .regions-area-tabs {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.regions-area-tabs-item {
+  flex: 1 1 100%;
+  margin: auto 20px;
+  border: 2px solid rgb(241, 105, 13);
+  padding: 10px auto;
+}
+
+.regions-area-tabs-panel {
+  margin-top: 10px;
+  padding: 10px auto;
+
+}
+
+
 /*================================================
   Software Integrations Area CSS
   =================================================*/
@@ -2557,6 +2564,131 @@ Screenshots Area CSS
     padding-top: 12.5px;
     padding-bottom: 12.5px;
   }
+
+  .characteristics-area .characteristics-cards .characteristics-bg {
+    width: 100%;
+    height: auto;
+    background: #da7211;
+    position: block;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+  .characteristics-bg .characteristics-cards-container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    align-content: center;
+  }
+
+  .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-container {
+    width: 100%;
+    padding-top: 0;
+    flex: 1;
+  }
+
+  .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-container .characteristics-cards-item {
+    margin: 5px 10px;
+    width: 75%;
+  }
+
+  .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-item .card {
+    padding-top: 5px;
+    height: 200px;
+    width: 100%;
+  }
+
+  .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-item .card img {
+    height: 50px;
+  }
+
+  .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-item .card h5 {
+   font-size: 1.5rem;
+  }
+
+  .characteristics-cards-item-description, .characteristics-cards-item-description p {
+    font-size: 1rem;
+  }
+
+  .product-area-box .product-area-tabs {
+    width: 100%;
+    overflow: visible;
+  }
+
+  .product-area-tabs-item {
+    margin: 0;
+    padding: 10px auto;
+    font-size: 0.8rem;
+  }
+
+  .MuiButtonBase-root {
+    margin-right: 5px !important;
+  }
+
+  .contact-form-area {
+    height: 660px;
+    display: block;
+  }
+
+  .contact-form-area .contact-form-cards .contact-form-bg {
+    width: 100%;
+    height: 640px;
+    background: #da7211;
+    position: block;
+  }
+
+  .contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container {
+    width: 100%;
+  }
+  
+  .contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form form {
+    width: 350px;
+  }
+
+  .contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form form {
+    height: 85vh;
+  }
+
+  .contact-form-area .contact-form-cards .contact-form-bg .contact-form-cards-container .contact-form {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .information-area .information-cards {
+    justify-content: center;
+  }
+  
+  
+  .information-area .information-cards .information-cards-item-02 .information-cards-item-02-bg {
+   background: none;
+   height: 40vh;
+  }
+
+  .information-area .information-cards .information-cards-item-01 {
+    flex: 1 1 100%;
+    padding-top: 30px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .information-area .information-cards .information-cards-item-01 h1 {
+    width: 330px;
+    font-size: 1.2rem;
+  }
+  .information-area .information-cards .information-cards-item-01 h4 {
+    margin-top: 20spx;
+  }
+
+  .information-area .information-cards .information-cards-item-01 .information-cards-item-01-phone .contactanos {
+    width: 80%;
+  }
+
 }
 
 /* Min width 576px to Max width 767px */
@@ -2579,6 +2711,25 @@ Screenshots Area CSS
     right: 2.5px;
     top: 2.5px;
   }
+
+  .characteristics-bg .characteristics-cards-container {
+    padding-bottom: 200px !important;
+  }
+
+  .characteristics-area .characteristics-cards .characteristics-bg .characteristics-cards-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .contact-form h2 {
+    font-size: 1rem;
+  }
+
+  .contact-form form {
+
+  }
+
 }
 
 /* Min width 768px to Max width 991px */

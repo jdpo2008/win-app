@@ -39,7 +39,7 @@ const ProductServices = () => {
           );
         })}
 
-        <StyledTab className="product-area-tabs-item" label="" />
+        {/* <StyledTab className="product-area-tabs-item" label="" /> */}
       </StyledTabs>
       <div className="product-area-tabs-panel">
         {Products &&

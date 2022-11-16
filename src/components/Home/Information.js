@@ -11,12 +11,7 @@ const Information = () => {
           <div className="information-cards-item-01">
             <h1>Realiza lo que necesitas sin salir de casa</h1>
             <div className="information-cards-item-01-phone">
-              <div
-                style={{
-                  width: "53%",
-                  marginTop: "10px",
-                }}
-              >
+              <div className="contactanos">
                 <span
                   style={{
                     color: "rgb(78, 77, 75)",

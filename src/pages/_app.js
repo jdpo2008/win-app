@@ -2,6 +2,12 @@ import React from "react";
 
 import Head from "next/head";
 
+import {
+  Hydrate,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
 import "@public/css/bootstrap.min.css";
 import "@public/css/fontawesome.min.css";
 import "@public/css/remixicon.css";
@@ -22,16 +28,29 @@ import "@fontsource/roboto/700.css";
 
 // Global CSS
 import "@public/css/styles.css";
+import ThemeProvider from "../theme";
+import NotistackProvider from "@components/Common/NotistackProvider";
 
 function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => page);
+  // Create a client
+  const queryClient = new QueryClient();
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      {getLayout(<Component {...pageProps} />)}
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          <ThemeProvider>
+            <NotistackProvider>
+              {getLayout(<Component {...pageProps} />)}
+            </NotistackProvider>{" "}
+            {/* <div id="modal-root"></div> */}
+          </ThemeProvider>
+        </Hydrate>
+      </QueryClientProvider>
     </>
   );
 }

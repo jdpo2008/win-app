@@ -6,7 +6,7 @@ const CharacteristicsPlan = () => {
       <div className="characteristics-area bg-gradient-color pb-75">
         <div className="characteristics-cards">
           <div className="characteristics-bg">
-            <div className="pt-100 characteristics-cards-container">
+            <div className="characteristics-cards-container">
               <div className="characteristics-cards-item">
                 <div className="card">
                   <div className="characteristics-cards-item-img">
