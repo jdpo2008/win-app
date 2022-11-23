@@ -157,14 +157,14 @@ export default function Blog() {
                     </a>
                   </Link>
                   <Link href="/blog-grid">
-                    <a className="tag">Tutorial</a>
+                    <a className="tag">Seguridad</a>
                   </Link>
                 </div>
                 <div className="content">
                   <ul className="meta">
                     <li>
                       <i className="ri-time-line"></i>
-                      April 14, 2021
+                      Noviembre 22, 2022
                     </li>
                     {/* <li>
                         <i className="ri-message-2-line"></i>
@@ -181,16 +181,16 @@ export default function Blog() {
                       }}
                     >
                       <a>
-                        Branding involves developing strategy to create a point
-                        of differentiation
+                        ¿Qué es el spyware y cómo podría poner en peligro tu
+                        hogar?
                       </a>
                     </Link>
                   </h5>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
+                    Es seguro que ya has escuchado hablar de malware, troyanos,
+                    gusanos, ransomware, adware y virus propiamente dichos, pero
+                    tal vez no conozcas los spyware y todo el peligro que
+                    ocasionan cuando contaminan tu PC o celular.
                   </p>
 
                   <button
@@ -217,14 +217,14 @@ export default function Blog() {
                     </a>
                   </Link>
                   <Link href="/blog-grid">
-                    <a className="tag">Educacion</a>
+                    <a className="tag">Actualidad</a>
                   </Link>
                 </div>
                 <div className="content">
                   <ul className="meta">
                     <li>
                       <i className="ri-time-line"></i>
-                      April 14, 2021
+                      Noviembre 22, 2022
                     </li>
                     {/* <li>
                         <i className="ri-message-2-line"></i>
@@ -235,17 +235,15 @@ export default function Blog() {
                   </ul>
                   <h5>
                     <Link href="/blog">
-                      <a>
-                        Design is a plan or specification for the construction
-                        of an object for bussiness logic
-                      </a>
+                      <a>¿Qué es la brecha digital y cómo podemos cerrarla?</a>
                     </Link>
                   </h5>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
+                    Aunque te parezca irreal, en la actualidad hay ciudades y
+                    zonas en diferentes países que aún no tienen acceso a
+                    servicios como internet, lo que sigue destacando los grandes
+                    problemas que existen en cuanto a la brecha digital en el
+                    mundo.
                   </p>
 
                   <button className="post-btn">
@@ -264,14 +262,14 @@ export default function Blog() {
                     </a>
                   </Link>
                   <Link href="/blog-grid">
-                    <a className="tag">Educacion</a>
+                    <a className="tag">Entretenimiento</a>
                   </Link>
                 </div>
                 <div className="content">
                   <ul className="meta">
                     <li>
                       <i className="ri-time-line"></i>
-                      April 14, 2021
+                      Noviembre 22, 2022
                     </li>
                     {/* <li>
                         <i className="ri-message-2-line"></i>
@@ -283,16 +281,16 @@ export default function Blog() {
                   <h5>
                     <Link href="/blog">
                       <a>
-                        The new minimum is a digital magazine with a header
-                        featuring a thin
+                        ¿Cansado de Netflix? Mira estas 6 Alternativas
+                        totalmente GRATIS
                       </a>
                     </Link>
                   </h5>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
+                    Cada día se hace más común hacer uso de los servicios de
+                    streaming para ver series y películas, tales como Netflix,
+                    Prime Video, Disney+ o HBO. Sin embargo, llega un momento
+                    que viste toda la programación de tu interés....
                   </p>
 
                   <button
@@ -319,14 +317,14 @@ export default function Blog() {
                     </a>
                   </Link>
                   <Link href="/blog-grid">
-                    <a className="tag">Educacion</a>
+                    <a className="tag">Entretenimiento</a>
                   </Link>
                 </div>
                 <div className="content">
                   <ul className="meta">
                     <li>
                       <i className="ri-time-line"></i>
-                      April 14, 2021
+                      Noviembre 22, 2022
                     </li>
                     {/* <li>
                         <i className="ri-message-2-line"></i>
@@ -337,17 +335,14 @@ export default function Blog() {
                   </ul>
                   <h5>
                     <Link href="/blog">
-                      <a>
-                        WordPress is open source software you can use to create
-                        a beautiful
-                      </a>
+                      <a>Realidad aumentada: ¿Qué es y para qué sirve?</a>
                     </Link>
                   </h5>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
+                    En su época, fue un juego muy divertido para mantener una
+                    audiencia conectada a internet, motivando a los jugadores
+                    para que realicen caminatas y visitas a diferentes lugares
+                    con el uso de otros recursos como Google Maps.
                   </p>
 
                   <button
@@ -374,14 +369,14 @@ export default function Blog() {
                     </a>
                   </Link>
                   <Link href="/blog-grid">
-                    <a className="tag">Entretenimiento</a>
+                    <a className="tag">Educación</a>
                   </Link>
                 </div>
                 <div className="content">
                   <ul className="meta">
                     <li>
                       <i className="ri-time-line"></i>
-                      April 14, 2021
+                      Noviembre 22, 2022
                     </li>
                     {/* <li>
                         <i className="ri-message-2-line"></i>
@@ -392,17 +387,14 @@ export default function Blog() {
                   </ul>
                   <h5>
                     <Link href="/blog-details">
-                      <a>
-                        Bootstrap 5 is open source software you can use to
-                        create a beautiful
-                      </a>
+                      <a>Plataformas de cursos online que deberías conocer</a>
                     </Link>
                   </h5>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
+                    ¿Quieres aprender formalmente algo por internet y no sabes
+                    dónde hacerlo? Este es un dilema que muchas personas tienen
+                    en la actualidad a la hora de escoger una plataforma de
+                    cursos online sólida y de confianza.
                   </p>
 
                   <button
@@ -448,181 +440,16 @@ export default function Blog() {
                   <h5>
                     <Link href="/blog-details">
                       <a>
-                        Beautiful designs, powerful features, and the freedom to
-                        build
+                        Qué es WhatsApp Business, cómo funciona y cómo usarlo en
+                        negocios
                       </a>
                     </Link>
                   </h5>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
-                  </p>
-
-                  <button
-                    className="post-btn"
-                    onClick={() => {
-                      router.push({
-                        pathname: "/blog-details/[blogId]",
-                        query: { blogId: "" },
-                      });
-                    }}
-                  >
-                    Leer Más <Add className="post-btn-icon" />{" "}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="single-blog-post">
-                <div className="image">
-                  <Link href="/blog-details">
-                    <a className="d-block">
-                      <img src="/images/blog/blog7.jpg" alt="blog" />
-                    </a>
-                  </Link>
-                  <Link href="/blog-grid">
-                    <a className="tag">Educacion</a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <ul className="meta">
-                    <li>
-                      <i className="ri-time-line"></i>
-                      April 14, 2021
-                    </li>
-                    {/* <li>
-                        <i className="ri-message-2-line"></i>
-                        <Link href="/blog-details">
-                          <a>(0) Comment</a>
-                        </Link>
-                      </li> */}
-                  </ul>
-                  <h5>
-                    <Link href="/blog-details">
-                      <a>
-                        Branding involves developing strategy to create a point
-                        of differentiation
-                      </a>
-                    </Link>
-                  </h5>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
-                  </p>
-
-                  <button
-                    className="post-btn"
-                    onClick={() => {
-                      router.push({
-                        pathname: "/blog-details/[blogId]",
-                        query: { blogId: "" },
-                      });
-                    }}
-                  >
-                    Leer Más <Add className="post-btn-icon" />{" "}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="single-blog-post">
-                <div className="image">
-                  <Link href="/blog-details">
-                    <a className="d-block">
-                      <img src="/images/blog/blog8.jpg" alt="blog" />
-                    </a>
-                  </Link>
-                  <Link href="/blog-grid">
-                    <a className="tag">Educacion</a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <ul className="meta">
-                    <li>
-                      <i className="ri-time-line"></i>
-                      April 14, 2021
-                    </li>
-                    {/* <li>
-                        <i className="ri-message-2-line"></i>
-                        <Link href="/blog-details">
-                          <a>(0) Comment</a>
-                        </Link>
-                      </li> */}
-                  </ul>
-                  <h5>
-                    <Link href="/blog-details">
-                      <a>
-                        Most designs, powerful features, and the freedom to
-                        build anything you
-                      </a>
-                    </Link>
-                  </h5>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
-                  </p>
-
-                  <button
-                    className="post-btn"
-                    onClick={() => {
-                      router.push({
-                        pathname: "/blog-details/[blogId]",
-                        query: { blogId: "" },
-                      });
-                    }}
-                  >
-                    Leer Más <Add className="post-btn-icon" />{" "}
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6">
-              <div className="single-blog-post">
-                <div className="image">
-                  <Link href="/blog-details">
-                    <a className="d-block">
-                      <img src="/images/blog/blog9.jpg" alt="blog" />
-                    </a>
-                  </Link>
-                  <Link href="/blog-grid">
-                    <a className="tag">Tutorial</a>
-                  </Link>
-                </div>
-                <div className="content">
-                  <ul className="meta">
-                    <li>
-                      <i className="ri-time-line"></i>
-                      April 14, 2021
-                    </li>
-                    {/* <li>
-                        <i className="ri-message-2-line"></i>
-                        <Link href="/blog-details">
-                          <a>(0) Comment</a>
-                        </Link>
-                      </li> */}
-                  </ul>
-                  <h5>
-                    <Link href="/blog-details">
-                      <a>
-                        Branding involves developing strategy to create a point
-                        in the sockets
-                      </a>
-                    </Link>
-                  </h5>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
-                    debitis nulla laboriosam tenetur quasi quam nostrum impedit
-                    ut vitae vero rem mollitia numquam, adipisci deserunt quae
-                    dignissimos maxime. Fugiat, nisi?
+                    El mundo empresarial está cambiando y tu compañía no puede
+                    quedarse fuera. Hoy en día es imposible concebir una
+                    estrategia de ventas que no contemple el uso de medios de
+                    comunicación y de plataformas de redes sociales...
                   </p>
 
                   <button

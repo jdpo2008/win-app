@@ -22,7 +22,7 @@ Blog Area CSS
 }
 
 .single-blog-post .image .tag {
-    background: linear-gradient(279.99deg, #f1610e -1.19%, #e28024 50.99%, #f88634 100%);
+    background: linear-gradient(279.99deg, #191919 -1.19%, #212121 50.99%, #232323 100%);
     color: var(--whiteColor);
     position: absolute;
     border-radius: 40px;
@@ -117,6 +117,7 @@ Blog Area CSS
     border-radius: 5px;
     font-weight: bolder;
     background-color: #fff;
+    margin-top: 10px;
     width: 130px;
 }
 
