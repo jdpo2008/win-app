@@ -51,13 +51,13 @@ const AppScreenshots = () => {
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/images/banner/banner_principal_web_2.jpg"
+                src="/images/banner/banner_principal_web_7.jpg"
                 alt="screenshots"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
-                src="/images/banner/banner_principal_web_3.jpg"
+                src="/images/banner/banner_principal_web_6.jpg"
                 alt="screenshots"
               />
             </SwiperSlide>
@@ -73,18 +73,18 @@ const AppScreenshots = () => {
                 alt="screenshots"
               />
             </SwiperSlide>
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <img
                 src="/images/banner/banner_principal_web_6.jpg"
                 alt="screenshots"
               />
-            </SwiperSlide>
-            <SwiperSlide>
+            </SwiperSlide> */}
+            {/* <SwiperSlide>
               <img
                 src="/images/banner/banner_principal_web_7.jpg"
                 alt="screenshots"
               />
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
