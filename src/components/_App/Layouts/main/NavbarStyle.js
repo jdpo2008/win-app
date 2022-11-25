@@ -1,6 +1,8 @@
 import * as React from "react";
 import Link from "@utils/ActiveLink";
 
+import { PATH_PAGE } from "@routes/paths";
+
 const NavbarStyle = () => {
   const [menu, setMenu] = React.useState(true);
 
@@ -33,7 +35,7 @@ const NavbarStyle = () => {
         <div className="texap-nav">
           <div className="container">
             <nav className="navbar navbar-expand-md navbar-light bg-light">
-              <Link href="/">
+              <Link href={PATH_PAGE.root}>
                 <a className="navbar-brand">
                   <img
                     className="logo"
@@ -61,31 +63,34 @@ const NavbarStyle = () => {
               <div className={classOne} id="navbarSupportedContent">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <Link href="/" activeClassName="active">
+                    <Link href={PATH_PAGE.root} activeClassName="active">
                       <a className="nav-link">Home</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/blog" activeClassName="active">
+                    <Link href={PATH_PAGE.blog.root} activeClassName="active">
                       <a className="nav-link">Blog</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/postula" activeClassName="active">
+                    <Link href={PATH_PAGE.postula} activeClassName="active">
                       <a className="nav-link">Postula</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/afiliaciones" activeClassName="active">
+                    <Link
+                      href={PATH_PAGE.afiliaciones}
+                      activeClassName="active"
+                    >
                       <a className="nav-link">Afiliaciones</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/contacto" activeClassName="active">
+                    <Link href={PATH_PAGE.contacto} activeClassName="active">
                       <a className="nav-link">Contactos</a>
                     </Link>
                   </li>

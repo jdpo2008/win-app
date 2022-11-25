@@ -6,15 +6,15 @@ import StyledTabs from "./styled/StyledTabs";
 import StyledTab from "./styled/StyledTab";
 import StyledTabPanel from "./styled/StyledTabPanel";
 
-import { Products } from "../../data/products";
-import { Services } from "../../data/services";
-
-const ProductServices = () => {
+const ProductServices = ({ products, services }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  console.log("Products", products);
+  console.log("Services", services);
 
   return (
     <Container
@@ -29,7 +29,7 @@ const ProductServices = () => {
         onChange={handleChange}
         aria-label="styled tabs example"
       >
-        {Products.map((product) => {
+        {products.map((product) => {
           return (
             <StyledTab
               className="product-area-tabs-item"
@@ -42,13 +42,14 @@ const ProductServices = () => {
         {/* <StyledTab className="product-area-tabs-item" label="" /> */}
       </StyledTabs>
       <div className="product-area-tabs-panel">
-        {Products &&
-          Products.map((product, i) => {
+        {products &&
+          products.map((product, i) => {
             return (
               <StyledTabPanel value={value} index={i} key={i}>
-                {Services &&
-                  Services.filter((s) => s.productId === product.id).map(
-                    (service, i) => {
+                {services &&
+                  services
+                    .filter((s) => s.productId === product.id)
+                    .map((service, i) => {
                       return (
                         <div
                           className="product-area-services-container"
@@ -106,8 +107,7 @@ const ProductServices = () => {
                           </button>
                         </div>
                       );
-                    }
-                  )}
+                    })}
               </StyledTabPanel>
             );
           })}

@@ -11,12 +11,16 @@ Layout.propTypes = {
   variant: PropTypes.oneOf(["dashboard", "main", "logoOnly"]),
 };
 
-export default function Layout({ variant = "dashboard", children }) {
+export default function Layout({
+  variant = "dashboard",
+  isLoadding = false,
+  children,
+}) {
   //   if (variant === 'logoOnly') {
   //     return <LogoOnlyLayout> {children} </LogoOnlyLayout>;
   //   }
   if (variant === "main") {
-    return <MainLayout>{children}</MainLayout>;
+    return <MainLayout isLoadding={isLoadding}>{children}</MainLayout>;
   }
   return <AuthLayotu>{children}</AuthLayotu>;
 }

@@ -1,7 +1,12 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import Page from "@components/_App/Page";
 import Layout from "@components/_App/Layouts";
+
+import axios from "axios";
+
+import { loaddingOn, loaddingOff } from "./store/features/app/appSlice";
 
 import AppScreenshots from "@components/Home/AppScreenshots";
 import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
@@ -14,14 +19,23 @@ Home.getLayout = function getLayout(page) {
   return <Layout variant="main">{page}</Layout>;
 };
 
-export default function Home(props) {
+Home.getInitialProps = async (ctx) => {
+  const products = await axios.get("http://localhost:3300/api/products");
+  const services = await axios.get("http://localhost:3300/api/services");
+
+  return { products: products.data, services: services.data };
+};
+
+export default function Home({ products, services }) {
+  const isLoadding = useSelector((state) => state.app.isLoadding);
+
   return (
     <Page title="Home">
       <AppScreenshots />
 
       <CharacteristicsPlan />
 
-      <ProductServices />
+      <ProductServices products={products} services={services} />
 
       <ContactForm />
 

@@ -7,7 +7,7 @@ import NavbarStyle from "./NavbarStyle";
 import Footer from "./Footer";
 import Cliengo from "./Cliengo";
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ isLoadding, children }) => {
   // Preloader
   const [loader, setLoader] = React.useState(true);
   React.useEffect(() => {

@@ -1,6 +1,9 @@
 import React from "react";
-
 import Head from "next/head";
+
+import { Provider as ReduxProvider } from "react-redux";
+
+import { store } from "./store";
 
 import {
   Hydrate,
@@ -13,10 +16,7 @@ import "@public/css/fontawesome.min.css";
 import "@public/css/remixicon.css";
 import "@public/css/animate.min.css";
 import "../../node_modules/swiper/swiper.min.css";
-// import "../../node_modules/swiper/components/effect-cube/effect-cube.min.css";
-// import "../../node_modules/swiper/components/effect-coverflow/effect-coverflow.min.css";
-// import "../../node_modules/swiper/components/pagination/pagination.min.css";
-// import "../../node_modules/swiper/components/navigation/navigation.min.css";
+
 import "../../node_modules/react-modal-video/css/modal-video.min.css";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "react-image-lightbox/style.css";
@@ -41,16 +41,17 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          <ThemeProvider>
-            <NotistackProvider>
-              {getLayout(<Component {...pageProps} />)}
-            </NotistackProvider>{" "}
-            {/* <div id="modal-root"></div> */}
-          </ThemeProvider>
-        </Hydrate>
-      </QueryClientProvider>
+      <ReduxProvider store={store}>
+        <QueryClientProvider client={queryClient}>
+          <Hydrate state={pageProps.dehydratedState}>
+            <ThemeProvider>
+              <NotistackProvider>
+                {getLayout(<Component {...pageProps} />)}
+              </NotistackProvider>{" "}
+            </ThemeProvider>
+          </Hydrate>
+        </QueryClientProvider>
+      </ReduxProvider>
     </>
   );
 }
