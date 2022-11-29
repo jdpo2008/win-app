@@ -428,7 +428,7 @@ export default function Blog() {
                   <ul className="meta">
                     <li>
                       <i className="ri-time-line"></i>
-                      April 14, 2021
+                      Noviembre 22, 2022
                     </li>
                     {/* <li>
                         <i className="ri-message-2-line"></i>

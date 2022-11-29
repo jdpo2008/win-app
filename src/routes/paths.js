@@ -28,7 +28,7 @@ export const PATH_PAGE = {
     new: "/blog/new",
     edit: (blogId) => `/blog/${blogId}`,
   },
-  contacto: "/",
+  contacto: "/contacto",
 };
 
 export const PATH_DASHBOARD = {

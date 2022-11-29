@@ -37,11 +37,7 @@ const NavbarStyle = () => {
             <nav className="navbar navbar-expand-md navbar-light bg-light">
               <Link href={PATH_PAGE.root}>
                 <a className="navbar-brand">
-                  <img
-                    className="logo"
-                    src="/images/logo_blanco.png"
-                    alt="logo"
-                  />
+                  <img className="logo" src="/images/logo.png" alt="logo" />
                 </a>
               </Link>
 

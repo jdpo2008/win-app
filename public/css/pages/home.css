@@ -1065,7 +1065,7 @@ Screenshots Area CSS
   -webkit-box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   margin-top: 50px;
-  height: 470px;
+  min-height: 470px;
   display: flex;
   flex-flow: column;
   justify-content: space-around;
@@ -1118,7 +1118,7 @@ Screenshots Area CSS
 }
 
 .product-area-services-container:hover,
-.product-area-services-container:hover h5 {
+.product-area-services-container:hover h5, .product-area-services-container:hover p {
   background: rgb(241, 105, 13);
   color: #fff;
 }
@@ -1199,6 +1199,15 @@ Screenshots Area CSS
 
 }
 
+.product-area-services-container #basic-button {
+  color: rgba(83, 84, 87, 0.8);
+}
+
+
+.product-area-services-container:hover #basic-button {
+  color: rgba(255, 255, 255, 1);
+}
+
 .product-area-services-card-button-icon {
   font-size: 1.5rem;
   margin-left: 5px;
@@ -1228,7 +1237,52 @@ Screenshots Area CSS
   display: flex;
 }
 
+.features-details-container {
+ width: 100%;
+ display: flex;
+ flex-flow: column;
+}
 
+
+.features-details-container-trigger {
+  cursor: pointer;
+}
+
+.features-details-container-card {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.features-details-container-card-item-white {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  flex-flow: column;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  flex: 1 1 25%;
+  display: none;
+}
+
+.features-details-container-card-item-naranja {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 10px;
+  flex-flow: column;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  flex: 1 1 25%;
+}
+
+.product-area-services-container:hover .features-details-container-card-item-naranja {
+  display: none;
+}
+
+.product-area-services-container:hover .features-details-container-card-item-white {
+  display: flex;
+}
 /*================================================
   Contact Form Area CSS
   =================================================*/

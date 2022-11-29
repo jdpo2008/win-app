@@ -5,16 +5,29 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import StyledTabs from "./styled/StyledTabs";
 import StyledTab from "./styled/StyledTab";
 import StyledTabPanel from "./styled/StyledTabPanel";
+import ProductEquipos from "./ProductEquipos";
+import ProductServiceDetails from "./ProductServiceDetails";
 
 const ProductServices = ({ products, services }) => {
   const [value, setValue] = React.useState(0);
+
+  const [servicios, setServicios] = React.useState(services);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  console.log("Products", products);
-  console.log("Services", services);
+  const handleFeaturesDetails = (id) => {
+    servicios.map((x) => {
+      x.details = false;
+    });
+
+    servicios.find((s) => s.id === id).details = !servicios.find(
+      (s) => s.id === id
+    ).details;
+
+    setServicios(servicios);
+  };
 
   return (
     <Container
@@ -45,15 +58,15 @@ const ProductServices = ({ products, services }) => {
         {products &&
           products.map((product, i) => {
             return (
-              <StyledTabPanel value={value} index={i} key={i}>
-                {services &&
-                  services
+              <StyledTabPanel value={value} index={i} key={product.id}>
+                {servicios &&
+                  servicios
                     .filter((s) => s.productId === product.id)
                     .map((service, i) => {
                       return (
                         <div
                           className="product-area-services-container"
-                          key={i}
+                          key={service.id}
                         >
                           {service.has_promotion && (
                             <div className="product-area-services-container-promotion">
@@ -89,22 +102,15 @@ const ProductServices = ({ products, services }) => {
                               {service.precio && <span>{service.precio}</span>}{" "}
                               al mes
                             </p>
-                            <ol>
-                              {service.features &&
-                                service.features.map((f) => (
-                                  <li
-                                    key={f.id}
-                                    className="product-area-services-card-features"
-                                  >
-                                    {f.descripcion}
-                                  </li>
-                                ))}
-                            </ol>
+
+                            <ProductEquipos equipos={service.equipo} />
                           </div>
                           <button className="product-area-services-card-button">
                             ¡Pidelo por WhatsApp{" "}
                             <WhatsAppIcon className="product-area-services-card-button-icon" />
                           </button>
+
+                          <ProductServiceDetails features={service.features} />
                         </div>
                       );
                     })}

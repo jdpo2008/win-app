@@ -43,6 +43,7 @@
     "react-owl-carousel3": "^2.2.5",
     "react-redux": "^8.0.5",
     "react-tabs": "^5.1.0",
+    "react-quill": "^2.0.0-beta.4",
     "reactstrap": "^9.1.5",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",

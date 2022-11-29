@@ -271,11 +271,12 @@
   font-size: inherit;
   line-height: 1;
   padding: 0;
+  width: 150px;
 }
 
 .texap-nav .navbar .navbar-brand .logo {
-  height: 40%;
-  width: 55%;
+  height: 50%;
+  width: 60%;
 }
 
 .texap-nav .navbar ul {

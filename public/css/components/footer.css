@@ -1,7 +1,7 @@
 .footer-area {
   background-color: var(--blackColor);
-  padding-top: 100px;
-  padding-bottom: 90px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .footer-area.footer-style-two {
@@ -57,7 +57,9 @@
 
 .footer-content .logo {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 150px;
 }
 
 .footer-content .social-links {

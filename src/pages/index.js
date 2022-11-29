@@ -20,8 +20,8 @@ Home.getLayout = function getLayout(page) {
 };
 
 Home.getInitialProps = async (ctx) => {
-  const products = await axios.get("http://localhost:3300/api/products");
-  const services = await axios.get("http://localhost:3300/api/services");
+  const products = await axios.get("http://localhost:3300/api/v1/products");
+  const services = await axios.get("http://localhost:3300/api/v1/services");
 
   return { products: products.data, services: services.data };
 };

@@ -9,18 +9,23 @@
     "has_promotion": true,
     "promotion": "X2 meses",
     "productId": 1,
+    "details": false,
+    "equipo": [],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
       }
     ]
   },
@@ -34,22 +39,30 @@
     "has_promotion": true,
     "promotion": "X2 meses",
     "productId": 1,
+    "details": false,
+    "equipo": [
+      {
+        "id": 1,
+        "descripcion": "Mesh",
+        "cantidad": 1,
+        "imagenUrl": "mesh.png"
+      }
+    ],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
-      },
-      {
-        "id": 4,
-        "descripcion": "Mesh"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
       }
     ]
   },
@@ -63,22 +76,36 @@
     "has_promotion": false,
     "promotion": null,
     "productId": 1,
-    "features": [
+    "details": false,
+    "equipo": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Mesh",
+        "cantidad": 2,
+        "imagenUrl": "mesh.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "McAfee",
+        "cantidad": 1,
+        "imagenUrl": "mcafee.png"
+      }
+    ],
+    "features": [
+      {
+        "id": 1,
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
+      },
+      {
+        "id": 2,
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
-      },
-      {
-        "id": 5,
-        "descripcion": "Mesh + Mcafee"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
       }
     ]
   },
@@ -86,36 +113,51 @@
     "id": 4,
     "nombre": "Internet Fibra WIN",
     "descripcion": "",
-    "precio": 144,
+    "precio": 149,
     "velocidad_actual": "200 Mbps",
     "velocidad_anterior": "100 Mbps",
     "has_promotion": true,
     "promotion": "X3 meses",
     "productId": 2,
+    "details": false,
+    "equipo": [
+      {
+        "id": 3,
+        "descripcion": "Win Box",
+        "cantidad": 1,
+        "imagenUrl": "box.png"
+      }
+    ],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
+      },
+      {
+        "id": 4,
+        "descripcion": "+60 canales en vivo",
+        "icon": "canales.png"
+      },
+      {
+        "id": 5,
+        "descripcion": "DIRECTV Sport",
+        "icon": "directv.png"
       },
       {
         "id": 6,
-        "descripcion": "+60 canales en vivo"
-      },
-      {
-        "id": 7,
-        "descripcion": "DIRECTV Sport"
-      },
-      {
-        "id": 8,
-        "descripcion": "DIRECTV GO hasta dos dispositivos simultaneos"
+        "descripcion": "Hasta 2 dispositivos en simultáneo",
+        "icon": "simultaneos.png"
       }
     ]
   },
@@ -123,40 +165,57 @@
     "id": 5,
     "nombre": "Internet Fibra WIN",
     "descripcion": "",
-    "precio": 189,
+    "precio": 194,
     "velocidad_actual": "600 Mbps",
     "velocidad_anterior": "300 Mbps",
     "has_promotion": true,
     "promotion": "X3 meses",
     "productId": 2,
+    "details": false,
+    "equipo": [
+      {
+        "id": 3,
+        "descripcion": "Win Box",
+        "cantidad": 1,
+        "imagenUrl": "box.png"
+      },
+      {
+        "id": 1,
+        "descripcion": "Mesh",
+        "cantidad": 1,
+        "imagenUrl": "mesh.png"
+      }
+    ],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
       },
       {
         "id": 4,
-        "descripcion": "Mesh"
+        "descripcion": "+60 canales en vivo",
+        "icon": "canales.png"
+      },
+      {
+        "id": 5,
+        "descripcion": "DIRECTV Sport",
+        "icon": "directv.png"
       },
       {
         "id": 6,
-        "descripcion": "+60 canales en vivo"
-      },
-      {
-        "id": 7,
-        "descripcion": "DIRECTV Sport"
-      },
-      {
-        "id": 8,
-        "descripcion": "DIRECTV GO hasta dos dispositivos simultaneos"
+        "descripcion": "Hasta 2 dispositivos en simultáneo",
+        "icon": "simultaneos.png"
       }
     ]
   },
@@ -170,34 +229,52 @@
     "has_promotion": false,
     "promotion": null,
     "productId": 2,
+    "details": false,
+    "equipo": [
+      {
+        "id": 3,
+        "descripcion": "Win Box",
+        "cantidad": 1,
+        "imagenUrl": "box.png"
+      },
+      {
+        "id": 1,
+        "descripcion": "Mesh",
+        "cantidad": 1,
+        "imagenUrl": "mesh.png"
+      }
+     
+    ],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
+      },
+      {
+        "id": 4,
+        "descripcion": "+60 canales en vivo",
+        "icon": "canales.png"
       },
       {
         "id": 5,
-        "descripcion": "Mesh + Mcafee"
+        "descripcion": "DIRECTV Sport",
+        "icon": "directv.png"
       },
       {
         "id": 6,
-        "descripcion": "+60 canales en vivo"
-      },
-      {
-        "id": 7,
-        "descripcion": "DIRECTV Sport"
-      },
-      {
-        "id": 8,
-        "descripcion": "DIRECTV GO hasta dos dispositivos simultaneos"
+        "descripcion": "Hasta 2 dispositivos en simultáneo",
+        "icon": "simultaneos.png"
       }
     ]
   },
@@ -211,35 +288,96 @@
     "has_promotion": false,
     "promotion": null,
     "productId": 3,
+    "details": false,
+    "equipo": [ ],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
+      },
+      {
+        "id": 7,
+        "descripcion": "Enrrutamiento inteligente",
+        "icon": "enrrutamiento.png"
+      },
+      {
+        "id": 8,
+        "descripcion": "Velocidad Simetrica",
+        "icon": "enrrutamiento.png"
       },
       {
         "id": 9,
-        "descripcion": "Atencion tecnica especializada"
-      },
-      {
-        "id": 10,
-        "descripcion": "COM NAT 1 y NAT2 para PO y consolas"
-      },
-      {
-        "id": 11,
-        "descripcion": "Enrrutamiento inteligente"
+        "descripcion": "Atencion tecnica especializada",
+        "icon": "atencion.png"
       }
+      
     ]
   },
   {
     "id": 8,
+    "nombre": "Plan Gamer Internet Fibra WIN",
+    "descripcion": "",
+    "precio": 149,
+    "velocidad_actual": "150 Mbps",
+    "velocidad_anterior": null,
+    "has_promotion": false,
+    "promotion": null,
+    "productId": 3,
+    "details": false,
+    "equipo": [
+      {
+        "id": 1,
+        "descripcion": "Mesh",
+        "cantidad": 1,
+        "imagenUrl": "mesh.png"
+      }
+    ],
+    "features": [
+      {
+        "id": 1,
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
+      },
+      {
+        "id": 2,
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
+      },
+      {
+        "id": 3,
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
+      },
+      {
+        "id": 7,
+        "descripcion": "Enrrutamiento inteligente",
+        "icon": "enrrutamiento.png"
+      },
+      {
+        "id": 8,
+        "descripcion": "Velocidad Simetrica",
+        "icon": "enrrutamiento.png"
+      },
+      {
+        "id": 9,
+        "descripcion": "Atencion tecnica especializada",
+        "icon": "atencion.png"
+      }
+    ]
+  },
+  {
+    "id": 9,
     "nombre": "Plan Gamer Internet Fibra WIN",
     "descripcion": "",
     "precio": 199,
@@ -248,75 +386,45 @@
     "has_promotion": false,
     "promotion": null,
     "productId": 3,
-    "features": [
+    "details": false,
+    "equipo": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
-      },
-      {
-        "id": 2,
-        "descripcion": "100% Fibra optica"
-      },
-      {
-        "id": 3,
-        "descripcion": "Mayor Velocidad"
-      },
-      {
-        "id": 4,
-        "descripcion": "Mesh"
-      },
-      {
-        "id": 9,
-        "descripcion": "Atencion tecnica especializada"
-      },
-      {
-        "id": 10,
-        "descripcion": "COM NAT 1 y NAT2 para PO y consolas"
-      },
-      {
-        "id": 11,
-        "descripcion": "Enrrutamiento inteligente"
+        "descripcion": "Mesh",
+        "cantidad": 1,
+        "imagenUrl": "mesh.png"
       }
-    ]
-  },
-  {
-    "id": 9,
-    "nombre": "Plan Gamer Internet Fibra WIN",
-    "descripcion": "",
-    "precio": 144,
-    "velocidad_actual": "150 Mbps",
-    "velocidad_anterior": null,
-    "has_promotion": false,
-    "promotion": null,
-    "productId": 3,
+    ],
     "features": [
       {
         "id": 1,
-        "descripcion": "Internet ilimitado y simetrico"
+        "descripcion": "Internet ilimitado y simetrico",
+        "icon": "ilimitado.png"
       },
       {
         "id": 2,
-        "descripcion": "100% Fibra optica"
+        "descripcion": "100% Fibra optica",
+        "icon": "fibra.png"
       },
       {
         "id": 3,
-        "descripcion": "Mayor Velocidad"
+        "descripcion": "Mayor Velocidad",
+        "icon": "velocidad.png"
       },
       {
-        "id": 4,
-        "descripcion": "Mesh"
+        "id": 7,
+        "descripcion": "Enrrutamiento inteligente",
+        "icon": "enrrutamiento.png"
+      },
+      {
+        "id": 8,
+        "descripcion": "Velocidad Simetrica",
+        "icon": "enrrutamiento.png"
       },
       {
         "id": 9,
-        "descripcion": "Atencion tecnica especializada"
-      },
-      {
-        "id": 10,
-        "descripcion": "COM NAT 1 y NAT2 para PO y consolas"
-      },
-      {
-        "id": 11,
-        "descripcion": "Enrrutamiento inteligente"
+        "descripcion": "Atencion tecnica especializada",
+        "icon": "atencion.png"
       }
     ]
   }

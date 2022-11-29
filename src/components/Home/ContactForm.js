@@ -10,19 +10,19 @@ import FormHelperText from "@mui/material/FormHelperText";
 function ContactForm() {
   const getDepartamentos = () => {
     return axios
-      .get("http://localhost:3300/api/departamentos")
+      .get("http://localhost:3300/api/v1/departamentos")
       .then((res) => res.data);
   };
 
   const getProvincias = () => {
     return axios
-      .get("http://localhost:3300/api/provincias")
+      .get("http://localhost:3300/api/v1/provincias")
       .then((res) => res.data);
   };
 
   const getDistritos = () => {
     return axios
-      .get("http://localhost:3300/api/distritos")
+      .get("http://localhost:3300/api/v1/distritos")
       .then((res) => res.data);
   };
 
