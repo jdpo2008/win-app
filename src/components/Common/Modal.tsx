@@ -10,9 +10,10 @@ const Modal = ({ onClose, children, title }) => {
 
   // check if the user has clickedinside or outside the modal
   const backDropHandler = (e) => {
-    if (!modalWrapperRef?.current?.contains(e.target)) {
-      onClose();
-    }
+    // if (!modalWrapperRef?.current?.contains(e.target)) {
+    //   onClose();
+    // }
+    onClose();
   };
 
   useEffect(() => {
