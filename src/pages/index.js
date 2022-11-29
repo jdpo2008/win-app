@@ -28,13 +28,15 @@ Home.getInitialProps = async (ctx) => {
   // const provincias = await axios.get("http://localhost:3300/api/v1/provincias");
   // const distritos = await axios.get("http://localhost:3300/api/v1/distritos");
 
-  const products = await axios.get("http://159.203.163.37/api/v1/products");
-  const services = await axios.get("http://159.203.163.37/api/v1/services");
+  const products = await axios.get("http://cambiateawin.pe/api/v1/products");
+  const services = await axios.get("http://cambiateawin.pe/api/v1/services");
   const departamentos = await axios.get(
-    "http://159.203.163.37/api/v1/departamentos"
+    "http://cambiateawin.pe/api/v1/departamentos"
   );
-  const provincias = await axios.get("http://159.203.163.37/api/v1/provincias");
-  const distritos = await axios.get("http://159.203.163.37/api/v1/distritos");
+  const provincias = await axios.get(
+    "http://cambiateawin.pe/api/v1/provincias"
+  );
+  const distritos = await axios.get("http://cambiateawin.pe/api/v1/distritos");
 
   return {
     products: products.data,
