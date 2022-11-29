@@ -59,7 +59,7 @@ const ProductServiceDetails = (props) => {
 };
 
 ProductServiceDetails.propTypes = {
-  features: PropTypes.object.isRequired,
+  features: PropTypes.array.isRequired,
 };
 
 export default ProductServiceDetails;

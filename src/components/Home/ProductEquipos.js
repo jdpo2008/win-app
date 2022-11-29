@@ -75,7 +75,7 @@ const ProductEquipos = (props) => {
 };
 
 ProductEquipos.propTypes = {
-  equipos: PropTypes.object.isRequired,
+  equipos: PropTypes.array.isRequired,
 };
 
 export default ProductEquipos;

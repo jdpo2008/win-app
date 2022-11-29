@@ -19,18 +19,47 @@ Home.getLayout = function getLayout(page) {
   return <Layout variant="main">{page}</Layout>;
 };
 
-export default function Home({ products, services }) {
-  const isLoadding = useSelector((state) => state.app.isLoadding);
+Home.getInitialProps = async (ctx) => {
+  // const products = await axios.get("http://localhost:3300/api/v1/products");
+  // const services = await axios.get("http://localhost:3300/api/v1/services");
+  // const departamentos = await axios.get(
+  //   "http://localhost:3300/api/v1/departamentos"
+  // );
+  // const provincias = await axios.get("http://localhost:3300/api/v1/provincias");
+  // const distritos = await axios.get("http://localhost:3300/api/v1/distritos");
 
+  const products = await axios.get("http://159.203.163.37/api/v1/products");
+  const services = await axios.get("http://159.203.163.37/api/v1/services");
+  const departamentos = await axios.get(
+    "http://159.203.163.37/api/v1/departamentos"
+  );
+  const provincias = await axios.get("http://159.203.163.37/api/v1/provincias");
+  const distritos = await axios.get("http://159.203.163.37/api/v1/distritos");
+
+  return {
+    products: products.data,
+    services: services.data,
+    departamentos: departamentos.data,
+    provincias: provincias.data,
+    distritos: distritos.data,
+  };
+};
+
+export default function Home(props) {
+  console.log("Props", props);
   return (
     <Page title="Home">
       <AppScreenshots />
 
       <CharacteristicsPlan />
 
-      <ProductServices />
+      <ProductServices products={props.products} services={props.services} />
 
-      <ContactForm />
+      <ContactForm
+        departamentos={props.departamentos}
+        provincias={props.provincias}
+        distritos={props.distritos}
+      />
 
       <Information />
 

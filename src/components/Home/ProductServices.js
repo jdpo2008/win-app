@@ -1,8 +1,8 @@
 import * as React from "react";
+import PropTypes from "prop-types";
+
 import Container from "@mui/material/Container";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import axios from "axios";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 import StyledTabs from "./styled/StyledTabs";
 import StyledTab from "./styled/StyledTab";
@@ -10,35 +10,7 @@ import StyledTabPanel from "./styled/StyledTabPanel";
 import ProductEquipos from "./ProductEquipos";
 import ProductServiceDetails from "./ProductServiceDetails";
 
-const ProductServices = () => {
-  const getProducts = () => {
-    return axios
-      .get("http://159.203.163.37/api/v1/products")
-      .then((res) => res.data);
-  };
-
-  const getServices = () => {
-    return axios
-      .get("http://159.203.163.37/api/v1/services")
-      .then((res) => res.data);
-  };
-
-  // Access the client
-  const queryClient = useQueryClient();
-
-  // Queries
-  const products = useQuery({
-    initialData: [],
-    queryKey: ["products"],
-    queryFn: getProducts,
-  });
-
-  const services = useQuery({
-    initialData: [],
-    queryKey: ["services"],
-    queryFn: getServices,
-  });
-
+const ProductServices = ({ products, services }) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -58,7 +30,7 @@ const ProductServices = () => {
         onChange={handleChange}
         aria-label="styled tabs example"
       >
-        {products.data.map((product) => {
+        {products.map((product) => {
           return (
             <StyledTab
               className="product-area-tabs-item"
@@ -72,11 +44,11 @@ const ProductServices = () => {
       </StyledTabs>
       <div className="product-area-tabs-panel">
         {products &&
-          products.data.map((product, i) => {
+          products.map((product, i) => {
             return (
               <StyledTabPanel value={value} index={i} key={product.id}>
                 {services &&
-                  services.data
+                  services
                     .filter((s) => s.productId === product.id)
                     .map((service, i) => {
                       return (
@@ -136,6 +108,11 @@ const ProductServices = () => {
       </div>
     </Container>
   );
+};
+
+ProductServices.propTypes = {
+  products: PropTypes.array.isRequired,
+  services: PropTypes.array.isRequired,
 };
 
 export default ProductServices;

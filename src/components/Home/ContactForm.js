@@ -1,53 +1,14 @@
 import React, { memo } from "react";
+import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import axios from "axios";
+
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 import FormHelperText from "@mui/material/FormHelperText";
 
-function ContactForm() {
-  const getDepartamentos = () => {
-    return axios
-      .get("http://159.203.163.37/api/v1/departamentos")
-      .then((res) => res.data);
-  };
-
-  const getProvincias = () => {
-    return axios
-      .get("http://159.203.163.37/api/v1/provincias")
-      .then((res) => res.data);
-  };
-
-  const getDistritos = () => {
-    return axios
-      .get("http://159.203.163.37/api/v1/distritos")
-      .then((res) => res.data);
-  };
-
-  // Access the client
-  const queryClient = useQueryClient();
-
-  // Queries
-  const departamentos = useQuery({
-    initialData: [],
-    queryKey: ["departamentos"],
-    queryFn: getDepartamentos,
-  });
-
-  const provincias = useQuery({
-    initialData: [],
-    queryKey: ["provincias"],
-    queryFn: getProvincias,
-  });
-
-  const distritos = useQuery({
-    initialData: [],
-    queryKey: ["distritos"],
-    queryFn: getDistritos,
-  });
-
+const ContactForm = ({ departamentos, provincias, distritos }) => {
   const defaultValues = {
     firstName: "",
     lastName: "",
@@ -96,13 +57,13 @@ function ContactForm() {
     mutationFn: (body) => {
       const request = {
         ...body,
-        departamento: departamentos.data.find(
+        departamento: departamentos.find(
           (d) => d.id_ubigeo === body.departamento
         ).nombre_ubigeo,
-        provincia: provincias.data[body.departamento].find(
+        provincia: provincias[body.departamento].find(
           (p) => p.id_ubigeo === body.provincia
         ).nombre_ubigeo,
-        distrito: distritos.data[body.provincia].find(
+        distrito: distritos[body.provincia].find(
           (d) => d.id_ubigeo === body.distrito
         ).nombre_ubigeo,
       };
@@ -110,10 +71,6 @@ function ContactForm() {
       //return axios.post("/api", body);
     },
     onSuccess: () => {
-      // Invalidate and refetch
-      queryClient.invalidateQueries({
-        queryKey: ["departamentos", "provincias", "distritos"],
-      });
       reset();
     },
     onError: (error) => {
@@ -122,12 +79,12 @@ function ContactForm() {
   });
 
   const handleChangeDepartamento = (event) => {
-    setProvFilter(provincias.data[event.target.value]);
+    setProvFilter(provincias[event.target.value]);
     setDistFilter([]);
   };
 
   const handleChangeProvincia = (event) => {
-    setDistFilter(distritos.data[event.target.value]);
+    setDistFilter(distritos[event.target.value]);
   };
 
   return (
@@ -215,8 +172,8 @@ function ContactForm() {
                           aria-invalid={errors.distrito ? "true" : "false"}
                           onChange={handleChangeDepartamento}
                         >
-                          {departamentos.data &&
-                            departamentos.data.map((d) => (
+                          {departamentos &&
+                            departamentos.map((d) => (
                               <option key={d.id_ubigeo} value={d.id_ubigeo}>
                                 {d.nombre_ubigeo}
                               </option>
@@ -289,6 +246,12 @@ function ContactForm() {
       </div>
     </>
   );
-}
+};
+
+ContactForm.propTypes = {
+  departamentos: PropTypes.array.isRequired,
+  provincias: PropTypes.object.isRequired,
+  distritos: PropTypes.object.isRequired,
+};
 
 export default ContactForm;
