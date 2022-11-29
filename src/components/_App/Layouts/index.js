@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 // components
 import MainLayout from "./main";
-import AuthLayotu from "./auth";
+import AuthLayout from "./auth";
 
 // ----------------------------------------------------------------------
 
@@ -22,5 +22,5 @@ export default function Layout({
   if (variant === "main") {
     return <MainLayout isLoadding={isLoadding}>{children}</MainLayout>;
   }
-  return <AuthLayotu>{children}</AuthLayotu>;
+  return <AuthLayout>{children}</AuthLayout>;
 }
