@@ -7,23 +7,23 @@ import { Box } from "@mui/material";
 //
 import EditorToolbar, { formats } from "./EditorToolbar";
 
-// const ReactQuill = dynamic(() => import("react-quill"), {
-//   ssr: false,
-//   loading: () => (
-//     <Box
-//       sx={{
-//         top: 0,
-//         left: 0,
-//         right: 0,
-//         bottom: 0,
-//         position: "absolute",
-//         bgcolor: "background.paper",
-//       }}
-//     >
-//       Loading...
-//     </Box>
-//   ),
-// });
+const ReactQuill = dynamic(() => import("react-quill"), {
+  ssr: false,
+  loading: () => (
+    <Box
+      sx={{
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        position: "absolute",
+        bgcolor: "background.paper",
+      }}
+    >
+      Loading...
+    </Box>
+  ),
+});
 
 // ----------------------------------------------------------------------
 
