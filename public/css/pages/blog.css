@@ -111,14 +111,14 @@ Blog Area CSS
 }
 
 .single-blog-post .content .post-btn {
-    border: 1.5px solid #f1610e;
-    padding: 5px 20px;
-    color: #f1610e;
-    border-radius: 5px;
-    font-weight: bolder;
-    background-color: #fff;
-    margin-top: 10px;
-    width: 130px;
+    border: 1.5px solid #f1610e !important;
+    padding: 5px 20px !important;
+    color: #f1610e !important;
+    border-radius: 5px !important;
+    font-weight: bolder !important;
+    background-color: #fff !important;
+    margin-top: 10px !important;
+    width: 130px !important;
 }
 
 .single-blog-post .content .post-btn .post-btn-icon {

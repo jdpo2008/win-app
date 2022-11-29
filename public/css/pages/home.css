@@ -1031,9 +1031,9 @@ Screenshots Area CSS
 }
 
 .product-area-box .product-area-tabs {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 80% !important;
   overflow: visibles;
 }
 
@@ -1488,16 +1488,16 @@ Screenshots Area CSS
 }
 
 .regions-area-box .regions-area-tabs {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 90% !important;
 }
 
 .regions-area-tabs-item {
-  flex: 1 1 100%;
-  margin: auto 20px;
-  border: 2px solid rgb(241, 105, 13);
-  padding: 10px auto;
+  flex: 1 1 100% !important;
+  margin: auto 20px !important;
+  border: 2px solid rgb(241, 105, 13) !important;
+  padding: 10px auto !important;
 }
 
 .regions-area-tabs-panel {
