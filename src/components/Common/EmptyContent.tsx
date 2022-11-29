@@ -37,7 +37,7 @@ export default function EmptyContent({ title, description, img, ...other }) {
           "https://minimal-assets-api.vercel.app/assets/illustrations/illustration_empty_content.svg"
         }
         sx={{ height: 240, mb: 3 }}
-        ratio={1}
+        ratio={"1/1"}
       />
 
       <Typography variant="h5" gutterBottom>

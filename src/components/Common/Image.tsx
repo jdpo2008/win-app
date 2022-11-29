@@ -24,7 +24,7 @@ Image.propTypes = {
 };
 
 export default function Image({
-  ratio,
+  ratio = "1/1",
   disabledEffect = false,
   effect = "blur",
   sx,
