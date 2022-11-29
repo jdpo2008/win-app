@@ -1023,7 +1023,7 @@ Screenshots Area CSS
   =================================================*/
 
 .product-area-box {
-  display: flex;
+  display: flex !important;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -1033,8 +1033,9 @@ Screenshots Area CSS
 .product-area-box .product-area-tabs {
   display: flex !important;
   justify-content: space-between !important;
-  width: 100% !important;
+  width: 65% !important;
   overflow: visibles;
+  padding: 0 10px !important;
 }
 
 .product-area-tabs-item {
