@@ -11,6 +11,8 @@ import {
   QueryClientProvider,
 } from "@tanstack/react-query";
 
+import palette from "../theme/palette";
+
 import "@public/css/bootstrap.min.css";
 import "@public/css/fontawesome.min.css";
 import "@public/css/remixicon.css";

@@ -1,7 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import React from "react";
 // theme
-import palette from "../theme/palette";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
