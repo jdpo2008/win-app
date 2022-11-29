@@ -46,7 +46,6 @@ Home.getInitialProps = async (ctx) => {
 };
 
 export default function Home(props) {
-  console.log("Props", props);
   return (
     <Page title="Home">
       <AppScreenshots />
