@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { Provider as ReduxProvider } from "react-redux";
 
-import { store } from "./store";
+import { store } from "../store";
 
 import {
   Hydrate,

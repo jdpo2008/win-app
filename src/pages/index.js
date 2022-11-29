@@ -6,7 +6,7 @@ import Layout from "@components/_App/Layouts";
 
 import axios from "axios";
 
-import { loaddingOn, loaddingOff } from "./store/features/app/appSlice";
+import { loaddingOn, loaddingOff } from "../store/features/app/appSlice";
 
 import AppScreenshots from "@components/Home/AppScreenshots";
 import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
