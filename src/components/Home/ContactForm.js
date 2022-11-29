@@ -169,7 +169,7 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
                           className="form-control"
                           placeholder="Deparatamento"
                           {...register("departamento", { required: true })}
-                          aria-invalid={errors.distrito ? "true" : "false"}
+                          aria-invalid={errors.departamento ? "true" : "false"}
                           onChange={handleChangeDepartamento}
                         >
                           {departamentos &&
