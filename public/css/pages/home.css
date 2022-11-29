@@ -1033,7 +1033,7 @@ Screenshots Area CSS
 .product-area-box .product-area-tabs {
   display: flex !important;
   justify-content: space-between !important;
-  width: 80% !important;
+  width: 100% !important;
   overflow: visibles;
 }
 
