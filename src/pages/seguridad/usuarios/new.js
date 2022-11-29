@@ -6,7 +6,7 @@ import { PATH_DASHBOARD } from "@routes/paths";
 // hooks
 import useSettings from "@hooks/useSettings";
 // layouts
-import Layout from "@components/_App/layouts";
+import Layout from "@components/_App/Layouts";
 // components
 import Page from "@components/_App/Page";
 // import HeaderBreadcrumbs from '@components/HeaderBreadcrumbs';
