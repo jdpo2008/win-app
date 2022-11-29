@@ -20,8 +20,11 @@ Home.getLayout = function getLayout(page) {
 };
 
 Home.getInitialProps = async (ctx) => {
-  const products = await axios.get("http://localhost:3300/api/v1/products");
-  const services = await axios.get("http://localhost:3300/api/v1/services");
+  // const products = await axios.get("http://localhost:3300/api/v1/products");
+  // const services = await axios.get("http://localhost:3300/api/v1/services");
+
+  const products = await axios.get("http://159.203.163.37/api/v1/products");
+  const services = await axios.get("http://159.203.163.37/api/v1/services");
 
   return { products: products.data, services: services.data };
 };
