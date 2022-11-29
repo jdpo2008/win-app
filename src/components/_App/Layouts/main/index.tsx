@@ -1,7 +1,4 @@
 import React from "react";
-import Head from "next/head";
-import GoTop from "./GoTop";
-import Preloader from "../../../Common/Preloader";
 
 import NavbarStyle from "./NavbarStyle";
 import Footer from "./Footer";

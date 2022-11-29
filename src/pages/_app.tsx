@@ -1,4 +1,5 @@
 import React from "react";
+import type, { AppProps } from "next/app";
 import Head from "next/head";
 
 import { Provider as ReduxProvider } from "react-redux";
@@ -33,7 +34,7 @@ import "@public/css/styles.css";
 import ThemeProvider from "../theme";
 import NotistackProvider from "@components/Common/NotistackProvider";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout ?? ((page) => page);
   // Create a client
   const queryClient = new QueryClient();
@@ -88,5 +89,3 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
-
-export default MyApp;
