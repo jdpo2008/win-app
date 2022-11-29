@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import GoTop from "./GoTop";
-import Preloader from "./Preloader";
+import Preloader from "../../../Common/Preloader";
 
 import NavbarStyle from "./NavbarStyle";
 import Footer from "./Footer";
@@ -9,10 +9,10 @@ import Cliengo from "./Cliengo";
 
 const MainLayout = ({ isLoadding, children }) => {
   // Preloader
-  const [loader, setLoader] = React.useState(true);
-  React.useEffect(() => {
-    setTimeout(() => setLoader(false), 1500);
-  }, []);
+  // const [loader, setLoader] = React.useState(true);
+  // React.useEffect(() => {
+  //   setTimeout(() => setLoader(false), 1500);
+  // }, []);
 
   return (
     <>
@@ -20,7 +20,7 @@ const MainLayout = ({ isLoadding, children }) => {
 
       {children}
 
-      {loader ? <Preloader /> : null}
+      {/* {loader ? <Preloader /> : null} */}
 
       {/* <GoTop scrollStepInPx="100" delayInMs="10.50" /> */}
 

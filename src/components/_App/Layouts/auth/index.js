@@ -1,5 +1,5 @@
 import React from "react";
-import Preloader from "../main/Preloader";
+import Preloader from "../../../Common/Preloader";
 
 import Cliengo from "../main/Cliengo";
 
