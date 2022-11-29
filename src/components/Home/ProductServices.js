@@ -58,7 +58,7 @@ const ProductServices = () => {
         onChange={handleChange}
         aria-label="styled tabs example"
       >
-        {products.map((product) => {
+        {products.data.map((product) => {
           return (
             <StyledTab
               className="product-area-tabs-item"
@@ -72,11 +72,11 @@ const ProductServices = () => {
       </StyledTabs>
       <div className="product-area-tabs-panel">
         {products &&
-          products.map((product, i) => {
+          products.data.map((product, i) => {
             return (
               <StyledTabPanel value={value} index={i} key={product.id}>
                 {services &&
-                  services
+                  services.data
                     .filter((s) => s.productId === product.id)
                     .map((service, i) => {
                       return (
