@@ -89,7 +89,6 @@ const EditorToolbarStyle = styled("div")(({ theme }) => {
           border: "none",
           maxHeight: 200,
           overflow: "auto",
-          boxShadow: theme.customShadows.z20,
           borderRadius: theme.shape.borderRadius,
           backgroundColor: theme.palette.background.paper,
         },
