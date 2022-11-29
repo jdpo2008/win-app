@@ -1033,14 +1033,15 @@ Screenshots Area CSS
 .product-area-box .product-area-tabs {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
+  overflow: visibles;
 }
 
 .product-area-tabs-item {
-  flex: 1 1 100%;
-  margin: auto 15px;
-  border: 2px solid rgb(241, 105, 13);
-  padding: 10px auto;
+  flex: 1 1 100% !important;
+  margin: auto 15px !important;
+  border: 2px solid rgb(241, 105, 13) !important;
+  padding: 10px auto !important;
 }
 
 .product-area-tabs-panel {
@@ -2664,10 +2665,6 @@ Screenshots Area CSS
     font-size: 1rem;
   }
 
-  .product-area-box .product-area-tabs {
-    width: 100%;
-    overflow: visible;
-  }
 
   .product-area-tabs-item {
     margin: 0;
