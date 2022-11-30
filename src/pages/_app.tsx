@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import type, { AppProps } from "next/app";
 import Head from "next/head";
 
@@ -11,8 +11,6 @@ import {
   QueryClient,
   QueryClientProvider,
 } from "@tanstack/react-query";
-
-import palette from "../theme/palette";
 
 import "@public/css/bootstrap.min.css";
 import "@public/css/fontawesome.min.css";
@@ -33,48 +31,18 @@ import "@fontsource/roboto/700.css";
 import "@public/css/styles.css";
 import ThemeProvider from "../theme";
 import NotistackProvider from "@components/Common/NotistackProvider";
+import { NextPageWithLayout } from "../types";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
   // Create a client
-  const queryClient = new QueryClient();
+  const [queryClient] = useState(() => new QueryClient());
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-
-        <meta name="theme-color" content={palette.light.primary.main} />
-        <link rel="manifest" href="/manifest.json" />
-
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <meta
-          name="description"
-          content="The starting point for your next project with Win-App"
-        />
-        <meta
-          name="keywords"
-          content="nextjs,win,internet,react,kit,application"
-        />
-        <meta name="author" content="innovacionesjd.com" />
-      </Head>
       <ReduxProvider store={store}>
         <QueryClientProvider client={queryClient}>
           <Hydrate state={pageProps.dehydratedState}>
