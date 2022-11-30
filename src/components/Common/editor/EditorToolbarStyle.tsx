@@ -30,7 +30,7 @@ const EditorToolbarStyle = styled("div")(({ theme }) => {
       },
     "& .ql-toolbar.ql-snow": {
       border: "none",
-      borderBottom: `solid 1px ${theme.palette.grey[500_32]}`,
+      borderBottom: `solid 1px ${theme.palette.grey[500]}`,
       "& .ql-formats": {
         "&:not(:last-of-type)": {
           marginRight: theme.spacing(2),

@@ -15,7 +15,7 @@ export default function Layout({
   variant = "dashboard",
   isLoadding = false,
   children,
-}) {
+}: any) {
   //   if (variant === 'logoOnly') {
   //     return <LogoOnlyLayout> {children} </LogoOnlyLayout>;
   //   }

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Error({ statusCode }) {
+function Error({ statusCode }: any) {
   return (
     <p>
       {statusCode
@@ -10,7 +10,7 @@ function Error({ statusCode }) {
   );
 }
 
-Error.getInitialProps = ({ res, err }) => {
+Error.getInitialProps = ({ res, err }: any) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
   return { statusCode };
 };

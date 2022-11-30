@@ -3,7 +3,7 @@ import Preloader from "../../../Common/Preloader";
 
 import Cliengo from "../main/Cliengo";
 
-const AuthLayout = ({ children }) => {
+const AuthLayout = ({ children }: any) => {
   // Preloader
   const [loader, setLoader] = React.useState(true);
   React.useEffect(() => {

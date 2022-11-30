@@ -43,7 +43,7 @@ EditorToolbar.propTypes = {
   isSimple: PropTypes.bool,
 };
 
-export default function EditorToolbar({ id, isSimple, ...other }) {
+export default function EditorToolbar({ id, isSimple, ...other }: any) {
   return (
     <EditorToolbarStyle {...other}>
       <div id={id}>

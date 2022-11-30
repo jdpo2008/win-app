@@ -30,7 +30,6 @@ export default function EmptyContent({ title, description, img, ...other }) {
     <RootStyle {...other}>
       <Image
         disabledEffect
-        visibleByDefault
         alt="empty content"
         src={
           img ||

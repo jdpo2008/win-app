@@ -31,7 +31,7 @@ const RootStyle = styled(Box)(({ theme }) => ({
   overflow: "hidden",
   position: "relative",
   borderRadius: theme.shape.borderRadius,
-  border: `solid 1px ${theme.palette.grey[500_32]}`,
+  border: `solid 1px ${theme.palette.grey[500]}`,
   "& .ql-container.ql-snow": {
     borderColor: "transparent",
     ...theme.typography.body1,
@@ -73,7 +73,7 @@ export default function Editor({
   helperText,
   sx,
   ...other
-}) {
+}: any) {
   const modules = {
     toolbar: {
       container: `#${id}`,

@@ -6,7 +6,7 @@ const PageBanner = ({
   homePageUrl,
   homePageText,
   activePageText,
-}) => {
+}: any) => {
   return (
     <>
       <div className="page-title-area">

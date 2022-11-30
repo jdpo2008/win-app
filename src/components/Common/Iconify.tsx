@@ -12,6 +12,6 @@ Iconify.propTypes = {
   sx: PropTypes.object,
 };
 
-export default function Iconify({ icon, sx, ...other }) {
+export default function Iconify({ icon, sx, ...other }: any) {
   return <Box component={Icon} icon={icon} sx={{ ...sx }} {...other} />;
 }

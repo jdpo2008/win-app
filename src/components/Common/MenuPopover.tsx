@@ -10,7 +10,7 @@ const ArrowStyle = styled("span")(({ theme }) => {
 
   const POSITION = -(SIZE / 2);
 
-  const borderStyle = `solid 1px ${theme.palette.grey[500_12]}`;
+  const borderStyle = `solid 1px ${theme.palette.grey[500]}`;
 
   const topStyle = {
     borderRadius: "0 0 3px 0",
@@ -115,7 +115,7 @@ export default function MenuPopover({
   disabledArrow,
   sx,
   ...other
-}) {
+}: any) {
   return (
     <Popover
       open={open}

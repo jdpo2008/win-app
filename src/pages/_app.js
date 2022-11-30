@@ -31,13 +31,8 @@ import "@fontsource/roboto/700.css";
 import "@public/css/styles.css";
 import ThemeProvider from "../theme";
 import NotistackProvider from "@components/Common/NotistackProvider";
-import { NextPageWithLayout } from "../types";
 
-type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayout;
-};
-
-function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+function MyApp({ Component, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => page);
   // Create a client
   const [queryClient] = useState(() => new QueryClient());

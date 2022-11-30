@@ -122,7 +122,7 @@ export default function BlogNewPostForm() {
   };
 
   const handleDrop = useCallback(
-    (acceptedFiles) => {
+    (acceptedFiles: any) => {
       const file = acceptedFiles[0];
 
       if (file) {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // ----------------------------------------------------------------------
 
-export default function useTable(props) {
+export default function useTable(props: any) {
   const [dense, setDense] = useState(props?.defaultDense || true);
 
   const [orderBy, setOrderBy] = useState(props?.defaultOrderBy || "name");
@@ -17,7 +17,7 @@ export default function useTable(props) {
 
   const [selected, setSelected] = useState(props?.defaultSelected || []);
 
-  const onSort = (id) => {
+  const onSort = (id: any) => {
     const isAsc = orderBy === id && order === "asc";
     if (id !== "") {
       setOrder(isAsc ? "desc" : "asc");
@@ -25,10 +25,10 @@ export default function useTable(props) {
     }
   };
 
-  const onSelectRow = (id) => {
+  const onSelectRow = (id: any) => {
     const selectedIndex = selected.indexOf(id);
 
-    let newSelected = [];
+    let newSelected: any[] = [];
 
     if (selectedIndex === -1) {
       newSelected = newSelected.concat(selected, id);
@@ -45,7 +45,7 @@ export default function useTable(props) {
     setSelected(newSelected);
   };
 
-  const onSelectAllRows = (checked, newSelecteds) => {
+  const onSelectAllRows = (checked: any, newSelecteds: any) => {
     if (checked) {
       setSelected(newSelecteds);
       return;
@@ -53,16 +53,16 @@ export default function useTable(props) {
     setSelected([]);
   };
 
-  const onChangePage = (event, newPage) => {
+  const onChangePage = (event: any, newPage: any) => {
     setPage(newPage);
   };
 
-  const onChangeRowsPerPage = (event) => {
+  const onChangeRowsPerPage = (event: any) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
 
-  const onChangeDense = (event) => {
+  const onChangeDense = (event: any) => {
     setDense(event.target.checked);
   };
 
@@ -90,7 +90,7 @@ export default function useTable(props) {
 
 // ----------------------------------------------------------------------
 
-export function descendingComparator(a, b, orderBy) {
+export function descendingComparator(a: any, b: any, orderBy: any) {
   if (b[orderBy] < a[orderBy]) {
     return -1;
   }
@@ -100,12 +100,16 @@ export function descendingComparator(a, b, orderBy) {
   return 0;
 }
 
-export function getComparator(order, orderBy) {
+export function getComparator(order: string, orderBy: any) {
   return order === "desc"
-    ? (a, b) => descendingComparator(a, b, orderBy)
-    : (a, b) => -descendingComparator(a, b, orderBy);
+    ? (a: any, b: any) => descendingComparator(a, b, orderBy)
+    : (a: any, b: any) => -descendingComparator(a, b, orderBy);
 }
 
-export function emptyRows(page, rowsPerPage, arrayLength) {
+export function emptyRows(
+  page: number,
+  rowsPerPage: number,
+  arrayLength: number
+) {
   return page > 0 ? Math.max(0, (1 + page) * rowsPerPage - arrayLength) : 0;
 }
