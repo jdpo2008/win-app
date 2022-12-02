@@ -244,7 +244,7 @@ Blog Area CSS
 
 @media (min-width: 1200px) {
     .search-container {
-        display: flex;
-        max-width: 1200px;
+        display: flex !important;
+        max-width: 1200px !important;
     }
 }
