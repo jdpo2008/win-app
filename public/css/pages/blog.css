@@ -149,7 +149,7 @@ Blog Area CSS
 
 .search-container .search-container-input {
     margin-top: 1.5rem;
-    width: 370px
+    width: 370px;
 }
 
 .search-container-input-control {
@@ -239,5 +239,12 @@ Blog Area CSS
     }
     .search-container-input-control {
         width: 79.5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .search-container {
+        display: flex;
+        max-width: 1200px;
     }
 }
