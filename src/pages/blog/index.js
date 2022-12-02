@@ -49,8 +49,8 @@ const ButtonStyled = styled(Button)({
   borderColor: "#dd5b10",
   color: "#fff",
   "&:hover": {
-    backgroundColor: "#000",
-    borderColor: "#000",
+    backgroundColor: "#fff",
+    borderColor: "#dd5b10",
     color: "#dd5b10",
   },
   "&:active": {
@@ -94,8 +94,8 @@ export default function Blog() {
         activePageText="Blog"
       />
 
-      <Container sx={{ display: "flex", justifyContent: "space-between" }}>
-        <FormControl sx={{ m: 2.5, width: "40ch" }} size="small">
+      <Container className="search-container">
+        <FormControl className="search-container-select" size="small">
           <InputLabel id="demo-select-small">Categoria</InputLabel>
           <CssSelect
             labelId="demo-select-small"
@@ -117,11 +117,8 @@ export default function Blog() {
           </CssSelect>
         </FormControl>
 
-        <div>
-          <FormControl
-            sx={{ marginTop: 2.5, marginBottom: 2.5, width: "33ch" }}
-            size="small"
-          >
+        <div className="search-container-input">
+          <FormControl size="small" className="search-container-input-control">
             <InputLabel htmlFor="filled-adornment-Search">Search</InputLabel>
             <OutlinedInput
               id="filled-adornment-Search"
@@ -131,9 +128,9 @@ export default function Blog() {
             />
           </FormControl>
           <ButtonStyled
+            className="search-container-button"
             aria-label="toggle Search visibility"
             onClick={handleClickSearch}
-            sx={{ marginTop: 2.5, marginRight: 2.5 }}
           >
             <Search />
           </ButtonStyled>

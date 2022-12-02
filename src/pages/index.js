@@ -5,6 +5,8 @@ import Layout from "@components/_App/Layouts";
 
 import axios from "axios";
 
+import { useProducts } from "@hooks/useProducts";
+
 import AppScreenshots from "@components/Home/AppScreenshots";
 import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
 import ProductServices from "@components/Home/ProductServices";
@@ -17,54 +19,30 @@ Home.getLayout = function getLayout(page) {
   return <Layout variant="main">{page}</Layout>;
 };
 
-// Home.getInitialProps = async (ctx) => {
-//   const products = await axios.get("http://localhost:3300/api/v1/products");
-//   const services = await axios.get("http://localhost:3300/api/v1/services");
-//   const departamentos = await axios.get(
-//     "http://localhost:3300/api/v1/departamentos"
-//   );
-//   const provincias = await axios.get("http://localhost:3300/api/v1/provincias");
-//   const distritos = await axios.get("http://localhost:3300/api/v1/distritos");
-
-//   // const products = await axios.get("http://cambiateawin.pe/api/v1/products");
-//   // const services = await axios.get("http://cambiateawin.pe/api/v1/services");
-//   // const departamentos = await axios.get(
-//   //   "http://cambiateawin.pe/api/v1/departamentos"
-//   // );
-//   // const provincias = await axios.get(
-//   //   "http://cambiateawin.pe/api/v1/provincias"
-//   // );
-//   // const distritos = await axios.get("http://cambiateawin.pe/api/v1/distritos");
-
-//   return {
-//     products: products.data,
-//     services: services.data,
-//     departamentos: departamentos.data,
-//     provincias: provincias.data,
-//     distritos: distritos.data,
-//   };
-// };
-
 export default function Home() {
   const [isLoadding, setIsLoadding] = React.useState(false);
   const [departamentos, setDepartamentos] = React.useState([]);
-  const [provincias, setProvincias] = React.useState([]);
-  const [distritos, setDistritos] = React.useState([]);
+  const [provincias, setProvincias] = React.useState({});
+  const [distritos, setDistritos] = React.useState({});
   const [products, setProducts] = React.useState([]);
   const [services, setServices] = React.useState([]);
+
+  const { data } = useProducts();
+
+  console.log(data);
 
   React.useEffect(() => {
     setIsLoadding(true);
     const getData = async () => {
-      const depart = axios.get("http://cambiateawin.pe/api/v1/departamentos");
+      const depart = axios.get("http://localhost:3000/api/v1/departamentos");
 
-      const provin = axios.get("http://cambiateawin.pe/api/v1/provincias");
+      const provin = axios.get("http://localhost:3000/api/v1/provincias");
 
-      const distri = axios.get("http://cambiateawin.pe/api/v1/distritos");
+      const distri = axios.get("http://localhost:3000/api/v1/distritos");
 
-      const prod = axios.get("http://cambiateawin.pe/api/v1/products");
+      const prod = axios.get("http://localhost:3000/api/v1/products");
 
-      const serv = axios.get("http://cambiateawin.pe/api/v1/services");
+      const serv = axios.get("http://localhost:3000/api/v1/services");
 
       axios
         .all([depart, provin, distri, prod, serv])

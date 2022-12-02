@@ -134,3 +134,110 @@ Blog Area CSS
     background-color: #f1610e;
     color: #fff;
 }
+
+.search-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.search-container .search-container-select {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    width: 350px
+}
+
+.search-container .search-container-input {
+    margin-top: 1.5rem;
+    width: 370px
+}
+
+.search-container-input-control {
+    width: 75%;
+}
+
+.search-container .search-container-input .search-container-button {
+    margin-top: 0rem;
+    margin-right: 1rem;
+}
+
+/* Max width 430px */
+@media only screen and (max-width: 430px) {
+    .search-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    .search-container .search-container-input {
+        margin: 0;
+        width: 100%;
+    }
+
+    .search-container .search-container-input .search-container-button {
+        margin-top: 0;
+        margin-right: 2.5rem;
+    }
+
+    .search-container-input-control {
+        width: 79.5%;
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 767px) {
+    .search-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    .search-container .search-container-input {
+        margin: 0;
+    }
+
+    .search-container .search-container-input .search-container-button {
+        margin-top: 0;
+        margin-right: 2.5rem;
+    }
+    .search-container-input-control {
+        width: 79.5%;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+    .search-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    .search-container .search-container-input {
+        margin: 0;
+    }
+
+    .search-container .search-container-input .search-container-button {
+        margin-top: 0;
+        margin-right: 2.5rem;
+    }
+    .search-container-input-control {
+        width: 79.5%;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .search-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    .search-container .search-container-input {
+        margin: 0;
+    }
+
+    .search-container .search-container-input .search-container-button {
+        margin-top: 0;
+        margin-right: 2.5rem;
+    }
+    .search-container-input-control {
+        width: 79.5%;
+    }
+}
