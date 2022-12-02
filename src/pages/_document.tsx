@@ -52,11 +52,21 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <meta
             name="description"
-            content="The starting point for your next project with Win-App"
+            content="cambiateawin.pe pagina win para reevendedores"
           />
           <meta
+            property="og:title"
+            content="Add a Shopping Cart to Any Website in Minutes - cambiateawin"
+          />
+          <meta
+            property="og:description"
+            content="cambiateawin.pe pagina win para reevendedores"
+          />
+          <meta property="og:url" content="http://www.cambiateawin.pe/" />
+          <meta property="og:type" content="website" />
+          <meta
             name="keywords"
-            content="nextjs,win,internet,react,kit,application"
+            content="nextjs,win,internet,react,kit,application,cambiateawin.pes"
           />
           <meta name="author" content="innovacionesjd.com" />
         </Head>
