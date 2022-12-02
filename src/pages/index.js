@@ -34,15 +34,15 @@ export default function Home() {
   React.useEffect(() => {
     setIsLoadding(true);
     const getData = async () => {
-      const depart = axios.get("http://localhost:3000/api/v1/departamentos");
+      const depart = axios.get("http://cambiateawin.pe//api/v1/departamentos");
 
-      const provin = axios.get("http://localhost:3000/api/v1/provincias");
+      const provin = axios.get("http://cambiateawin.pe/api/v1/provincias");
 
-      const distri = axios.get("http://localhost:3000/api/v1/distritos");
+      const distri = axios.get("http://cambiateawin.pe/api/v1/distritos");
 
-      const prod = axios.get("http://localhost:3000/api/v1/products");
+      const prod = axios.get("http://cambiateawin.pe/api/v1/products");
 
-      const serv = axios.get("http://localhost:3000/api/v1/services");
+      const serv = axios.get("http://cambiateawin.pe/api/v1/services");
 
       axios
         .all([depart, provin, distri, prod, serv])
