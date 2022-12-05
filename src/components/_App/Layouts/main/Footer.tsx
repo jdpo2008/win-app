@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import { PATH_PAGE } from "@routes/paths";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -45,27 +47,27 @@ const Footer = () => {
 
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link href="/">
+                <Link href={PATH_PAGE.root}>
                   <a className="nav-link">Home</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/blog">
+                <Link href={PATH_PAGE.blog.root}>
                   <a className="nav-link">Blog</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/postula">
+                <Link href={PATH_PAGE.postula}>
                   <a className="nav-link">Postula</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/afiliaciones">
+                <Link href={PATH_PAGE.afiliaciones}>
                   <a className="nav-link">Afiliaciones</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/contact">
+                <Link href={PATH_PAGE.contacto}>
                   <a className="nav-link">Contacta</a>
                 </Link>
               </li>

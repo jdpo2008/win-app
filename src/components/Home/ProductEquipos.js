@@ -30,26 +30,26 @@ const ProductEquipos = (props) => {
               {e.id === 1 && (
                 <img
                   src={"/images/features/" + e.imagenUrl}
-                  alt={e.descripcion}
+                  alt={e.nombre}
                   width={65}
                 />
               )}
               {e.id === 2 && (
                 <img
                   src={"/images/features/" + e.imagenUrl}
-                  alt={e.descripcion}
+                  alt={e.nombre}
                   width={49}
                 />
               )}
               {e.id === 3 && (
                 <img
                   src={"/images/features/" + e.imagenUrl}
-                  alt={e.descripcion}
+                  alt={e.nombre}
                   width={42}
                 />
               )}
               <p>
-                {e.cantidad} {e.descripcion}
+                {e.cantidad} {e.nombre}
               </p>
             </div>
             {i === 0 && props.equipos?.length > 1 && (

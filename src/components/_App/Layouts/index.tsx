@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 // components
 import MainLayout from "./main";
 import AuthLayout from "./auth";
+import LogoOnlyLayout from "./LogoOnlyLayout";
 
 // ----------------------------------------------------------------------
 
@@ -16,9 +17,9 @@ export default function Layout({
   isLoadding = false,
   children,
 }: any) {
-  //   if (variant === 'logoOnly') {
-  //     return <LogoOnlyLayout> {children} </LogoOnlyLayout>;
-  //   }
+  if (variant === "logoOnly") {
+    return <LogoOnlyLayout> {children} </LogoOnlyLayout>;
+  }
   if (variant === "main") {
     return <MainLayout isLoadding={isLoadding}>{children}</MainLayout>;
   }

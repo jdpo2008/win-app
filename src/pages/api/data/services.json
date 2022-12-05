@@ -43,6 +43,7 @@
     "equipo": [
       {
         "id": 1,
+        "nombre": "Mesh",
         "descripcion": "Mesh",
         "cantidad": 1,
         "imagenUrl": "mesh.png"
@@ -80,12 +81,14 @@
     "equipo": [
       {
         "id": 1,
+        "nombre": "Mesh",
         "descripcion": "Mesh",
         "cantidad": 2,
         "imagenUrl": "mesh.png"
       },
       {
         "id": 2,
+        "nombre": "McAfee",
         "descripcion": "McAfee",
         "cantidad": 1,
         "imagenUrl": "mcafee.png"
@@ -123,6 +126,7 @@
     "equipo": [
       {
         "id": 3,
+        "nombre": "Win Box",
         "descripcion": "Win Box",
         "cantidad": 1,
         "imagenUrl": "box.png"
@@ -175,12 +179,14 @@
     "equipo": [
       {
         "id": 3,
+        "nombre": "Win Box",
         "descripcion": "Win Box",
         "cantidad": 1,
         "imagenUrl": "box.png"
       },
       {
         "id": 1,
+        "nombre": "Mesh",
         "descripcion": "Mesh",
         "cantidad": 1,
         "imagenUrl": "mesh.png"
@@ -233,12 +239,14 @@
     "equipo": [
       {
         "id": 3,
+        "nombre": "Win Box",
         "descripcion": "Win Box",
         "cantidad": 1,
         "imagenUrl": "box.png"
       },
       {
         "id": 1,
+        "nombre": "Mesh",
         "descripcion": "Mesh",
         "cantidad": 1,
         "imagenUrl": "mesh.png"
@@ -338,6 +346,7 @@
     "equipo": [
       {
         "id": 1,
+        "nombre": "Mesh",
         "descripcion": "Mesh",
         "cantidad": 1,
         "imagenUrl": "mesh.png"
@@ -390,6 +399,7 @@
     "equipo": [
       {
         "id": 1,
+        "nombre": "Mesh",
         "descripcion": "Mesh",
         "cantidad": 1,
         "imagenUrl": "mesh.png"
