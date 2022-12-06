@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="es-ES">
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -50,27 +50,6 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="./manifest.json" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <meta property="og:locale" content="es_ES" />
-          <meta property="og:type" content="website" />
-          <meta
-            property="og:title"
-            content="Win Internet 100% Fibra - Win Internet 100% Fibra Óptica"
-            key="title"
-          />
-          <meta
-            property="og:description"
-            content="Pídelos aquí Previous Next Pídelos aquí Previous Next Ahora contamos con cobertura en Chiclayo, Piura, Trujillo, Chimbote. Contratando solo internet ¡Durante todo el mes de Noviembre, cámbiate a Win y disfruta de la velocidad de tu internet! * La promo win duplica solo aplica desde el plan de 50Mbps hasta 300Mbps. x2 Internet Fibra WIN &hellip; Win Internet 100% Fibra Read More &raquo;"
-            key="description"
-          />
-          <meta property="og:url" content="https://cambiateawin.pe/" />
-          <meta
-            property="og:site_name"
-            content="Win Internet 100% Fibra Óptica"
-          />
-          <meta
-            property="article:modified_time"
-            content="2022-11-21T20:52:44+00:00"
-          />
           <meta
             property="description"
             content="Pídelos aquí Previous Next Pídelos aquí Previous Next Ahora contamos con cobertura en Chiclayo, Piura, Trujillo, Chimbote. Contratando solo internet ¡Durante todo el mes de Noviembre, cámbiate a Win y disfruta de la velocidad de tu internet! * La promo win duplica solo aplica desde el plan de 50Mbps hasta 300Mbps. x2 Internet Fibra WIN &hellip; Win Internet 100% Fibra Read More &raquo;"

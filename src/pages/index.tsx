@@ -68,21 +68,23 @@ const Home: NextPageWithLayout = () => {
       description="Home page cambiateawin.pe servicios, informacion, planes y mas"
       url="/"
     >
-      <AppScreenshots />
+      <>
+        <AppScreenshots />
 
-      <CharacteristicsPlan />
+        <CharacteristicsPlan />
 
-      <ProductServices products={products} services={services} />
+        <ProductServices products={products} services={services} />
 
-      <ContactForm
-        departamentos={departamentos}
-        provincias={provincias}
-        distritos={distritos}
-      />
+        <ContactForm
+          departamentos={departamentos}
+          provincias={provincias}
+          distritos={distritos}
+        />
 
-      <Information />
+        <Information />
 
-      <RegionsParts />
+        <RegionsParts />
+      </>
     </Page>
   );
 };

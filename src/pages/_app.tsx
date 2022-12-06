@@ -42,7 +42,6 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
-  // Create a client
   const [queryClient] = useState(() => new QueryClient());
   return (
     <ReduxProvider store={store}>
