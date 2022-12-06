@@ -31,12 +31,9 @@ import "@fontsource/roboto/700.css";
 
 // Global CSS
 import "@public/css/styles.css";
-import ThemeProvider from "../theme";
 import NotistackProvider from "@components/Common/NotistackProvider";
-
-type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
-};
+import { NextPageWithLayout } from "@interfaces/index";
+import ThemeProvider from "../theme";
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;

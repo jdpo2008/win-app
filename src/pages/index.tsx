@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import Page from "@components/_App/Page";
 import Layout from "@components/_App/Layouts";
@@ -14,12 +14,11 @@ import ContactForm from "@components/Home/ContactForm";
 import Information from "@components/Home/Information";
 import RegionsParts from "@components/Home/RegionsParts";
 import Preloader from "@components/Common/Preloader";
+import { NextPageWithLayout } from "@interfaces/index";
 
-Home.getLayout = function getLayout(page) {
-  return <Layout variant="main">{page}</Layout>;
-};
+interface Props {}
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   const [isLoadding, setIsLoadding] = React.useState(false);
   const [departamentos, setDepartamentos] = React.useState([]);
   const [provincias, setProvincias] = React.useState({});
@@ -64,7 +63,11 @@ export default function Home() {
   return isLoadding ? (
     <Preloader />
   ) : (
-    <Page title="Home">
+    <Page
+      title="Home"
+      description="Home page cambiateawin.pe servicios, informacion, planes y mas"
+      url="/"
+    >
       <AppScreenshots />
 
       <CharacteristicsPlan />
@@ -82,4 +85,10 @@ export default function Home() {
       <RegionsParts />
     </Page>
   );
-}
+};
+
+Home.getLayout = function getLayout(page) {
+  return <Layout variant="main">{page}</Layout>;
+};
+
+export default Home;

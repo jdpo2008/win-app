@@ -86,7 +86,11 @@ export default function Blog() {
   const router = useRouter();
 
   return (
-    <Page title="Blog">
+    <Page
+      title="Blog"
+      description="Blog page cambiateawin.pe tu mejor blog de internet"
+      url="blog"
+    >
       <PageBanner
         pageTitle="Tu Blog favorito de INTERNET"
         homePageUrl="/"

@@ -23,10 +23,6 @@ const RootStyle = styled("div")(({ theme }) => ({
   paddingBottom: theme.spacing(10),
 }));
 
-ErrorPage.getLayout = function getLayout(page) {
-  return <Layout variant="logoOnly">{page}</Layout>;
-};
-
 export default function ErrorPage() {
   return (
     <Page title="404 Page Not Found" sx={{ height: 1 }}>
@@ -59,3 +55,7 @@ export default function ErrorPage() {
     </Page>
   );
 }
+
+ErrorPage.getLayout = function getLayout(page) {
+  return <Layout variant="logoOnly">{page}</Layout>;
+};

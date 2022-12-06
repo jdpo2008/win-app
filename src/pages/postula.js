@@ -141,7 +141,11 @@ export default function Postula() {
   };
 
   return (
-    <Page title="Postula">
+    <Page
+      title="Postula"
+      description="Postula page cambiateawin.pe empleos, postulacion, ofertas laboral y mas"
+      url="/postula"
+    >
       <PageBanner
         pageTitle="Oportunidades de Empleo"
         homePageUrl="/"
