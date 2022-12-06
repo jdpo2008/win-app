@@ -29,8 +29,6 @@ export default function Home() {
 
   const { data } = useProducts();
 
-  console.log(data);
-
   React.useEffect(() => {
     setIsLoadding(true);
     const getData = async () => {

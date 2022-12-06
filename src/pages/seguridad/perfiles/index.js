@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import PropTypes from "prop-types";
 
 // @mui
@@ -53,13 +53,7 @@ const TABLE_HEAD = [
   { id: "" },
 ];
 
-PerfilesList.getLayout = function getLayout(page) {
-  return <Layout variant="main">{page}</Layout>;
-};
-
-PerfilesList.propTypes = {};
-
-export default function PerfilesList(props) {
+const PerfilesList = (props) => {
   const { themeStretch } = useSettings();
   const {
     dense,
@@ -248,7 +242,15 @@ export default function PerfilesList(props) {
       </DialogStyle>
     </Page>
   );
-}
+};
+
+PerfilesList.getLayout = function getLayout(page) {
+  return <Layout variant="main">{page}</Layout>;
+};
+
+PerfilesList.propTypes = {};
+
+export default PerfilesList;
 
 function applySortFilter({ tableData, comparator, filterName }) {
   const stabilizedThis = tableData.map((el, index) => [el, index]);

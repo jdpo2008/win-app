@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { ReactElement, ReactNode, useState } from "react";
 import type, { AppProps } from "next/app";
+import { NextPage } from "next";
 import Head from "next/head";
 
 import { Provider as ReduxProvider } from "react-redux";
@@ -7,6 +8,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { store } from "../store";
 
 import {
+  DehydratedState,
   Hydrate,
   QueryClient,
   QueryClientProvider,
@@ -32,24 +34,32 @@ import "@public/css/styles.css";
 import ThemeProvider from "../theme";
 import NotistackProvider from "@components/Common/NotistackProvider";
 
-function MyApp({ Component, pageProps }) {
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+  //pageProps: { dehydratedState?: DehydratedState };
+};
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
   // Create a client
   const [queryClient] = useState(() => new QueryClient());
   return (
-    <>
-      <ReduxProvider store={store}>
-        <QueryClientProvider client={queryClient}>
-          <Hydrate state={pageProps.dehydratedState}>
-            <ThemeProvider>
-              <NotistackProvider>
-                {getLayout(<Component {...pageProps} />)}
-              </NotistackProvider>{" "}
-            </ThemeProvider>
-          </Hydrate>
-        </QueryClientProvider>
-      </ReduxProvider>
-    </>
+    <ReduxProvider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider>
+          <NotistackProvider>
+            {getLayout(<Component {...pageProps} />)}
+          </NotistackProvider>
+        </ThemeProvider>
+        {/* <Hydrate state={pageProps.dehydratedState}>
+          
+        </Hydrate> */}
+      </QueryClientProvider>
+    </ReduxProvider>
   );
 }
 

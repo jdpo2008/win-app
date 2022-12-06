@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { FC, ReactElement } from "react";
 // @mui
 import { styled } from "@mui/material/styles";
 // components
@@ -18,13 +19,13 @@ const HeaderStyle = styled("header")(({ theme }) => ({
   },
 }));
 
+interface Props {
+  children: PropTypes.ReactNodeLike;
+}
+
 // ----------------------------------------------------------------------
 
-LogoOnlyLayout.propTypes = {
-  children: PropTypes.node,
-};
-
-export default function LogoOnlyLayout({ children }) {
+const LogoOnlyLayout: FC<Props> = ({ children }) => {
   return (
     <>
       <HeaderStyle>
@@ -33,4 +34,6 @@ export default function LogoOnlyLayout({ children }) {
       {children}
     </>
   );
-}
+};
+
+export default LogoOnlyLayout;
