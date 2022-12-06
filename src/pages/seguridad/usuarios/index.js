@@ -183,40 +183,7 @@ export default function UserList() {
         activePageText="Usuarios"
       />
       <Container maxWidth={themeStretch ? false : "lg"} className="pt-50 pb-50">
-        {/* <HeaderBreadcrumbs
-          heading="User List"
-          links={[
-            { name: "Dashboard", href: PATH_DASHBOARD.root },
-            { name: "User", href: PATH_DASHBOARD.user.root },
-            { name: "List" },
-          ]}
-          action={
-            <NextLink href={PATH_DASHBOARD.user.new} passHref>
-              <Button
-                variant="contained"
-                startIcon={<Iconify icon={"eva:plus-fill"} />}
-              >
-                New User
-              </Button>
-            </NextLink>
-          }
-        /> */}
-        <Card>
-          {/* <Tabs
-            allowScrollButtonsMobile
-            variant="scrollable"
-            scrollButtons="auto"
-            value={filterStatus}
-            onChange={onChangeFilterStatus}
-            sx={{ px: 2, bgcolor: "background.neutral" }}
-          >
-            {STATUS_OPTIONS.map((tab) => (
-              <Tab disableRipple key={tab} label={tab} value={tab} />
-            ))}
-          </Tabs>
-
-          <Divider /> */}
-
+        <Card sx={{ padding: "15px" }}>
           <UserTableToolbar
             filterName={filterName}
             filterRole={filterRole}
@@ -303,12 +270,6 @@ export default function UserList() {
               onPageChange={onChangePage}
               onRowsPerPageChange={onChangeRowsPerPage}
             />
-
-            {/* <FormControlLabel
-              control={<Switch checked={dense} onChange={onChangeDense} />}
-              label="Dense"
-              sx={{ px: 3, py: 1.5, top: 0, position: { md: "absolute" } }}
-            /> */}
           </Box>
         </Card>
       </Container>
