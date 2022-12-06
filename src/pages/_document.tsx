@@ -78,7 +78,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="keywords"
-            content="nextjs,win,internet,react,kit,application,cambiateawin.pes"
+            content="nextjs,win,internet,react,kit,application,cambiateawin.pe,cambiateawin"
           />
           <meta name="author" content="innovacionesjd.com" />
         </Head>
