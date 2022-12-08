@@ -27,7 +27,7 @@ const Page: FC<Props> = forwardRef(
         title={`${title} | WIN-APP`}
         description={description}
         openGraph={{
-          url: `http://cambiateawin.pe/${url}`,
+          url: `httpa://cambiateawin.pe${url}`,
           title,
           description,
         }}
