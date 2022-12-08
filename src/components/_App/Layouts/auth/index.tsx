@@ -1,9 +1,7 @@
 import React from "react";
 import Preloader from "../../../Common/Preloader";
 
-import Cliengo from "../main/Cliengo";
-
-const AuthLayout = ({ children }: any) => {
+const AuthLayout = ({ children }: React.PropsWithChildren<{}>) => {
   // Preloader
   const [loader, setLoader] = React.useState(true);
   React.useEffect(() => {
@@ -15,8 +13,6 @@ const AuthLayout = ({ children }: any) => {
       {children}
 
       {loader ? <Preloader /> : null}
-
-      {/* <Cliengo /> */}
     </>
   );
 };

@@ -25,7 +25,9 @@ interface Props {
 
 // ----------------------------------------------------------------------
 
-const LogoOnlyLayout: FC<Props> = ({ children }) => {
+export default function LogoOnlyLayout({
+  children,
+}: React.PropsWithChildren<{}>) {
   return (
     <>
       <HeaderStyle>
@@ -34,6 +36,4 @@ const LogoOnlyLayout: FC<Props> = ({ children }) => {
       {children}
     </>
   );
-};
-
-export default LogoOnlyLayout;
+}

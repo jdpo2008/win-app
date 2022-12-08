@@ -20,7 +20,8 @@
       "@public/*": [
         "public/*"
       ],
-      "@interfaces/*" :["src/types/*"]
+      "@interfaces/*" :["src/types/*"],
+      "@data/*" :["src/data/*"]
     },
     "target": "es5",
     "lib": [

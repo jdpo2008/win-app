@@ -16,12 +16,12 @@ export default function Layout({
   variant = "dashboard",
   isLoadding = false,
   children,
-}: any) {
+}: React.PropsWithChildren<{ variant: string; isLoadding: boolean }>) {
   if (variant === "logoOnly") {
     return <LogoOnlyLayout> {children} </LogoOnlyLayout>;
   }
   if (variant === "main") {
-    return <MainLayout isLoadding={isLoadding}>{children}</MainLayout>;
+    return <MainLayout>{children}</MainLayout>;
   }
   return <AuthLayout>{children}</AuthLayout>;
 }

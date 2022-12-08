@@ -16,53 +16,18 @@ import RegionsParts from "@components/Home/RegionsParts";
 import Preloader from "@components/Common/Preloader";
 import { NextPageWithLayout } from "@interfaces/index";
 
+import {
+  departamentos,
+  provincias,
+  distritos,
+  productos,
+  servicios,
+} from "@data/static";
+
 interface Props {}
 
 const Home: NextPageWithLayout = () => {
-  const [isLoadding, setIsLoadding] = React.useState(false);
-  const [departamentos, setDepartamentos] = React.useState([]);
-  const [provincias, setProvincias] = React.useState({});
-  const [distritos, setDistritos] = React.useState({});
-  const [products, setProducts] = React.useState([]);
-  const [services, setServices] = React.useState([]);
-
-  const { data } = useProducts();
-
-  React.useEffect(() => {
-    setIsLoadding(true);
-    const getData = async () => {
-      const depart = axios.get("http://cambiateawin.pe//api/v1/departamentos");
-
-      const provin = axios.get("http://cambiateawin.pe/api/v1/provincias");
-
-      const distri = axios.get("http://cambiateawin.pe/api/v1/distritos");
-
-      const prod = axios.get("http://cambiateawin.pe/api/v1/products");
-
-      const serv = axios.get("http://cambiateawin.pe/api/v1/services");
-
-      axios
-        .all([depart, provin, distri, prod, serv])
-        .then((result) => {
-          setDepartamentos(result[0].data);
-          setProvincias(result[1].data);
-          setDistritos(result[2].data);
-          setProducts(result[3].data);
-          setServices(result[4].data);
-        })
-        .finally(() => {
-          setIsLoadding(false);
-        });
-    };
-
-    getData();
-
-    //setIsLoadding(false);
-  }, []);
-
-  return isLoadding ? (
-    <Preloader />
-  ) : (
+  return (
     <Page
       title="Home"
       description="Home page cambiateawin.pe servicios, informacion, planes y mas"
@@ -73,7 +38,7 @@ const Home: NextPageWithLayout = () => {
 
         <CharacteristicsPlan />
 
-        <ProductServices products={products} services={services} />
+        <ProductServices products={productos} services={servicios} />
 
         <ContactForm
           departamentos={departamentos}
@@ -90,7 +55,11 @@ const Home: NextPageWithLayout = () => {
 };
 
 Home.getLayout = function getLayout(page) {
-  return <Layout variant="main">{page}</Layout>;
+  return (
+    <Layout variant="main" isLoadding={false}>
+      {page}
+    </Layout>
+  );
 };
 
 export default Home;
