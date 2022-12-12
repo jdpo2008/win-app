@@ -71,7 +71,7 @@ const Page: FC<Props> = forwardRef(
           {
             name: "keywords",
             content:
-              "cambiateawin.pe, cambiate a win, 100% fibra optica, internet, win, television digital, planes gamers, mesh, tv box ",
+              "Win, Win Perú, Win Internet, Win Planes, Win Hogar, Win Planes Internet, Win Internet Hogar, Fibra Win, Win Fibra Óptica, Win Internet Inalámbrico, Win Wifi, Internet Satelital Win, Win Internet Precio, Internet Inalámbrico",
           },
           {
             name: "author",
@@ -79,15 +79,15 @@ const Page: FC<Props> = forwardRef(
           },
         ]}
         additionalLinkTags={[
-          {
-            rel: "manifest",
-            href: "/manifest.json",
-          },
-          {
-            rel: "apple-touch-icon",
-            sizes: "180x180",
-            href: "/favicon/apple-touch-icon.png",
-          },
+          // {
+          //   rel: "manifest",
+          //   href: "/manifest.json",
+          // },
+          // {
+          //   rel: "apple-touch-icon",
+          //   sizes: "180x180",
+          //   href: "/favicon/apple-touch-icon.png",
+          // },
           {
             rel: "icon",
             type: "image/png",
