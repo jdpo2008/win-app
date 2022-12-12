@@ -50,11 +50,7 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <meta
-            property="description"
-            content="Pídelos aquí Previous Next Pídelos aquí Previous Next Ahora contamos con cobertura en Chiclayo, Piura, Trujillo, Chimbote. Contratando solo internet ¡Durante todo el mes de Noviembre, cámbiate a Win y disfruta de la velocidad de tu internet! * La promo win duplica solo aplica desde el plan de 50Mbps hasta 300Mbps. x2 Internet Fibra WIN &hellip; Win Internet 100% Fibra Read More &raquo;"
-            key="description"
-          />
+
           <meta
             name="keywords"
             content="nextjs,win,internet,react,kit,application,cambiateawin.pe,cambiateawin"

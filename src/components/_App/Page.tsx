@@ -34,8 +34,9 @@ const Page: FC<Props> = forwardRef(
         openGraph={{
           url: `https://cambiateawin.pe${url}`,
           title: `${title}`,
-          description: `${description}`,
-          siteName: "WIN-APP",
+          description:
+            "Pídelos aquí Previous Next Ahora contamos con cobertura en Chiclayo, Piura, Trujillo, Chimbote. Contratando solo internet ¡Durante todo el mes de Noviembre, cámbiate a Win y disfruta de la velocidad de tu internet! * La promo win duplica solo aplica desde el plan de 50Mbps hasta 300Mbps. x2 Internet Fibra WIN &hellip; Win Internet 100% Fibra Read More &raquo;",
+          siteName: "cambiateawin.pe",
           images: [
             {
               url: DEFAULT_OG_IMAGE,
@@ -46,6 +47,10 @@ const Page: FC<Props> = forwardRef(
             },
           ],
         }}
+        robotsProps={{
+          notranslate: true,
+        }}
+
         // twitter={{
         //   handle: "@handle",
         //   site: "@site",

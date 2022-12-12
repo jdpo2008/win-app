@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-
 import FormHelperText from "@mui/material/FormHelperText";
+import { LoadingButton } from "@mui/lab";
+
+import toast from "@components/Common/Toast";
 
 const ContactForm = ({ departamentos, provincias, distritos }) => {
   const defaultValues = {
@@ -32,6 +33,8 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
   });
 
   const methods = useForm({
+    mode: "all",
+    reValidateMode: "onChange",
     resolver: yupResolver(FormSchema),
     defaultValues,
   });
@@ -72,6 +75,8 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
     },
     onSuccess: () => {
       reset();
+
+      notify("success", "Registro Exitoso. Pronto sera contactado");
     },
     onError: (error) => {
       console.error(error);
@@ -86,6 +91,14 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
   const handleChangeProvincia = (event) => {
     setDistFilter(distritos[event.target.value]);
   };
+
+  const notify = React.useCallback((type, message) => {
+    toast({ type, message });
+  }, []);
+
+  const dismiss = React.useCallback(() => {
+    toast.dismiss();
+  }, []);
 
   return (
     <>
@@ -232,10 +245,22 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
                     </div>
 
                     <div className="col-lg-12 col-md-12 col-sm-12 btn-container">
-                      <button type="submit" className="btn-form">
+                      <LoadingButton
+                        type="submit"
+                        variant="contained"
+                        loading={isSubmitting}
+                        sx={{
+                          width: "50%",
+                          backgroundColor: "rgb(0, 100, 250)",
+                          ":hover": {
+                            backgroundColor: "rgba(0, 100, 250, 0.7)",
+                          },
+                        }}
+                        disabled={Object.keys(errors).length > 0}
+                      >
                         <i className="bx bx-paper-plane"></i> Solicitar
                         Información
-                      </button>
+                      </LoadingButton>
                     </div>
                   </div>
                 </form>

@@ -11,6 +11,7 @@ import { MotionContainer, varBounce } from "@components/Common/animate";
 
 // assets
 import { SeverErrorIllustration } from "../assets";
+import { NextPageWithLayout } from "@interfaces/index";
 
 // ----------------------------------------------------------------------
 
@@ -24,15 +25,9 @@ const RootStyle = styled("div")(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-Page500.getLayout = function getLayout(page) {
-  return <Layout variant="logoOnly">{page}</Layout>;
-};
-
-// ----------------------------------------------------------------------
-
-export default function Page500() {
+const Page500: NextPageWithLayout = () => {
   return (
-    <Page title="500 Internal Server Error" sx={{ height: 1 }}>
+    <Page title="500 Internal Server Error">
       <RootStyle>
         <Container component={MotionContainer}>
           <Box sx={{ maxWidth: 480, margin: "auto", textAlign: "center" }}>
@@ -59,4 +54,16 @@ export default function Page500() {
       </RootStyle>
     </Page>
   );
-}
+};
+
+// ----------------------------------------------------------------------
+
+Page500.getLayout = function getLayout(page) {
+  return (
+    <Layout variant="logoOnly" isLoadding={false}>
+      {page}
+    </Layout>
+  );
+};
+
+export default Page500;

@@ -14,6 +14,7 @@ import Layout from "@components/_App/Layouts";
 
 // assets
 import { PageNotFoundIllustration } from "../assets";
+import { NextPageWithLayout } from "@interfaces/index";
 
 const RootStyle = styled("div")(({ theme }) => ({
   display: "flex",
@@ -23,9 +24,9 @@ const RootStyle = styled("div")(({ theme }) => ({
   paddingBottom: theme.spacing(10),
 }));
 
-export default function ErrorPage() {
+const ErrorPage: NextPageWithLayout = () => {
   return (
-    <Page title="404 Page Not Found" sx={{ height: 1 }}>
+    <Page title="404 Page Not Found">
       <RootStyle>
         <Container component={MotionContainer}>
           <Box sx={{ maxWidth: 480, margin: "auto", textAlign: "center" }}>
@@ -54,8 +55,14 @@ export default function ErrorPage() {
       </RootStyle>
     </Page>
   );
-}
+};
 
 ErrorPage.getLayout = function getLayout(page) {
-  return <Layout variant="logoOnly">{page}</Layout>;
+  return (
+    <Layout variant="logoOnly" isLoadding={false}>
+      {page}
+    </Layout>
+  );
 };
+
+export default ErrorPage;

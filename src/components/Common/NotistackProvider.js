@@ -89,15 +89,15 @@ export default function NotistackProvider({ children }) {
           error: <SnackbarIcon icon={"eva:alert-circle-fill"} color="error" />,
         }}
         // With close as default
-        // action={(key) => (
-        //   // <IconButtonAnimate
-        //   //   size="small"
-        //   //   onClick={onClose(key)}
-        //   //   sx={{ p: 0.5 }}
-        //   // >
-        //   //   <Iconify icon={"eva:close-fill"} sx={{ width: 20, height: 20 }} />
-        //   // </IconButtonAnimate>s
-        // )}
+        action={(key) => (
+          <IconButtonAnimate
+            size="small"
+            onClick={onClose(key)}
+            sx={{ p: 0.5 }}
+          >
+            <Iconify icon={"eva:close-fill"} sx={{ width: 20, height: 20 }} />
+          </IconButtonAnimate>
+        )}
       >
         {children}
       </SnackbarProvider>

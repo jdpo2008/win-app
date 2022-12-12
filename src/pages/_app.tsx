@@ -31,9 +31,13 @@ import "@fontsource/roboto/700.css";
 
 // Global CSS
 import "@public/css/styles.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import NotistackProvider from "@components/Common/NotistackProvider";
 import { NextPageWithLayout } from "@interfaces/index";
 import ThemeProvider from "../theme";
+import toast from "@components/Common/Toast";
+import { ToastContainer } from "react-toastify";
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
@@ -49,6 +53,15 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         <ThemeProvider>
           <NotistackProvider>
             {getLayout(<Component {...pageProps} />)}
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              draggable={false}
+              closeOnClick
+              pauseOnHover
+            />
           </NotistackProvider>
         </ThemeProvider>
         {/* <Hydrate state={pageProps.dehydratedState}>
