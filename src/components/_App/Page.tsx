@@ -1,7 +1,5 @@
 import { forwardRef, FC, ReactElement } from "react";
-import PropTypes from "prop-types";
-// next
-import Head from "next/head";
+
 // @mui
 import { Box } from "@mui/material";
 import { NextSeo, NextSeoProps } from "next-seo";
@@ -28,15 +26,17 @@ const Page: FC<Props> = forwardRef(
   ) => (
     <>
       <NextSeo
-        title={`${title} | Win Internet 100% Fibra Optica`}
+        title={`${title} - Win Internet 100% Fibra Optica`}
         description={description}
         canonical={DOMAIN}
         openGraph={{
+          type: "website",
+          locale: "es_PE",
+          siteName: "cambiateawin.pe",
           url: `https://cambiateawin.pe${url}`,
-          title: `${title}`,
+          title: `${title} - Win Internet 100% Fibra Optica`,
           description:
             "Pídelos aquí Previous Next Ahora contamos con cobertura en Chiclayo, Piura, Trujillo, Chimbote. Contratando solo internet ¡Durante todo el mes de Noviembre, cámbiate a Win y disfruta de la velocidad de tu internet! * La promo win duplica solo aplica desde el plan de 50Mbps hasta 300Mbps. x2 Internet Fibra WIN &hellip; Win Internet 100% Fibra Read More &raquo;",
-          siteName: "cambiateawin.pe",
           images: [
             {
               url: DEFAULT_OG_IMAGE,
@@ -51,6 +51,11 @@ const Page: FC<Props> = forwardRef(
           notranslate: true,
         }}
         additionalMetaTags={[
+          {
+            name: "viewport",
+            content:
+              "width=device-width, initial-scalewidth=device-width, initial-scale=1, maximum-scale=1.0,user-scalable=0",
+          },
           {
             property: "dc:creator",
             content: "José Daniel Pérez Ochoa - innovacionesjp.com",
@@ -71,6 +76,29 @@ const Page: FC<Props> = forwardRef(
           {
             name: "author",
             content: "innovacionesjd.com",
+          },
+        ]}
+        additionalLinkTags={[
+          {
+            rel: "manifest",
+            href: "/manifest.json",
+          },
+          {
+            rel: "apple-touch-icon",
+            sizes: "180x180",
+            href: "/favicon/apple-touch-icon.png",
+          },
+          {
+            rel: "icon",
+            type: "image/png",
+            sizes: "32x32",
+            href: "/favicon/favicon-32x32.png",
+          },
+          {
+            rel: "icon",
+            type: "image/png",
+            sizes: "16x16",
+            href: "/favicon/favicon-16x16.png",
           },
         ]}
 
