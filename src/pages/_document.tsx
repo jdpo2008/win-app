@@ -50,12 +50,6 @@ export default class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-          <meta
-            name="keywords"
-            content="nextjs,win,internet,react,kit,application,cambiateawin.pe,cambiateawin"
-          />
-          <meta name="author" content="innovacionesjd.com" />
         </Head>
         <body>
           <Main />

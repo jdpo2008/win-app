@@ -50,6 +50,29 @@ const Page: FC<Props> = forwardRef(
         robotsProps={{
           notranslate: true,
         }}
+        additionalMetaTags={[
+          {
+            property: "dc:creator",
+            content: "José Daniel Pérez Ochoa - innovacionesjp.com",
+          },
+          {
+            name: "application-name",
+            content: "cambiateawin",
+          },
+          {
+            httpEquiv: "x-ua-compatible",
+            content: "IE=edge; chrome=1",
+          },
+          {
+            name: "keywords",
+            content:
+              "cambiateawin.pe, cambiate a win, 100% fibra optica, internet, win, television digital, planes gamers, mesh, tv box ",
+          },
+          {
+            name: "author",
+            content: "innovacionesjd.com",
+          },
+        ]}
 
         // twitter={{
         //   handle: "@handle",
