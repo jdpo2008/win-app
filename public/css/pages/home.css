@@ -195,6 +195,16 @@ Main Banner Area CSS
   animation: movebounce 5s linear infinite;
 }
 
+.home-h2-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-h2-container h2 {
+  color: grey;
+  text-align: center;
+}
+
 /*================================================
   Features Area CSS
   =================================================*/

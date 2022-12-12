@@ -28,7 +28,7 @@ const Page: FC<Props> = forwardRef(
   ) => (
     <>
       <NextSeo
-        title={`${title} | WIN-APP`}
+        title={`${title} | Win Internet 100% Fibra Optica`}
         description={description}
         canonical={DOMAIN}
         openGraph={{

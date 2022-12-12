@@ -30,13 +30,20 @@ const Home: NextPageWithLayout = () => {
   return (
     <Page
       title="Home"
-      description="Home page cambiateawin.pe servicios, informacion, planes y mas"
+      description="Home page cambiate a win, cambiateawin.pe, 100% fibra optica, mayor velocidad, servicios, informacion, planes y mas"
       url="/"
     >
       <>
         <AppScreenshots />
 
         <CharacteristicsPlan />
+
+        <div className="home-h2-container pb-25">
+          <h2>
+            ¡Durante todo el mes de Diciembre, cámbiate a Win y disfruta de la
+            velocidad de tu internet!
+          </h2>
+        </div>
 
         <ProductServices products={productos} services={servicios} />
 
