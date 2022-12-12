@@ -77,6 +77,10 @@ const Page: FC<Props> = forwardRef(
             name: "author",
             content: "innovacionesjd.com",
           },
+          {
+            name: "google-site-verification",
+            content: "eTTGC4fZ-VuYVh4vGmyl6m9UfIEsLNbuRNarf988hcg",
+          },
         ]}
         additionalLinkTags={[
           // {
