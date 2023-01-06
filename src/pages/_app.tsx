@@ -19,6 +19,8 @@ import "@public/css/fontawesome.min.css";
 import "@public/css/remixicon.css";
 import "@public/css/animate.min.css";
 import "../../node_modules/swiper/swiper.min.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import "../../node_modules/react-modal-video/css/modal-video.min.css";
 import "react-accessible-accordion/dist/fancy-example.css";
@@ -36,37 +38,51 @@ import "react-toastify/dist/ReactToastify.css";
 import NotistackProvider from "@components/Common/NotistackProvider";
 import { NextPageWithLayout } from "@interfaces/index";
 import ThemeProvider from "../theme";
-import toast from "@components/Common/Toast";
 import { ToastContainer } from "react-toastify";
+
+import dynamic from "next/dynamic";
+const PrivateRoute = dynamic(
+  () => import("@components/_App/Layouts/_private-routes"),
+  {
+    ssr: false,
+  }
+);
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
-  //pageProps: { dehydratedState?: DehydratedState };
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => page);
   const [queryClient] = useState(() => new QueryClient());
+  const getLayout = Component.getLayout ?? ((page) => page);
+  const authenticationRequired = Component.authorization ?? false;
+
   return (
     <ReduxProvider store={store}>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider>
-          <NotistackProvider>
-            {getLayout(<Component {...pageProps} />)}
-            <ToastContainer
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={false}
-              newestOnTop={false}
-              draggable={false}
-              closeOnClick
-              pauseOnHover
-            />
-          </NotistackProvider>
-        </ThemeProvider>
-        {/* <Hydrate state={pageProps.dehydratedState}>
-          
-        </Hydrate> */}
+        <Hydrate state={pageProps.dehydratedState}>
+          <ThemeProvider>
+            <NotistackProvider>
+              {getLayout(<Component {...pageProps} />)}
+              {/* {authenticationRequired ? (
+                <PrivateRoute>
+                  {getLayout(<Component {...pageProps} />)}
+                </PrivateRoute>
+              ) : (
+                getLayout(<Component {...pageProps} />)
+              )} */}
+              <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                draggable={false}
+                closeOnClick
+                pauseOnHover
+              />
+            </NotistackProvider>
+          </ThemeProvider>
+        </Hydrate>
       </QueryClientProvider>
     </ReduxProvider>
   );

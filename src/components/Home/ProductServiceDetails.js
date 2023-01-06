@@ -31,7 +31,7 @@ const ProductServiceDetails = (props) => {
       {open && (
         <div className="features-details-container-card">
           {props.features.map((f) => (
-            <>
+            <React.Fragment key={f.id}>
               <div className="features-details-container-card-item-naranja">
                 <img
                   src={"/images/features/naranja/" + f.icon}
@@ -50,7 +50,7 @@ const ProductServiceDetails = (props) => {
                 />
                 <span style={{ fontSize: "8px" }}>{f.descripcion}</span>
               </div>
-            </>
+            </React.Fragment>
           ))}
         </div>
       )}

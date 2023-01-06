@@ -1,6 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
+import Slider from "react-slick";
+
 import Container from "@mui/material/Container";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -17,6 +19,40 @@ const ProductServices = ({ products, services }) => {
     setValue(newValue);
   };
 
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <Container
       className="product-area-box"
@@ -30,89 +66,90 @@ const ProductServices = ({ products, services }) => {
         onChange={handleChange}
         aria-label="styled tabs example"
       >
-        {products.map((product) => {
-          return (
-            <StyledTab
-              className="product-area-tabs-item"
-              label={product.nombre}
-              key={product.id}
-            />
-          );
-        })}
+        {products &&
+          products?.map((product) => {
+            return (
+              <StyledTab
+                className="product-area-tabs-item"
+                label={product.nombre}
+                key={product.id}
+              />
+            );
+          })}
 
         {/* <StyledTab className="product-area-tabs-item" label="" /> */}
       </StyledTabs>
       <div className="product-area-tabs-panel">
-        {products &&
-          products.map((product, i) => {
-            return (
-              <StyledTabPanel value={value} index={i} key={product.id}>
-                {services &&
-                  services
-                    .filter((s) => s.productId === product.id)
-                    .map((service, i) => {
-                      return (
-                        <div
-                          className="product-area-services-container"
-                          key={service.id}
-                        >
-                          {service.has_promotion && (
-                            <div className="product-area-services-container-promotion">
-                              <span>X2</span>
-                            </div>
-                          )}
-                          {!service.has_promotion && (
-                            <div className="product-area-services-container-promotion-x">
-                              <span>&nbsp;</span>
-                            </div>
-                          )}
-                          <div className="product-area-services-card">
-                            <h5 className="product-area-services-card-nombre">
-                              {service.nombre}
-                            </h5>
-                            <div className="product-area-services-card-logo"></div>
-                            {service.velocidad_anterior && (
-                              <span className="product-area-services-card-velocidad-antigua">
-                                {service.velocidad_anterior}
-                              </span>
-                            )}
-                            {!service.velocidad_anterior && (
-                              <span className="product-area-services-card-velocidad-antigua">
-                                &nbsp;
-                              </span>
-                            )}
-                            <h4 className="product-area-services-card-velocidad">
-                              {service.velocidad_actual}{" "}
-                              <span>{service.promotion}</span>
-                            </h4>
-                            <p className="product-area-services-card-precio">
-                              Precio S/{" "}
-                              {service.precio && <span>{service.precio}</span>}{" "}
-                              al mes
-                            </p>
-
-                            <ProductEquipos equipos={service.equipo} />
-                          </div>
-                          <button className="product-area-services-card-button">
-                            ¡Pidelo por WhatsApp{" "}
-                            <WhatsAppIcon className="product-area-services-card-button-icon" />
-                          </button>
-
-                          <ProductServiceDetails features={service.features} />
+        {products?.map((product, i) => {
+          return (
+            <StyledTabPanel value={value} index={i} key={product.id}>
+              <Slider {...settings}>
+                {product.servicios.map((service, i) => {
+                  return (
+                    <div
+                      key={service.id}
+                      className="product-area-services-container"
+                    >
+                      {service.tiene_promocion && (
+                        <div className="product-area-services-container-promotion">
+                          <span>X2</span>
                         </div>
-                      );
-                    })}
-              </StyledTabPanel>
-            );
-          })}
+                      )}
+                      {!service.tiene_promocion && (
+                        <div className="product-area-services-container-promotion-x">
+                          <span>&nbsp;</span>
+                        </div>
+                      )}
+                      <div className="product-area-services-card">
+                        <h5 className="product-area-services-card-nombre">
+                          {service.nombre}
+                        </h5>
+                        <div className="product-area-services-card-logo"></div>
+                        {service.velocidad_anterior && (
+                          <span className="product-area-services-card-velocidad-antigua">
+                            {service.velocidad_anterior}
+                          </span>
+                        )}
+                        {!service.velocidad_anterior && (
+                          <span className="product-area-services-card-velocidad-antigua">
+                            &nbsp;
+                          </span>
+                        )}
+                        <h4 className="product-area-services-card-velocidad">
+                          {service.velocidad_actual}{" "}
+                          <span>{service.promocion}</span>
+                        </h4>
+                        <p className="product-area-services-card-precio">
+                          Precio S/{" "}
+                          {service.precio && <span>{service.precio}</span>} al
+                          mes
+                        </p>
+
+                        <ProductEquipos equipos={service.equipos} />
+                      </div>
+                      <button className="product-area-services-card-button">
+                        ¡Pidelo por WhatsApp{" "}
+                        <WhatsAppIcon className="product-area-services-card-button-icon" />
+                      </button>
+
+                      <ProductServiceDetails
+                        features={service.caracteristicas}
+                      />
+                    </div>
+                  );
+                })}
+              </Slider>
+            </StyledTabPanel>
+          );
+        })}
       </div>
     </Container>
   );
 };
 
 ProductServices.propTypes = {
-  products: PropTypes.array.isRequired,
-  services: PropTypes.array.isRequired,
+  products: PropTypes.array,
+  services: PropTypes.array,
 };
 
 export default ProductServices;

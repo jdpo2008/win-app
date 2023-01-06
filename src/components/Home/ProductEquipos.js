@@ -27,21 +27,24 @@ const ProductEquipos = (props) => {
                 alignItems: "center",
               }}
             >
-              {e.id === 1 && (
+              {[
+                "52d9f38e-f04d-4d4b-ae06-3267a7db02fa",
+                "a87f83dc-fe49-4360-8ecd-6c57749b7ca4",
+              ].includes(e.id) && (
                 <img
                   src={"/images/features/" + e.imagenUrl}
                   alt={e.nombre}
                   width={65}
                 />
               )}
-              {e.id === 2 && (
+              {e.id === "f938eeee-3ba7-4527-94a7-7f244d895ef0" && (
                 <img
                   src={"/images/features/" + e.imagenUrl}
                   alt={e.nombre}
                   width={49}
                 />
               )}
-              {e.id === 3 && (
+              {e.id === "ce2d3931-8c71-43ae-86f8-1cc671addcc1" && (
                 <img
                   src={"/images/features/" + e.imagenUrl}
                   alt={e.nombre}

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { useForm } from "react-hook-form";
+import { useRouter } from "next/router";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 import { Grid, Box, Stack } from "@mui/material";
@@ -13,12 +14,14 @@ import {
 } from "@components/Common/hook-form";
 import Page from "@components/_App/Page";
 import Layout from "@components/_App/Layouts";
+import { LoginUserInput, NextPageWithLayout } from "@interfaces/index";
+import useAuth from "@hooks/useAuth";
+import { useMutation } from "@tanstack/react-query";
+import client from "@data/client";
+import toast from "@components/Common/Toast";
 
-SignIn.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};
-
-export default function SignIn(props) {
+const SignIn: NextPageWithLayout = (props) => {
+  const { push } = useRouter();
   const defaultValues = {
     email: "",
     password: "",
@@ -44,15 +47,40 @@ export default function SignIn(props) {
 
   const values = watch();
 
-  const onSubmit = async () => {
+  const { authorize } = useAuth();
+
+  const { mutate: login } = useMutation(client.auth.login, {
+    onSuccess: (result) => {
+      if (!result.token) {
+        // toast.error(<b>Wrong username or password</b>, {
+        //   className: '-mt-10 xs:mt-0',
+        // });
+        return;
+      }
+      authorize(result.token);
+      notify("success", "Bienvenido a cambiateawin.pe");
+      push("/");
+      //closeModal();
+    },
+    onError: (error) => {
+      notify("error", "Usuario y/o contraseña incorrecta");
+    },
+  });
+
+  const onSubmit: SubmitHandler<LoginUserInput> = async () => {
     try {
       //await new Promise((resolve) => setTimeout(resolve, 500));
-      console.log(values);
-      reset();
+      //console.log(values);
+      //reset();
+      login(values);
     } catch (error) {
       console.error(error);
     }
   };
+
+  const notify = React.useCallback((type, message) => {
+    toast({ type, message });
+  }, []);
 
   return (
     <Page title="Login">
@@ -91,6 +119,7 @@ export default function SignIn(props) {
                       >
                         <RHFTextField name="email" label="Email" />
                         <RHFTextField
+                          type="password"
                           name="password"
                           label="Password"
                           style={{ marginTop: "10px" }}
@@ -163,4 +192,14 @@ export default function SignIn(props) {
       </div>
     </Page>
   );
-}
+};
+
+SignIn.getLayout = function getLayout(page) {
+  return (
+    <Layout variant="dashboard" isLoadding={false}>
+      {page}
+    </Layout>
+  );
+};
+
+export default SignIn;

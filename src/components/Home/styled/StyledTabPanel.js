@@ -14,8 +14,6 @@ const StyledTabPanel = (props) => {
       {value === index && (
         <div
           style={{
-            display: "flex",
-            justifyContent: "space-between",
             width: "cal(100vw)",
           }}
         >

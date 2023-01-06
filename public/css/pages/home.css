@@ -1043,7 +1043,7 @@ Screenshots Area CSS
 .product-area-box .product-area-tabs {
   display: flex !important;
   justify-content: space-between !important;
-  width: 65% !important;
+  width: 70% !important;
   overflow: visibles;
   padding: 0 10px !important;
 }
@@ -1056,7 +1056,7 @@ Screenshots Area CSS
 }
 
 .product-area-tabs-panel {
-  margin-top: 10px;
+ 
   text-align: center;
   padding: 10px auto;
   width: 100%;
@@ -1070,7 +1070,7 @@ Screenshots Area CSS
   border: 1.8px solid rgb(241, 105, 13);
   border-radius: 25px;
   padding: 15px;
-  width: 330px;
+  width: 95% !important;
   background: #fff;
   color: rgb(241, 105, 13);
   font-weight: bolder;
@@ -1078,10 +1078,16 @@ Screenshots Area CSS
   box-shadow: 5px 12px 13px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   margin-top: 50px;
   min-height: 470px;
-  display: flex;
+  display: flex !important;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    color: orangered !important;
 }
 
 .product-area-services-container-promotion {

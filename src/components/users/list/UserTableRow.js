@@ -34,7 +34,8 @@ export default function UserTableRow({
 }) {
   const theme = useTheme();
 
-  const { nombres, apellidos, email, perfil, avatarUrl, telefono, fecha } = row;
+  const { nombres, apellidos, email, perfil, avatarUrl, telefono, createdAt } =
+    row;
 
   const [openMenu, setOpenMenuActions] = useState(null);
 
@@ -74,11 +75,11 @@ export default function UserTableRow({
       <TableCell align="left">{telefono}</TableCell>
 
       <TableCell align="center" sx={{ textTransform: "capitalize" }}>
-        {perfil}
+        {perfil.nombre}
       </TableCell>
 
       <TableCell align="center" sx={{ textTransform: "capitalize" }}>
-        {fecha}
+        {createdAt}
       </TableCell>
 
       {/* <TableCell align="center">

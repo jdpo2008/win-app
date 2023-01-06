@@ -8,11 +8,12 @@ import FormHelperText from "@mui/material/FormHelperText";
 import { LoadingButton } from "@mui/lab";
 
 import toast from "@components/Common/Toast";
+import client from "@data/client";
 
 const ContactForm = ({ departamentos, provincias, distritos }) => {
   const defaultValues = {
-    firstName: "",
-    lastName: "",
+    nombres: "",
+    apellidos: "",
     email: "",
     celular: "",
     departamento: "",
@@ -22,8 +23,8 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
   };
 
   const FormSchema = Yup.object().shape({
-    firstName: Yup.string().required("Los nombres son requeridos"),
-    lastName: Yup.string().required("Los apellidos son requeridos"),
+    nombres: Yup.string().required("Los nombres son requeridos"),
+    apellidos: Yup.string().required("Los apellidos son requeridos"),
     email: Yup.string().required("El correo electronico es requerido"),
     celular: Yup.string().required("El celular es requerido"),
     departamento: Yup.string().required("EL departamento es requerido"),
@@ -52,11 +53,7 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
   const [distFilter, setDistFilter] = React.useState([]);
   const [provFilter, setProvFilter] = React.useState([]);
 
-  const onSubmit = () => {
-    mutation.mutate(values);
-  };
-
-  const mutation = useMutation({
+  const { mutate } = useMutation(client.informacion.create, {
     mutationFn: (body) => {
       const request = {
         ...body,
@@ -73,7 +70,7 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
       console.log(request);
       //return axios.post("/api", body);
     },
-    onSuccess: () => {
+    onSuccess: (res) => {
       reset();
 
       notify("success", "Registro Exitoso. Pronto sera contactado");
@@ -82,6 +79,10 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
       console.error(error);
     },
   });
+
+  const onSubmit = () => {
+    mutate(values);
+  };
 
   const handleChangeDepartamento = (event) => {
     setProvFilter(provincias[event.target.value]);
@@ -117,13 +118,13 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
                           type="text"
                           className="form-control"
                           placeholder="First name"
-                          {...register("firstName", {
+                          {...register("nombres", {
                             required: true,
                           })}
-                          aria-invalid={errors.firstName ? "true" : "false"}
+                          aria-invalid={errors.nombres ? "true" : "false"}
                           aria-describedby="component-error-text"
                         />
-                        {errors.firstName?.type === "required" && (
+                        {errors.nombres?.type === "required" && (
                           <FormHelperText id="component-error-text">
                             El nombre es requerido
                           </FormHelperText>
@@ -136,10 +137,10 @@ const ContactForm = ({ departamentos, provincias, distritos }) => {
                           type="text"
                           className="form-control"
                           placeholder="Last name"
-                          {...register("lastName", { required: true })}
-                          aria-invalid={errors.lastName ? "true" : "false"}
+                          {...register("apellidos", { required: true })}
+                          aria-invalid={errors.apellidos ? "true" : "false"}
                         />
-                        {errors.lastName?.type === "required" && (
+                        {errors.apellidos?.type === "required" && (
                           <FormHelperText id="component-error-text">
                             El apellido es requerido
                           </FormHelperText>

@@ -2,6 +2,7 @@ import * as React from "react";
 import Link from "@utils/ActiveLink";
 
 import { PATH_PAGE } from "@routes/paths";
+import useAuth from "../../../../hooks/useAuth";
 
 const NavbarStyle = () => {
   const [menu, setMenu] = React.useState(true);
@@ -28,6 +29,14 @@ const NavbarStyle = () => {
   const classTwo = menu
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right";
+
+  const { isAuthorized, unauthorize } = useAuth();
+
+  const logout = () => {
+    unauthorize();
+  };
+
+  console.log(isAuthorized);
 
   return (
     <>
@@ -91,7 +100,7 @@ const NavbarStyle = () => {
                     </Link>
                   </li>
 
-                  {false && (
+                  {isAuthorized && (
                     <li className="nav-item">
                       <Link href="#">
                         <a
@@ -141,7 +150,7 @@ const NavbarStyle = () => {
                     </li>
                   )}
 
-                  {false && (
+                  {isAuthorized && (
                     <li className="nav-item">
                       <Link href="#">
                         <a
@@ -480,11 +489,24 @@ const NavbarStyle = () => {
                 </ul>
               </div>
 
-              <div className="others-options">
-                <Link href="/auth/login">
-                  <a className="default-btn">Ingresar</a>
-                </Link>
-              </div>
+              {!isAuthorized && (
+                <div className="others-options">
+                  <Link href="/auth/login">
+                    <a className="default-btn">Ingresar</a>
+                  </Link>
+                </div>
+              )}
+              {isAuthorized && (
+                <div className="others-options">
+                  <button
+                    type="button"
+                    className="default-btn"
+                    onClick={() => logout()}
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
             </nav>
           </div>
         </div>

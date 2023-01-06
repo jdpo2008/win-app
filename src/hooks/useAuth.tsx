@@ -1,13 +1,25 @@
-import { useContext } from "react";
-//
-//import { AuthContext } from "../contexts/JWTContext";
+import { atom, useAtom } from "jotai";
+import {
+  checkHasAuthToken,
+  getAuthToken,
+  removeAuthToken,
+  setAuthToken,
+} from "@data/client/token.utils";
 
-// ----------------------------------------------------------------------
-
-const useAuth = () => {
-  //   const context = useContext(AuthContext);
-  //   if (!context) throw new Error("Auth context must be use inside AuthProvider");
-  //   return context;
-};
-
-export default useAuth;
+const authorizationAtom = atom(checkHasAuthToken());
+export default function useAuth() {
+  const [isAuthorized, setAuthorized] = useAtom(authorizationAtom);
+  return {
+    setToken: setAuthToken,
+    getToken: getAuthToken,
+    isAuthorized,
+    authorize(token: string) {
+      setAuthToken(token);
+      setAuthorized(true);
+    },
+    unauthorize() {
+      setAuthorized(false);
+      removeAuthToken();
+    },
+  };
+}

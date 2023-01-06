@@ -1,11 +1,12 @@
 import React, { FC } from "react";
+import { GetStaticProps } from "next";
 
 import Page from "@components/_App/Page";
 import Layout from "@components/_App/Layouts";
 
 import axios from "axios";
 
-import { useProducts } from "@hooks/useProducts";
+import { useProducts } from "@data/products";
 
 import AppScreenshots from "@components/Home/AppScreenshots";
 import CharacteristicsPlan from "@components/Home/CharacteristicsPlan";
@@ -23,10 +24,41 @@ import {
   productos,
   servicios,
 } from "@data/static";
+import { dehydrate, QueryClient } from "@tanstack/react-query";
+import { API_ENDPOINTS } from "@data/client/endpoints";
+import client from "@data/client";
+import { PaginatorRequest } from "../types/index";
 
 interface Props {}
 
-const Home: NextPageWithLayout = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const queryClient = new QueryClient();
+  try {
+    await Promise.all([
+      queryClient.prefetchInfiniteQuery(
+        [API_ENDPOINTS.PRODUCTOS, {}],
+        ({ queryKey }) => client.products.all(queryKey[1] as PaginatorRequest)
+      ),
+    ]);
+    return {
+      props: {
+        dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
+      },
+      revalidate: 60, // In seconds
+    };
+  } catch (error) {
+    //* if we get here, the product doesn't exist or something else went wrong
+    return {
+      notFound: true,
+    };
+  }
+};
+
+const Home: NextPageWithLayout = (props) => {
+  const { products, loadMore, isLoadingMore, isLoading } = useProducts();
+
+  console.log(products);
+
   return (
     <Page
       title="Home"
@@ -45,7 +77,7 @@ const Home: NextPageWithLayout = () => {
           </h2>
         </div>
 
-        <ProductServices products={productos} services={servicios} />
+        <ProductServices products={products?.data} services={servicios} />
 
         <ContactForm
           departamentos={departamentos}
@@ -61,6 +93,7 @@ const Home: NextPageWithLayout = () => {
   );
 };
 
+Home.authorization = false;
 Home.getLayout = function getLayout(page) {
   return (
     <Layout variant="main" isLoadding={false}>

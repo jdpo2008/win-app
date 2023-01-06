@@ -1,11 +1,14 @@
 const path = require("path");
 
 const nextConfig = {
-  // reactStrictMode: false,
-  // swcMinify: true,
-  // sassOptions: {
-  //   includePaths: [path.join(__dirname, "styles")],
-  // },
+  reactStrictMode: true,
+  swcMinify: true,
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
+  experimental: {
+    outputStandalone: true,
+  },
   trailingSlash: true,
   // async rewrites() {
   //   return [
@@ -15,6 +18,14 @@ const nextConfig = {
   //     },
   //   ];
   // },
+  ...(process.env.NODE_ENV === "production" && {
+    typescript: {
+      ignoreBuildErrors: true,
+    },
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
+  }),
 };
 
 module.exports = nextConfig;

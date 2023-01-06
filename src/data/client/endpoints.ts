@@ -1,7 +1,9 @@
 export const API_ENDPOINTS = {
-  PRODUCTS: "/products",
-  SERVICES: "/services",
-  DEPARTMENTS: "/departamentos",
-  PROVINCIAS: "/provincias",
-  DISTRITOS: "/distritos",
+  PRODUCTOS: "/product",
+  SERVICIOS: "/service",
+  CAREACTERISTICAS: "/feature",
+  INFORMATION: "/informacion",
+  POSTULATION: "/postulacion",
+  USER_LOGIN: "/auth/login",
+  USER_ALL: "/user",
 };
