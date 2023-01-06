@@ -8,7 +8,6 @@ import {
 } from "@interfaces/index";
 
 export function useUser(options?: Partial<PaginatorRequest>) {
-  // Prueba de commit
   const { data, isLoading, error, isFetching } = useQuery<UserPaginator, Error>(
     [API_ENDPOINTS.USER_ALL, options],
     () => client.user.all(options)
