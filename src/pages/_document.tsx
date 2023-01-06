@@ -27,10 +27,10 @@ export default class MyDocument extends Document {
       <Html lang="es-PE">
         <Head>
           <meta name="theme-color" content={palette.light.primary.main} />
-          <meta
+          {/* <meta
             http-equiv="Content-Security-Policy"
             content="upgrade-insecure-requests"
-          />
+          /> */}
         </Head>
         <body>
           <Main />
