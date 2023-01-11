@@ -22,6 +22,11 @@ import "../../node_modules/swiper/swiper.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// lazy image
+import "react-lazy-load-image-component/src/effects/blur.css";
+import "react-lazy-load-image-component/src/effects/opacity.css";
+import "react-lazy-load-image-component/src/effects/black-and-white.css";
+
 import "../../node_modules/react-modal-video/css/modal-video.min.css";
 import "react-accessible-accordion/dist/fancy-example.css";
 import "react-image-lightbox/style.css";
@@ -41,6 +46,7 @@ import ThemeProvider from "../theme";
 import { ToastContainer } from "react-toastify";
 
 import dynamic from "next/dynamic";
+import { MotionLazyContainer } from "@components/Common/animate";
 const PrivateRoute = dynamic(
   () => import("@components/_App/Layouts/_private-routes"),
   {
@@ -63,23 +69,25 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         <Hydrate state={pageProps.dehydratedState}>
           <ThemeProvider>
             <NotistackProvider>
-              {getLayout(<Component {...pageProps} />)}
-              {/* {authenticationRequired ? (
+              <MotionLazyContainer>
+                {getLayout(<Component {...pageProps} />)}
+                {/* {authenticationRequired ? (
                 <PrivateRoute>
                   {getLayout(<Component {...pageProps} />)}
                 </PrivateRoute>
               ) : (
                 getLayout(<Component {...pageProps} />)
               )} */}
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                draggable={false}
-                closeOnClick
-                pauseOnHover
-              />
+                <ToastContainer
+                  position="top-right"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  draggable={false}
+                  closeOnClick
+                  pauseOnHover
+                />
+              </MotionLazyContainer>
             </NotistackProvider>
           </ThemeProvider>
         </Hydrate>

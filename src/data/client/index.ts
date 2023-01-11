@@ -17,10 +17,12 @@ class Client {
       HttpClient.get<ProductPaginator>(API_ENDPOINTS.PRODUCTOS, { ...options }),
   };
   services = {
-    all: () => HttpClient.get<any>(API_ENDPOINTS.SERVICIOS, {}),
+    all: ({ ...options }: Partial<PaginatorRequest>) =>
+      HttpClient.get<any>(API_ENDPOINTS.SERVICIOS, {}),
   };
   features = {
-    all: () => HttpClient.get<any>(API_ENDPOINTS.CAREACTERISTICAS, {}),
+    all: ({ ...options }: Partial<PaginatorRequest>) =>
+      HttpClient.get<any>(API_ENDPOINTS.CAREACTERISTICAS, {}),
   };
   informacion = {
     all: ({ ...options }: Partial<PaginatorRequest>) =>

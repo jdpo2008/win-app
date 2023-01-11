@@ -9,7 +9,7 @@ const MainLayout = ({ children }: React.PropsWithChildren<{}>) => {
   // Preloader
   const [loader, setLoader] = React.useState(true);
   React.useEffect(() => {
-    setTimeout(() => setLoader(false), 1500);
+    setTimeout(() => setLoader(false), 3000);
   }, []);
 
   return (

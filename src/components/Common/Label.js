@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 // @mui
-import { alpha, styled } from "@mui/material/styles";
+import { alpha, styled, useTheme } from "@mui/material/styles";
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled("span")(({ theme, ownerState }) => {
+const RootStyle = styled("span")(({ ...other }) => {
+  const theme = useTheme();
   const isLight = theme.palette.mode === "light";
-  const { color, variant } = ownerState;
+  const { color, variant } = other;
 
   const styleFilled = (color) => ({
     color: theme.palette[color].contrastText,

@@ -102,6 +102,10 @@ p:last-child {
   margin-bottom: 0;
 }
 
+.simplebar-placeholder {
+  display: none !important;
+}
+
 .ptb-100 {
   padding-top: 100px;
   padding-bottom: 100px;

@@ -1,10 +1,13 @@
 import * as React from "react";
 import PropTypes from "prop-types";
+import { m } from "framer-motion";
 
 import Slider from "react-slick";
 
 import Container from "@mui/material/Container";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
+import { MotionContainer, varFade } from "@components/Common/animate";
 
 import StyledTabs from "./styled/StyledTabs";
 import StyledTab from "./styled/StyledTab";
@@ -79,7 +82,8 @@ const ProductServices = ({ products, services }) => {
 
         {/* <StyledTab className="product-area-tabs-item" label="" /> */}
       </StyledTabs>
-      <div className="product-area-tabs-panel">
+
+      <m.div className="product-area-tabs-panel">
         {products?.map((product, i) => {
           return (
             <StyledTabPanel value={value} index={i} key={product.id}>
@@ -142,7 +146,7 @@ const ProductServices = ({ products, services }) => {
             </StyledTabPanel>
           );
         })}
-      </div>
+      </m.div>
     </Container>
   );
 };

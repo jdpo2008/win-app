@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import Swiper core and required modules
-//import SwiperCore, { EffectCoverflow } from "swiper/core";
+import SwiperCore, { EffectCoverflow } from "swiper/core";
 import { Autoplay, Navigation, EffectFade, Pagination } from "swiper";
 
 // Import Swiper styles
@@ -13,7 +13,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 
 // install Swiper modules
-//SwiperCore.use([EffectCoverflow, Navigation]);
+SwiperCore.use([EffectCoverflow, Navigation]);
 
 const AppScreenshots = () => {
   return (
