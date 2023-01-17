@@ -1,14 +1,15 @@
 import React, { ReactElement, ReactNode, useState } from "react";
 import type, { AppProps } from "next/app";
-import { NextPage } from "next";
-import Head from "next/head";
+import App from "next/app";
 
 import { Provider as ReduxProvider } from "react-redux";
 
-import { store } from "../store";
+import { ToastContainer } from "react-toastify";
+
+import dynamic from "next/dynamic";
+import cookie from "cookie";
 
 import {
-  DehydratedState,
   Hydrate,
   QueryClient,
   QueryClientProvider,
@@ -43,10 +44,11 @@ import "react-toastify/dist/ReactToastify.css";
 import NotistackProvider from "@components/Common/NotistackProvider";
 import { NextPageWithLayout } from "@interfaces/index";
 import ThemeProvider from "../theme";
-import { ToastContainer } from "react-toastify";
 
-import dynamic from "next/dynamic";
 import { MotionLazyContainer } from "@components/Common/animate";
+import { getSettings } from "@utils/settings";
+import { store } from "../store";
+
 const PrivateRoute = dynamic(
   () => import("@components/_App/Layouts/_private-routes"),
   {
@@ -95,5 +97,20 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     </ReduxProvider>
   );
 }
+
+MyApp.getInitialProps = async (context) => {
+  const appProps = await App.getInitialProps(context);
+
+  const cookies = cookie.parse(
+    context.ctx.req ? context.ctx.req.headers.cookie || "" : document.cookie
+  );
+
+  const settings = getSettings(cookies);
+
+  return {
+    ...appProps,
+    settings,
+  };
+};
 
 export default MyApp;

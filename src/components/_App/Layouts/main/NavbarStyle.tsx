@@ -86,6 +86,12 @@ const NavbarStyle = () => {
                   </li>
 
                   <li className="nav-item">
+                    <Link href={PATH_PAGE.gamers} activeClassName="active">
+                      <a className="nav-link">Gamers</a>
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
                     <Link
                       href={PATH_PAGE.afiliaciones}
                       activeClassName="active"
@@ -94,11 +100,11 @@ const NavbarStyle = () => {
                     </Link>
                   </li>
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link href={PATH_PAGE.contacto} activeClassName="active">
                       <a className="nav-link">Contactos</a>
                     </Link>
-                  </li>
+                  </li> */}
 
                   {isAuthorized && (
                     <li className="nav-item">

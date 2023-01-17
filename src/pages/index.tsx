@@ -27,6 +27,29 @@ import { API_ENDPOINTS } from "@data/client/endpoints";
 import client from "@data/client";
 import { PaginatorRequest } from "../types/index";
 
+const APP_BANNER_IMAGES = [
+  {
+    id: 1,
+    image: "/images/banner/banner_principal_web_7.jpg",
+    title: "banner_principal_web_7.jpg",
+  },
+  {
+    id: 2,
+    image: "/images/banner/banner_principal_web_6.jpg",
+    title: "banner_principal_web_6.jpg",
+  },
+  {
+    id: 3,
+    image: "/images/banner/banner_principal_web_4.jpg",
+    title: "banner_principal_web_4.jpg",
+  },
+  {
+    id: 4,
+    image: "/images/banner/banner_principal_web_1.jpg",
+    title: "banner_principal_web_1.jpg",
+  },
+];
+
 interface Props {}
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -66,7 +89,7 @@ const Home: NextPageWithLayout = (props) => {
       <>
         {/* <AppScreenshots /> */}
 
-        <AppMainCarrousel />
+        <AppMainCarrousel images={APP_BANNER_IMAGES} dots={true} />
 
         <CharacteristicsPlan />
 

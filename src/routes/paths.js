@@ -30,6 +30,7 @@ export const PATH_PAGE = {
   },
   contacto: "/contacto",
   maintenance: "/maintenance",
+  gamers: "/gamers",
 };
 
 export const PATH_DASHBOARD = {

@@ -34,7 +34,7 @@ export default function LoadingScreen() {
           repeat: Infinity,
         }}
       >
-        <Logo disabledLink sx={{ width: 64, height: 64 }} />
+        <Logo disabledLink sx={{ width: 70, height: 70 }} />
       </m.div>
 
       <Box
@@ -47,8 +47,8 @@ export default function LoadingScreen() {
         }}
         transition={{ ease: "linear", duration: 3.2, repeat: Infinity }}
         sx={{
-          width: 100,
-          height: 100,
+          width: 130,
+          height: 130,
           borderRadius: "25%",
           position: "absolute",
           border: (theme) =>
@@ -70,8 +70,8 @@ export default function LoadingScreen() {
           repeat: Infinity,
         }}
         sx={{
-          width: 120,
-          height: 120,
+          width: 150,
+          height: 150,
           borderRadius: "25%",
           position: "absolute",
           border: (theme) =>
@@ -81,40 +81,3 @@ export default function LoadingScreen() {
     </RootStyle>
   );
 }
-
-// const Preloader = () => {
-//   return (
-//     <>
-//       <div className="preloader-area">
-//         <div className="d-table">
-//           <div className="d-table-cell">
-//             <img src="/images/logo_color.png" alt="logo" />
-//             <p>Loading...</p>
-//           </div>
-//         </div>
-//       </div>
-
-//       <style jsx>{`
-//         .preloader-area {
-//           position: fixed;
-//           background: #fff;
-//           width: 100%;
-//           top: 0;
-//           height: 100%;
-//           z-index: 1010;
-//           left: 0;
-//           text-align: center;
-//           opacity: 0.96;
-//         }
-//         .preloader-area img {
-//           margin-bottom: 5px;
-//         }
-//         .preloader-area p {
-//           font-size: 17px;
-//         }
-//       `}</style>
-//     </>
-//   );
-// };
-
-// export default Preloader;
